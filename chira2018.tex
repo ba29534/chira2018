@@ -1,0 +1,105 @@
+\documentclass{aa}		% two-column
+% \documentclass[referee]{aa}		% referee one-column
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,enumerate}
+\usepackage{txfonts,graphics,graphicx,epstopdf,float,lscape,longtable,dcolumn,footnote,subcaption,caption,color,url,hyperref,listings,esvect}
+\usepackage{rotating,afterpage}
+
+% Added by Juan
+\usepackage{soul,xcolor}
+\newcommand{\jcim}[1]{\textbf{\textcolor{green}{#1}}}
+\newcommand{\mm}[1]{\textbf{\textcolor{purple}{#1}}}
+\newcommand{\rc}[1]{\textbf{\textcolor{red}{#1}}}
+\newcommand{\thh}[1]{\textbf{\textcolor{blue}{#1}}}
+
+\setstcolor{red}  
+\newcommand{\stjc}[1]{\st{#1}}
+
+
+\newenvironment{amssidewaysfigure}
+	{\begin{sidewaysfigure}\vspace*{.75\textwidth}\begin{minipage}{\textheight}\centering}{\end{minipage}\end{sidewaysfigure}}
+\newenvironment{mysidewaysfigure}
+	{\begin{sidewaysfigure*}\vspace*{.75\textwidth}\centering}{\end{sidewaysfigure*}}
+\newcommand*\xbar[1]{{\hbox{\vbox{\hrule height 0.5pt \kern0.5ex \hbox{\kern-0.1em \ensuremath{#1} \kern-0.1em}}}}}
+
+\usepackage{natbib}
+	\bibpunct{(}{)}{;}{a}{}{,} % to follow the A&A style
+
+\defcitealias{IbanezMejia2016}{Paper I}
+\defcitealias{IbanezMejia2017}{Paper II}
+\defcitealias{Chira2017}{Paper III}
+%\defcitealias{Chira2017}{\scshape Paper I}
+
+\input{alias}
+
+\graphicspath{{./pics/}}
+
+%opening
+\title{How do Velocity Structure Functions Trace Turbulence in Simulated Molecular Clouds?}
+\author{
+	R.-A.~Chira\inst{\ref{mpia}} \and
+	J.~C.~Ib\'a\~{n}ez-Mej\'{\i}a\inst{\ref{koeln},\ref{mpe}} \and 
+	M.-M.~Mac~Low\inst{\ref{amnh},\ref{ita}} \and
+	Th.~Henning\inst{\ref{mpia}}
+  }
+\institute{
+	Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, 69117 Heidelberg, Germany\\ \email{roxana-adela.chira@alumni.uni-heidelberg.de}\label{mpia}
+	\and I.\ Physikalisches Institut, Universit\"at zu K\"oln,
+        Z\"ulpicher Straße 77, 50937 K\"oln, Germany\\ \email{ibanez@ph1.uni-koeln.de}\label{koeln}
+        \and Max-Planck-Institut f\"ur Extraterrestrische Physik,
+          Giessenbachstrasse 1, 85748 Garching, Germany\label{mpe}
+	\and Dept.\ of Astrophysics, American Museum of Natural History, 79th St.\ at Central Park West, New York, NY 10024, USA\\ \email{mordecai@amnh.org}\label{amnh}
+	\and Zentrum f\"ur Astronomie, Institut f\"ur Theoretische
+        Astrophysik, Universit\"at Heidelberg, Albert-Ueberle-Str.\ 2, 69120 Heidelberg, Germany\label{ita}
+}
+
+\date{draft of \today}
+
+
+\abstract
+	{ %context
+    	For many decades it has been argued that turbulence is an important requirement for the formation and evolution of molecular clouds (MCs). Furthermore, it is supposed to be the dominant process that stabilises MCs against gravitational collapse and supports the formation of hierarchical sub-structures. Yet, little is still known about the sources of turbulence that dominates the velocity structure on scales of entire MCs.
+    }
+	{ %aims
+    	We address the distribution and time evolution of turbulence within modelled clouds. In particular, we focus on the following questions: What dominantly drives turbulent motions within MCs? And is there a method that traces these dominant models based on both simulated and observational data?
+    } 
+	{ %methods 
+		We follow the gas motions within three MCs that have formed self-consistently within kiloparsec-scale numerical simulations of the interstellar medium performed with the FLASH adaptive mesh refinement magnetohydrodynamic code. The simulated interstellar medium evolves under the influence of different physical processes, i.e.~self-gravity, magnetic fields, supernovae-driven turbulence, and radiative heating and cooling. We estimate the distribution of turbulent power with velocity structure functions and compare the time evolution of obtained parameters with predicted values.
+    }
+	{ %results
+    	We demonstrate that the scaling exponent of velocity structure functions is sensitive parameter that traces the dominant source of turbulence driving in both simulated and observational data. The general evolution is mostly robust against the influence of Jeans refinement and density-weighting, yet the detailed evolution may vary significantly.
+        \rc{[comments on density threshold, 1D comparison]}
+    }
+	{ %conclusions
+        Conclusions.
+    }
+	
+	\keywords{keywords}
+
+\begin{document}
+	\maketitle
+
+ 	\input{01_intro}
+ 	\input{02_methods}
+ 	\input{03_results}
+ 	\input{04_discussion}
+ 	\input{05_conclusion}
+ 
+ 	\begin{acknowledgements}
+ 		R-AC acknowledges the support ESO and its Studentship Programme provided.
+         M-MML received support from US NSF grant AST11-09395 and thanks the A. von Humboldt-Stiftung for support.  
+         JCI-M was additionally supported by the DFG Priority Programme 157.
+ 	\end{acknowledgements}
+
+ 	\bibliographystyle{aa} % style aa.bst
+ 	\bibliography{ref}
+
+% 	\appendix
+% 		\input{a_filfinder}
+%         %\onecolumn
+%         %\thispagestyle{headings}
+%     	%\input{a_figures}
+        
+        
+\end{document}

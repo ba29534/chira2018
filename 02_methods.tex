@@ -1,0 +1,89 @@
+\section{Methods}\label{methods}
+
+
+\subsection{Cloud models}\label{methods:clouds}
+
+\rc{[general comment: In this sub-section I basically copied the descriptions we have used in the previous paper. I am not sure whether the summary given here in to short as I also wanted to provide a summary of the work we have done with the data already. I would appreciate what you think about the structure of this subsection.]}
+
+The analysis in this paper is based on a sample of clouds found within the 3D magnetohydrodynamics~(MHD), AMR FLASH code \citep{Fryxell2000} simulations by \citet{IbanezMejia2016}.
+\citet[hereafter \citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}, respectively]{IbanezMejia2016,IbanezMejia2017} and \citet[hereafter \citetalias{Chira2017}]{Chira2017} describe the simulations and the clouds in details. 
+For the context of this paper, we summarise the most important properties. 
+
+The entire 3D MHD AMR simulations model a multi-phase, turbulent interstellar medium (ISM) of a disk galaxy, where dense structures form self-consistently in turbulent, convergent flows \citepalias{IbanezMejia2016}. 
+The simulations include gravity (stellar potential and dark matter halo; after 250~Myr also self-gravity), supernova-driven turbulence, photoelectric heating and radiative cooling, as well as magnetic fields. 
+The three clouds we analyse in this paper are small (40~pc)$^{3}$ subregions of the entire $1~\times~1~\times~40$~kpc$^3$ volume.
+The authors of \citetalias{IbanezMejia2017} have re-simulated the clouds with an effective spatial resolution of $\Delta x_{\rm min}=0.1$~pc when mapped onto a $400\times 400~\times 400$ grid cells containing cube, respectively.
+Objects with the clouds are fully resolved if their local Jeans length $\lambda_J > 4~\Delta x_{\rm min}$, corresponding to a maximum resolved density at 10~K of $8~\times 10^3$~cm$^{-3}$ \citepalias[e.g.][Eq.~15]{IbanezMejia2017}.
+This means that we can trace fragmentation down to 0.4~pc, but cannot fully resolve objects that form at smaller scales.
+The clouds have total masses on the order of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ (hereafter denoted models \texttt{M3}, \texttt{M4}, and \texttt{M8}).
+
+This set-up opens opportunities for many different kind of studies. 
+The authors of \citetalias{IbanezMejia2017} have described the properties of all three clouds in detail, as well as followed the time evolution of those properties. 
+In particular focus, the authors have investigated typical observables, such as mass, velocity dispersion and Mach number, in context of molecular cloud formation within spiral galaxies.
+In \citetalias{Chira2017} we have studied the properties and time evolution, as well as the fragmentation behaviour of filaments that condense within the model clouds. 
+
+In this paper, we focus on the driving sources of turbulence  within the modelled molecular clouds and which signatures they print on observables, such as the velocity structure functions.
+
+
+\subsection{Velocity Structure Functions}\label{methods:vsf}
+
+We probe the power distribution of turbulence throughout the entire modelled molecular clouds by using the so-called velocity structure function (VSF).
+The VSF is a two-point correlation function that measures the mean velocity difference, $\Delta \vec{v} = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})$, between two grid cells $\vec{x}$ and $\vec{x}+\vec{\ell}$ (with $\vec{\ell}$ being a direction vector pointing from the first to the second cell of the grid), to the $p^\mathrm{th}$ order as function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
+Thereby, the VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events of random turbulent flows in velocity patterns that become more prominent the higher $p$ is \citep{Heyer2004}.
+For data on an Eulerian grid, such as ours, the density weighted definition of the VSF, $\mathit{S}_p$, is given by
+\begin{equation}
+	\mathit{S}_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle} ,
+    \label{equ:method:def_vsf}
+\end{equation}
+\citep[and references within]{Padoan2016a}.
+
+Each order of VSF has a physical meaning. 
+For example, $\mathit{S}_1$ is correlated to the mean relative velocities between cells, reflecting the modes created by different gas flows.
+$\mathit{S}_2$ is proportionally to the kinetic energy, making it a good probe of how the turbulent energy is transferred across different scales.
+
+If the turbulence is fully developed the VSF is supposed to be well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
+\begin{equation}
+	\mathit{S}_p (\ell) \propto \ell^{\zeta(p)} .
+    \label{equ:method:propto_zeta}
+\end{equation}
+The scaling exponent of that power-law relation, $\zeta$, therefore, not only depends on the order of the VSF, but is also strongly influenced by the properties and composition of the underlying turbulence, like compressibility or Mach number.
+Many studies on VSFs  distinguish between longitudinal and transverse velocity components, or compressible and solenoidal gas flow components since those are expected to behave differently, especially towards larger lag distances \citep{Gotoh2002,Schmidt2008,Benzi2010}.
+However, the differences are mostly negligible on the scales we focus on. 
+This and the fact that those components are observationally very hard differentiable, are the reasons why we analyse all components in a common sample.
+
+There are a few theoretical studies that predict values of $\zeta(p)$ depending on the nature of turbulence.
+For example, \citet{Kolmogorov1941} predicts the third-order exponent, $\zeta(3)$, to be exactly 1 for an incompressible, transonic flow.
+This results in the commonly known prediction that the kinetic energy decays with $E_k(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
+
+For a supersonic flow, however, it is always supposed to be greater or equal to unity.
+Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} have extended and generalised the analysis and predict the following.
+For an incompressible filamentary flow \citet{She1994} predict that the VSFs scale with,
+\begin{equation}
+	\zeta_\mathrm{She}(p) = \frac{p}{9} + 2 \left[ 1 - \left( \frac{2}{3} \right)^{\frac{p}{3}} \right] = Z_\mathrm{She}(p) ,
+    \label{equ:method:she}
+\end{equation}
+while supersonic flows with sheet-like geometry are supposed to scale with \citep{Boldyrev2002},
+\begin{equation}
+	 \zeta_\mathrm{Boldyrev}(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}} = Z_\mathrm{Boldyrev}(p) .
+    \label{equ:method:boldyrev}
+\end{equation}
+\citet{Benzi1993} have introduced the principle of "extended self-similarity" which propose that there is a fixed relation between the a VSF of $p^\mathrm{th}$ order and the 3$^\mathrm{rd}$ VSF, so that the ratio 
+\begin{equation}
+	Z(p) = \frac{\zeta(p)}{\zeta(3)}
+	\label{equ:method:z_def}
+\end{equation} 
+is constant over all lag scales.
+Since the mentioned predictions of $\zeta(p)$ are normalised in a way that $\zeta(3)$~=~1 Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) also provide the predictions for $Z(p)$, respectively.
+
+For the discussion below, we measure $\zeta$ by fitting a power-law, given by
+\begin{equation}
+	\log_{10}\left[ S_p(\ell) \right] = \log_{10}\left(A\right) + \zeta \log_{10}(\ell) ,
+    \label{equ:method:fitting}
+\end{equation}
+with $A$ being the scaling factor of the power-law to the simulated measurements.
+For the calculations, we only take those cells with a minimal number density of 100~cm$^{-3}$ into account as this threshold defines the volume of the clouds.
+For reducing the computational effort we divide the scale of 3D lag distances, $\ell$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
+This means that the measurements at the given lag interval $\ell_i$ we will show below base on the data with lag distances $\ell_{i-1} < \ell \leq \ell_i$.
+
+
+\endinput
