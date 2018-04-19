@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.27)  15 APR 2018 21:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.27)  19 APR 2018 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,34 +1117,52 @@ sion: multiple pdfs with page group included in a single page
 Underfull \vbox (badness 1199) has occurred while \output is active []
 
 
-Underfull \vbox (badness 1199) has occurred while \output is active []
+Underfull \vbox (badness 2837) has occurred while \output is active []
 
  [7 <./pics/comp_jeans.pdf>]
-Underfull \hbox (badness 1092) in paragraph at lines 253--255
+Underfull \hbox (badness 1092) in paragraph at lines 252--254
 []\OT1/txr/m/n/10 In this sec-tion, we in-ves-ti-gate the in-flu-ence of den-si
 ty
  []
 
-<./pics/comp_weighting.pdf, id=913, 1589.94pt x 1084.05pt>
+<./pics/comp_weighting.pdf, id=914, 1589.94pt x 1084.05pt>
 File: ./pics/comp_weighting.pdf Graphic file (type pdf)
 
 <use ./pics/comp_weighting.pdf>
-Package pdftex.def Info: ./pics/comp_weighting.pdf used on input line 284.
+Package pdftex.def Info: ./pics/comp_weighting.pdf used on input line 283.
 (pdftex.def)             Requested size: 523.5307pt x 356.96017pt.
-) (./04_discussion.tex [8] [9 <./pics/comp_weighting.pdf>] [10]) (./05_conclusi
-on.tex
+) (./04_discussion.tex [8] [9 <./pics/comp_weighting.pdf>] [10]
+Underfull \hbox (badness 1596) in paragraph at lines 181--185
+[]\OT1/txr/m/n/10 Further note that by choos-ing the start-ing points ran-
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 181--185
+\OT1/txr/m/n/10 domly we en-sure that all parts of the cubes are con-sid-
+ []
+
+
+Underfull \vbox (badness 1199) has occurred while \output is active []
+
+ [11])
+(./05_conclusion.tex
 Underfull \hbox (badness 2229) in paragraph at lines 3--5
 \OT1/txr/m/n/10 sim-u-la-tions of the self-gravitating, mag-ne-tised, supernova
 -
  []
 
 
-Underfull \vbox (badness 1173) has occurred while \output is active []
+Package natbib Warning: Citation `She1997' on page 12 undefined on input line 1
+1.
 
- [11])
-(./chira2018.bbl)
+) [12] (./chira2018.bbl)
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
- [12]
+[13
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./chira2018.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
@@ -1154,13 +1172,13 @@ Package rerunfilecheck Info: File `chira2018.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 11943 strings out of 493089
- 167794 string characters out of 6134842
+ 11945 strings out of 493089
+ 167810 string characters out of 6134842
  298105 words of memory out of 5000000
- 15044 multiletter control sequences out of 15000+600000
+ 15045 multiletter control sequences out of 15000+600000
  76358 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,44p,699b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,44p,891b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb></usr/local/texlive/2015/
@@ -1176,10 +1194,10 @@ l/texlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on chira2018.pdf (12 pages, 457847 bytes).
+Output written on chira2018.pdf (13 pages, 463820 bytes).
 PDF statistics:
- 1160 PDF objects out of 1200 (max. 8388607)
- 578 compressed objects within 6 object streams
- 83 named destinations out of 1000 (max. 500000)
+ 1169 PDF objects out of 1200 (max. 8388607)
+ 586 compressed objects within 6 object streams
+ 84 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

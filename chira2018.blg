@@ -3,9 +3,10 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chira2018.aux
 The style file: aa.bst
 Database file #1: ref.bib
+Warning--I didn't find a database entry for "She1997"
 You've used 36 entries,
             2947 wiz_defined-function locations,
-            901 strings with 11208 characters,
+            903 strings with 11222 characters,
 and the built_in function-call counts, 17334 in all, are:
 = -- 1457
 > -- 1297
@@ -44,3 +45,4 @@ warning$ -- 0
 while$ -- 146
 width$ -- 0
 write$ -- 360
+(There was 1 warning)
