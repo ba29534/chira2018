@@ -167,12 +167,35 @@ Yet, $Z$ remains a fine probe for the geometry of turbulence and the scales at w
 
 \subsection{The Effect of Density Thresholds}\label{discussion:densthres}
 
-In Sect.~\ref{results:densthres} we test the influence of the density threshold that defines the volume of gas of our interest on the evolution of VSFs.
-In this particular case, I normally define our clouds as volumes of connected gas cells with densities above a certain value n$_\mathrm{cloud}$~=~100~cm$^{-3}$. 
-Although this approach is in agreement with typical post-processing methods of observational data, we only consider $\leq$1.5\% of the cubes' volumes by doing to. 
+In Sect.~\ref{results:densthres} we test the influence of the density threshold that defines the volume of our interest on the evolution of VSFs.
+In this particular case, we normally define our clouds as volumes of connected gas cells with densities above a certain value n$_\mathrm{cloud}$~=~100~cm$^{-3}$ \citetalias[see][]{IbanezMejia2016,IbanezMejia2017}. 
+Although this approach is in agreement with typical post-processing methods of observational data, by doing so we only work with $\leq$1.5\% of the cubes' volumes.
 
-\rc{--- continue ---}
+As the post-processing of the entire data cubes, which would be result when removing the density threshold and setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$, would be too computational expensive, we have decided to reduce the number of considered radomly chosen cells to 5\% of the total number of cells.
+We emphasise again that this does not mean that we only calculate the relative velocities between those 5\% of cells.
+Rather this subsample of cells represent the starting vectors $\vec{x}$ to which the velocities of all other cells  $\vec{x} + \vec{\ell}$ in the same cube are compared to.
+This way we reduce the risk of ignoring or emphasising any spatial direction or angle.
 
+Further note that by choosing the starting points randomly we ensure that all parts of the cubes are considered. 
+As a consequence, there is only a verys little likelihood (5\%~$\times$~1.5\%~=~0.075\%) that cells that are associated with the clouds are chosen.
+Therefore, we emphasise that it is very likely that the two subsamples (no density threshold and cloud-only) do not necessarily have a common set of starting vectors.
+Yet, as we here still calculate relative velocities to all other cells in the cube, and that includes all cells making up the clouds, the resulting VSFs of the n$_\mathrm{cloud}$~=~0~cm$^{-3}$ sample also consists of most of the information of the inner-cloud interactions.
+
+In Sect.~\ref{results:densthres} we see that the structure and evolution of VSFs strongly depends on whether or not there is a density threshold. 
+In the previous case, where n$_\mathrm{cloud}$~=~100~cm$^{-3}$, we have seen a mostly straight decline of $\zeta$ and a rather, but not completely constant evolution of $Z$ over time that reflect the conteraction of the clouds due to self-gravity.
+Here, in the n$_\mathrm{cloud}$~=~0~cm$^{-3}$ sample, however, we see a completly different picture.
+There is still a slightly declining trend in $\zeta$.
+Yet, the evolutions are dominated by random fluctuations.
+
+In case of $Z$, however, we see that the constant trend, that we have seen in the previous scenarios, does not only continue, but becomes completely constant in time and space. 
+This means that the source that drives the turbulence on the scales of the modelled ISM is constantly and isotropically acting on the diffuse gas.
+Thus, the ISM matter around the clouds is constantly highly driven by different sources, like SN shocks or galactic shears.
+Consequently, individual events, like a single SN, do not have as a high impact on the state of turbulence of the ISM as on the gas within the clouds which is comparably quite.
+
+We conclude that the decision whether or not a density threshold is used for ascertaining insights on the turbulent composition of the observed gas has a significant and direct influence on the resulting VSFs.
+As mentioned previously, applying a density threshold is mosten unavoidable as it is a straight-forward approach to filter the data on the actual area of interest.
+In observational studies it is even always present as minimal collision rates for excitation or the sensitivity of detectors automatically result in implicite intensity and density thresholds. 
+Although we have only tested two specific setups in this context we have seen the significance of a proper choice of the density threshold, as well as a proper discussion of the obtained results considering the used threshold as one of the defining parameters.
 
 
 \subsection{The Effect of Density Weighting}\label{discussion:densweight}
