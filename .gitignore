@@ -3,3 +3,8 @@
 pics/BACKUP
 pics/BACKUP/*
 pics/*ipynb
+*aux
+*log
+*gz
+*blg
+*out
