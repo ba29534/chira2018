@@ -5,27 +5,30 @@
 
 \rc{[general comment: In this sub-section I basically copied the descriptions we have used in the previous paper. I am not sure whether the summary given here in to short as I also wanted to provide a summary of the work we have done with the data already. I would appreciate what you think about the structure of this subsection.]}
 
-The analysis in this paper is based on a sample of clouds found within the 3D magnetohydrodynamics~(MHD), AMR FLASH code \citep{Fryxell2000} simulations by \citet{IbanezMejia2016}.
-\citet[hereafter \citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}, respectively]{IbanezMejia2016,IbanezMejia2017} and \citet[hereafter \citetalias{Chira2017}]{Chira2017} describe the simulations and the clouds in details. 
-For the context of this paper, we summarise the most important properties. 
+The analysis in this paper is based on a sample of three molecular clouds (MCs) found within the 3D magnetohydrodynamics~(MHD), adaptive mesh refinement~(AMR) FLASH code \citep{Fryxell2000} simulations by \citet{IbanezMejia2016}.
+\citet[hereafter \citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}, respectively]{IbanezMejia2016,IbanezMejia2017} and \citet[hereafter \citetalias{Chira2017}]{Chira2017} describe the simulations and the clouds in more details. 
+For the context of this paper, we here summarise the most relevant properties. 
 
-The entire 3D MHD AMR simulations model a multi-phase, turbulent interstellar medium (ISM) of a disk galaxy, where dense structures form self-consistently in turbulent, convergent flows \citepalias{IbanezMejia2016}. 
-The simulations include gravity (stellar potential and dark matter halo; after 250~Myr also self-gravity), supernova-driven turbulence, photoelectric heating and radiative cooling, as well as magnetic fields. 
-The three clouds we analyse in this paper are small (40~pc)$^{3}$ subregions of the entire $1~\times~1~\times~40$~kpc$^3$ volume.
+The entire 3D MHD AMR simulations model a multi-phase, turbulent interstellar medium (ISM) of a disk galaxy where dense structures form self-consistently in turbulent, convergent flows \citepalias{IbanezMejia2016}. 
+The simulations include gravity (stellar potential and dark matter halo, as well as self-gravity after 250~Myr simulated time), supernova-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
+The three MCs of our sample are (40~pc)$^{3}$ subregions of the entire $1~\times~1~\times~40$~kpc$^3$ volume.
 The authors of \citetalias{IbanezMejia2017} have re-simulated the clouds with an effective spatial resolution of $\Delta x_{\rm min}=0.1$~pc when mapped onto a $400\times 400~\times 400$ grid cells containing cube, respectively.
-Objects with the clouds are fully resolved if their local Jeans length $\lambda_J > 4~\Delta x_{\rm min}$, corresponding to a maximum resolved density at 10~K of $8~\times 10^3$~cm$^{-3}$ \citepalias[e.g.][Eq.~15]{IbanezMejia2017}.
+Substructures of the MCs are fully resolved if their local Jeans length $\lambda_J > 4~\Delta x_{\rm min}$, corresponding to a maximum resolved density of $8~\times 10^3$~cm$^{-3}$ at 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}.
 This means that we can trace fragmentation down to 0.4~pc, but cannot fully resolve objects that form at smaller scales.
-The clouds have total masses on the order of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ (hereafter denoted models \texttt{M3}, \texttt{M4}, and \texttt{M8}).
+The MCs have total masses on the order of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter.
 
 This set-up opens opportunities for many different kind of studies. 
-The authors of \citetalias{IbanezMejia2017} have described the properties of all three clouds in detail, as well as followed the time evolution of those properties. 
-In particular focus, the authors have investigated typical observables, such as mass, velocity dispersion and Mach number, in context of molecular cloud formation within spiral galaxies.
-In \citetalias{Chira2017} we have studied the properties and time evolution, as well as the fragmentation behaviour of filaments that condense within the model clouds. 
+The authors of \citetalias{IbanezMejia2017} have described the time evolution of the properties of all three clouds in detail.
+In particular focus, the authors have investigated typical observables, such as mass, velocity dispersion, infall velocity and Mach number, in context of MC formation within spiral galaxies.
+\citetalias{Chira2017} have studied the properties and time evolution, as well as the fragmentation behaviour of filaments that self-consistently condense within the model clouds. 
+The authors have compared their measurements with typical stability criteria in order to evaluate whether they can also be used for predicting fragmentation.
 
-In this paper, we focus on the driving sources of turbulence  within the modelled molecular clouds and which signatures they print on observables, such as the velocity structure functions.
+In this paper, we focus on the driving sources of turbulence within the simulated MCs and the signatures they print on observables, such as the velocity structure function.
 
 
 \subsection{Velocity Structure Functions}\label{methods:vsf}
+
+\rc{--- continue proof-reading ---}
 
 We probe the power distribution of turbulence throughout the entire modelled molecular clouds by using the so-called velocity structure function (VSF).
 The VSF is a two-point correlation function that measures the mean velocity difference, $\Delta \vec{v} = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})$, between two grid cells $\vec{x}$ and $\vec{x}+\vec{\ell}$ (with $\vec{\ell}$ being a direction vector pointing from the first to the second cell of the grid), to the $p^\mathrm{th}$ order as function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
