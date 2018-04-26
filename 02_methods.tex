@@ -28,35 +28,36 @@ In this paper, we focus on the driving sources of turbulence within the simulate
 
 \subsection{Velocity Structure Functions}\label{methods:vsf}
 
-\rc{--- continue proof-reading ---}
+We probe the power distribution of turbulence throughout the entire simulated MCs by using the so-called velocity structure function (VSF).
+The VSF is a two-point correlation function that measures the mean velocity difference, $\Delta \vec{v} = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})$, between two grid cells $\vec{x}$ and $\vec{x}+\vec{\ell}$ (with $\vec{\ell}$ being the direction vector pointing from the first to the second cell), to the $p^\mathrm{th}$ power as function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
+Thereby, the VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events of random turbulent flows (e.g., SNe) in velocity patterns.
+Those patterns become more prominent the higher order $p$ is \citep{Heyer2004}.
 
-We probe the power distribution of turbulence throughout the entire modelled molecular clouds by using the so-called velocity structure function (VSF).
-The VSF is a two-point correlation function that measures the mean velocity difference, $\Delta \vec{v} = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})$, between two grid cells $\vec{x}$ and $\vec{x}+\vec{\ell}$ (with $\vec{\ell}$ being a direction vector pointing from the first to the second cell of the grid), to the $p^\mathrm{th}$ order as function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
-Thereby, the VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events of random turbulent flows in velocity patterns that become more prominent the higher $p$ is \citep{Heyer2004}.
-For data on an Eulerian grid, such as ours, the density weighted definition of the VSF, $\mathit{S}_p$, is given by
+For data on an Eulerian grid, such as ours, the density-weighted definition of the VSF, $\mathit{S}_p$, is given by
 \begin{equation}
 	\mathit{S}_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle} ,
     \label{equ:method:def_vsf}
 \end{equation}
 \citep[and references within]{Padoan2016a}.
-
-Each order of VSF has a physical meaning. 
-For example, $\mathit{S}_1$ is correlated to the mean relative velocities between cells, reflecting the modes created by different gas flows.
-$\mathit{S}_2$ is proportionally to the kinetic energy, making it a good probe of how the turbulent energy is transferred across different scales.
+With this definition one can see that each order of the VSF has a physical meaning. 
+For example, $\mathit{S}_1$ is to the mean relative velocities between cells, reflecting the modes created by different gas flows.
+$\mathit{S}_2$ is proportional to the kinetic energy, making it a good probe of how the turbulent energy is transported to different scales.
 
 If the turbulence is fully developed the VSF is supposed to be well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
 \begin{equation}
 	\mathit{S}_p (\ell) \propto \ell^{\zeta(p)} .
     \label{equ:method:propto_zeta}
 \end{equation}
-The scaling exponent of that power-law relation, $\zeta$, therefore, not only depends on the order of the VSF, but is also strongly influenced by the properties and composition of the underlying turbulence, like compressibility or Mach number.
-Many studies on VSFs  distinguish between longitudinal and transverse velocity components, or compressible and solenoidal gas flow components since those are expected to behave differently, especially towards larger lag distances \citep{Gotoh2002,Schmidt2008,Benzi2010}.
+Note that the scaling exponent of that power-law relation, $\zeta$, depends on many parameters, such as the order of the VSF, as well as the properties and composition of the studied turbulent flow, like its geometry, compressibility or Mach number.
+Many studies on VSFs distinguish between longitudinal and transverse velocity components, or compressible and solenoidal gas flow components because those are expected to behave differently, especially towards larger lag distances \citep{Gotoh2002,Schmidt2008,Benzi2010}.
 However, the differences are mostly negligible on the scales we focus on. 
-This and the fact that those components are observationally very hard differentiable, are the reasons why we analyse all components in a common sample.
+This and the fact that those components are observationally very hard to differentiate are the reasons why we analyse all components in a common sample.
 
-There are a few theoretical studies that predict values of $\zeta(p)$ depending on the nature of turbulence.
-For example, \citet{Kolmogorov1941} predicts the third-order exponent, $\zeta(3)$, to be exactly 1 for an incompressible, transonic flow.
+There are some theoretical studies that predict values of $\zeta$ depending on the nature of turbulence and the order $p$.
+For example, \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal unity for an incompressible, transonic flow.
 This results in the commonly known prediction that the kinetic energy decays with $E_k(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
+
+\rc{--- continue proof-reading ---}
 
 For a supersonic flow, however, it is always supposed to be greater or equal to unity.
 Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} have extended and generalised the analysis and predict the following.
