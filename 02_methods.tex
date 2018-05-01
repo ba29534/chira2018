@@ -57,8 +57,6 @@ There are some theoretical studies that predict values of $\zeta$ depending on t
 For example, \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal unity for an incompressible, transonic flow.
 This results in the commonly known prediction that the kinetic energy decays with $E_k(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 
-\rc{--- continue proof-reading ---}
-
 For a supersonic flow, however, it is always supposed to be greater or equal to unity.
 Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} have extended and generalised the analysis and predict the following.
 For an incompressible filamentary flow \citet{She1994} predict that the VSFs scale with,
@@ -71,12 +69,12 @@ while supersonic flows with sheet-like geometry are supposed to scale with \cite
 	 \zeta_\mathrm{Boldyrev}(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}} = Z_\mathrm{Boldyrev}(p) .
     \label{equ:method:boldyrev}
 \end{equation}
-\citet{Benzi1993} have introduced the principle of "extended self-similarity" which propose that there is a fixed relation between the a VSF of $p^\mathrm{th}$ order and the 3$^\mathrm{rd}$ VSF, so that the ratio 
+\citet{Benzi1993} have introduced the principle of "extended self-similarity".
+It proposes that there is a constant relationship between the scaling exponents of different orders on all lag scales. Normally, the self-similarity parameter, $Z$, normally refers to the 3$^mathrm{rd}$ order VSF and is given by:
 \begin{equation}
-	Z(p) = \frac{\zeta(p)}{\zeta(3)}
+	Z(p) = \frac{\zeta(p)}{\zeta(3)} .
 	\label{equ:method:z_def}
 \end{equation} 
-is constant over all lag scales.
 Since the mentioned predictions of $\zeta(p)$ are normalised in a way that $\zeta(3)$~=~1 Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) also provide the predictions for $Z(p)$, respectively.
 
 For the discussion below, we measure $\zeta$ by fitting a power-law, given by
@@ -84,10 +82,33 @@ For the discussion below, we measure $\zeta$ by fitting a power-law, given by
 	\log_{10}\left[ S_p(\ell) \right] = \log_{10}\left(A\right) + \zeta \log_{10}(\ell) ,
     \label{equ:method:fitting}
 \end{equation}
-with $A$ being the scaling factor of the power-law to the simulated measurements.
+with $A$ being the proportionality factor of the power-law to the simulated measurements.
 For the calculations, we only take those cells with a minimal number density of 100~cm$^{-3}$ into account as this threshold defines the volume of the clouds.
-For reducing the computational effort we divide the scale of 3D lag distances, $\ell$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
+For reducing the computational effort we divide the range of 3D lag distances, $\ell$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
 This means that the measurements at the given lag interval $\ell_i$ we will show below base on the data with lag distances $\ell_{i-1} < \ell \leq \ell_i$.
+
+Fig.~\ref{pic:results:vsf_example} shows three examples of VSFs, namely (a) \texttt{M4} $t$~=~1.2~Myr, after self-gravity has been activated in the simulations, (b) \texttt{M3} at $t$~=~3.5~Myr, and (c) \texttt{M3} at $t$~=~4.0~Myr.
+All plots illustrate the VSFs of the orders $p$~=~1--3 that are computed based on the simulation data.
+The solid lines show the fitted power-law relations as given in Eq.~(\ref{equ:method:fitting}).
+
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{vsf_example.pdf}
+    \caption{Examples of velocity structure functions as function of the lag scale, $\ell$, and order, $p$. 
+    	The dots (connected by dashed lines) illustrate the measured values based on the simulation data. 
+        The solid lines represent the power-law relations fitted to the respective structure function.
+	}
+    \label{pic:results:vsf_example}
+\end{figure*}
+
+The examples demonstrate that, in general, the measured VSFs cannot be described by a single power-law relation over the entire range of $\ell$.
+Instead they are composed of roughly three different regimes: 
+one at small scales at $\ell \lesssim$~3~pc, a second one within 3~pc~$\lesssim \ell \lesssim$~10--15~pc, and the last one at large scales with $\ell >$~15~pc.
+Therefore, only the small and intermediate ranges may be represented by a common power-law relation.
+On larger scales, one observes a local minimum before the VSFs either increase or stagnate.
+The location of the minimum, thereby, coincides with the equivalent radius of the cloud, meaning the radius a cloud of given mass would have if it would be a sphere.
+Thus, in this context the VSF is an accurate tool to measure the size of a molecular cloud.
+On smaller scales, which correspond to individual clumps and cores, one sees significant differences.
 
 
 \endinput

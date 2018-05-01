@@ -3,6 +3,7 @@
 pics/BACKUP
 pics/BACKUP/*
 pics/*ipynb
+pics/.ipynb*
 *aux
 *log
 *gz
