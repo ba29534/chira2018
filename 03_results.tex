@@ -99,94 +99,91 @@ Besides this, the time evolution of $Z$ based on the $\lambda_J$~=~$8\Delta{}x$ 
 The divergence which is produced when gravity has transferred the majority of power to smaller scales occurs at the same time. 
 Thereby, the depth of the sink is a numerical artefact caused by $\zeta(3)$ being equal or close to 0 at this very time step. 
 
-The picture changes when analysing the VSFs based on the $\lambda_J$~=~$32\Delta{}x$ runs (Figs.~\ref{pic:results:zeta_all}c,~\ref{pic:results:z_all}c, and~\ref{pic:results:jeans_comp} \textit{bottom} panel).
+The picture changes when we analyse the VSFs based on the $\lambda_J$~=~$32\Delta{}x$ runs (Figs.~\ref{pic:results:zeta_all}c,~\ref{pic:results:z_all}c, and~\ref{pic:results:jeans_comp}).
 Here one sees that the measured values of both $\zeta$ (Fig.~\ref{pic:results:zeta_all}c) and $Z$ (Fig.~\ref{pic:results:z_all}c) are similar to those for $\lambda_J$~=~$4\Delta{}x$ for the first 0.2~Myr.
 After this short period, though, the evolutions of $\zeta$ diverge. 
-While $\zeta(1)$ and $\zeta(2)$ continue to decrease in similar, but lower rates compared to $\lambda_J$~=~$4\Delta{}x$, $\zeta(3)$ increases until it peaks at $t$~=~0.8~Myr, before it falls steeply down again.
-At $t$~=~1.2~Myr, the last time step of this sample, the values of all $\zeta$ equal the measurements of $\lambda_J$~=~$4\Delta{}x$ again (see also Fig.~\ref{pic:results:jeans_comp}). 
-However, since there is no information of how the $\lambda_J$~=~$32\Delta{}x$ simulations develop further we cannot predict whether this correspondence will continue. 
+While $\zeta(1)$ and $\zeta(2)$ continue to decrease in similar, but on lower rates compared to $\lambda_J$~=~$4\Delta{}x$, $\zeta(3)$ increases until it peaks at $t$~=~0.8~Myr and falls steeply down again.
+This divergence has notable impact on the evolution of $Z$, as well. 
+The bottom panel of Fig.~\ref{pic:results:jeans_comp} illustrates the different evolutions of measured $\zeta$ and $Z$ in the two samples of simulations more clearly.
+One sees that the differences between the samples follow the same pattern for all orders of $p$.
+The differences, though, increases with the order:
+While the values for $\zeta(1)$ are still in good agreement, the measured values of $\zeta(2)$ and $\zeta(3)$ for $\lambda_J$~=~$32\Delta{}x$ are 40\% and 100\% higher than those measured for $\lambda_J$~=~$4\Delta{}x$, respectively.
+Consequently, this causes differences in $Z(p)$ within 30--52\% between the simulations.
 
 \begin{figure*}
 	\centering
     \includegraphics[width=\textwidth]{comp_jeans.pdf}
-    \caption{Caption.}
+    \caption{Comparison of measure VSF sclaing exponents, $\zeta$ (\textit{left}), and self-similarity parameters, $Z$ (\textit{right}), depending on the Jeans refinement of the simulation runs the data are based on, respectively. The \textit{abscissas}, thereby, always refers to the measurements based on $\lambda_J$~=~$4\Delta{}x$, while the \textit{ordinates} of the do so the $\lambda_J$~=~$8\Delta{}x$ (\textit{top}) and $\lambda_J$~=~$32\Delta{}x$ (\textit{bottom}) measurements. All data points based on the \texttt{M3} cloud and represent the same time step in the respective simulations. 
+    }
     \label{pic:results:jeans_comp}
 \end{figure*}
 
-The bottom panel of Fig.~\ref{pic:results:jeans_comp} illustrates the different evolutions of measured $\zeta$ and $Z$ in the two samples of simulations more clearly.
-One sees that the differences between the simulation samples follow the same pattern for all orders of $p$.
-The order of difference, though, increases with the order:
-While the values for $\zeta(1)$ are still in good agreement, the measured values of $\zeta(2)$ and $\zeta(3)$ for $\lambda_J$~=~$32\Delta{}x$ are 40\% and 100\% higher than those measured for $\lambda_J$~=~$4\Delta{}x$, respectively.
-Consequently, this causes differences in $Z(p)$ within 30--52\% between the simulations.
+At $t$~=~1.2~Myr, the last time step of this sample, the values of all $\zeta$ equal the measurements of $\lambda_J$~=~$4\Delta{}x$ again.
+As there is no information of how the $\lambda_J$~=~$32\Delta{}x$ simulations develop further we cannot predict whether this correspondence will continue. 
 
 
 
 \subsection{The Effect of Density Thresholds}\label{results:densthres}
 
-Another assumption that significantly influence the structure and evolution of VSFs is the density threshold we have applied to filter out the cells that are part of the clouds.
-In this paper, we assume a minimal number density that defines the clouds' volume of $n_\mathrm{cloud}~=$~100~cm$^{-3}$.
-This means that, when focusing on the cloud-only matter, we only consider those cells with number densities $n \geq n_\mathrm{cloud}$.
+Another assumption that significantly influence the structure and evolution of VSFs is the (number) density threshold, $n_\mathrm{cloud}$, that is normally applied to filter out the cells that are part of the clouds.
+In this paper, we assume a minimal number density of $n_\mathrm{cloud}~=$~100~cm$^{-3}$.
+This means that, when focusing on the cloud-only gas, we only consider those cells with number densities $n \geq n_\mathrm{cloud}$.
 We have chosen this threshold as it roughly corresponds to the density when CO becomes detectable.
 
-However, \citetalias{IbanezMejia2017} show that there is usually no harsh jump in density between the ISM and the clouds. 
-Instead, the density increases continuously towards the centres of mass within the clouds. Consequently, introducing a density threshold is a rather artificially, weakly physically motivated distinction between the clouds and the ISM.
+However, \citetalias{IbanezMejia2017} show that there is usually no harsh increase in density between the ISM and the clouds. 
+Instead, the gas becomes continuously denser towards the centres of mass within the clouds. Consequently, introducing a density threshold is a rather artificial, physically weakly motivated distinction between the clouds and the ISM.
 Observationally, however, introducing a density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., sensibility of detector) or the nature of the underlying physical processes (for example, excitation rates, or critical density).
 Therefore, it is important to study to which extend a density threshold influences the VSF and its evolution.
 
-In Figs.~\ref{pic:results:zeta_all_rand} and~\ref{pic:results:z_all_rand} we show our measurements for $\zeta$ and $Z$, respectively, without introducing an density threshold.
-This means that we now do not only measure the relative velocities between cells that are part of the clouds' volume, but between cells within the entire 400$^3$ cell cut-outs that contain both the clouds and the ISM.
+In Figs.~\ref{pic:results:zeta_all}d and~\ref{pic:results:z_all}d we show the measured values of $\zeta$ and $Z$, respectively, that are derived from the data cubes without introducing an density threshold, meaning $n_\mathrm{cloud}~=$~0~cm$^{-3}$.
+This means that we now do not only calculate the relative velocities between cells that are part of the clouds' volume, but between cells within the entire 400$^3$ cell cut-outs that contain both the clouds and the ISM.
 For our calculations we apply the same methods as described in Sect.~\ref{methods}. 
-Yet, in order to reduce the computational effort we have chosen only a randomly positioned subset of cells within the entire cubes. 
-This means that the results shown here are based on 3,200,000 cells (=~5\% of the entire 400$^3$ cube).
-As the random selection of cells and the clouds make up only a small fraction of the volume within the cubes, this approach makes it more like to pick locations within the modelled ISM, rather than cells within the clouds. 
-Please note, that by doing so we only influence the choice of $\vec{x}$ in Eq.~(\ref{equ:method:def_vsf}), not $\vec{x+\ell}$ as we still compute the relative velocities relative to every other cell at 3D lag distance $\ell$ within the entire cube. 
+Yet, in order to reduce the computational effort we choose only a randomly positioned subset of 3,200,000 cells (=~5\% of the entire 400$^3$ cube) within the entire cubes as reference points, $\vec{x}$. 
+As the clouds make up only a small fraction of the volume within the cubes ($\approx$1.5\%), this approach makes it more like to pick locations within the modelled ISM, rather than cells within the clouds. 
+We emphasise that, by doing so, we only influence the choice of $\vec{x}$ in Eq.~(\ref{equ:method:def_vsf}), not $\vec{x+\ell}$ as we still compute the relative velocities relative to every other cell at 3D lag distance $\ell$ within the entire cube. 
 
-The figures clearly illustrate that the measurements in the samples without density threshold completely differ from those with the density threshold.
-Fig.~\ref{pic:results:zeta_all_rand} shows that the measured values of $\zeta$ are by far higher in the ISM than in the cloud-only sample.
-Furthermore, although we see a similar decline of $\zeta$ in \texttt{M4} and \texttt{M8} as the gas contracts under the influence of gravity in the vicinity of the clouds, $\zeta$ generally evolve differently here than what we have observed for the cloud-only matter.
-E.g., the pronounced features that have reflected the interactions between the clouds' mass and shock waves are either not as significantly visible or not present at all.
+Figs.~\ref{pic:results:zeta_all}d and~\ref{pic:results:z_all}d clearly illustrate that the measurements in the samples without density threshold completely differ from those with the density threshold.
+Fig.~\ref{pic:results:zeta_all}d shows that the measured values of $\zeta$ are by far higher in the ISM than in the cloud-only sample.
+Although we see a similar decline of $\zeta$ in \texttt{M4} and \texttt{M8} as the gas contracts under the influence of gravity in the vicinity of the clouds, $\zeta$ generally evolve differently here than what we have observed for the cloud-only matter.
+E.g., the pronounced features that have reflected the interactions between the clouds' gas and shock waves are either not as significantly visible or not present at all.
 We see a high rate of random fluctuations in the evolution of $\zeta$, as well.
-That those fluctuations really represent the turbulent nature of the ISM gas and not a super-position of multiple shocks, that are too weak to influence the compact clouds, becomes evident in the evolution of $Z$ (see Fig.~\ref{pic:results:z_all_rand}). 
-Contrary to all of our other test scenarios, all $Z$ here are constant in time and within all clouds, with values slightly lower than those predicted by \citet{She1994} for filamentary flows.
+Furthermore, contrary to all of our other test scenarios, we see here that all $Z$ are constant in time and within all clouds, with values slightly lower than those predicted by \citet{She1994} for filamentary flows.
 
 
 \subsection{The Effect of Density Weighting}\label{results:densweight}
 
-As mentioned previously, Eq.~(\ref{equ:method:def_vsf}) represents the definition of the density-weighted VSF.
-The density weighting is required for this study to account for obtaining smooth density distributions on Eulerian grids from the simulations, instead of using individual Lagrangian test particles (or eddies) as one is actually supposed to.
-Thus, a natural question to ask is how the two ansatzes compare with each other.
+As mentioned in Sect.~\ref{methods:vsf}, Eq.~(\ref{equ:method:def_vsf}) represents the definition of the density-weighted VSF.
+The density weighting is required for this study to account for obtaining the data from smooth density distributions on Eulerian grids, instead of using individual Lagrangian test particles (or eddies) as it is actually supposed to.
+Thus, the question is: How the two approaches compare with each other?
 There are a few studies that have targeted this question \rc{(ref!!!)}. 
-Yet all of them considered turbulent flows in sterile, homogeneous environments that are not comparable to our clouds.
+However, all of them considered turbulent flows in sterile, homogeneous environments that are not comparable to our clouds.
 Other studies, like \citet{Padoan2016a}, use both methods, but not on the same set of data. 
 
-In this section, we investigate the influence of density weighting on VSFs.
-For this, we repeat the analysis, but now using the non-weighted VSF as given by,
+In this section, we investigate the influence of density weighting on VSFs by repeating the original analysis with the non-weighted VSF given by,
 \begin{equation}
 	\mathit{S}_p (\ell) = \langle \, |\Delta \vec{v}|^p  \, \rangle = \langle \, |\vec{v}(\vec{x}) - \vec{v}(\vec{x} + \vec{\ell})|^p  \, \rangle .
     \label{equ:results:def_vsf_no}
 \end{equation}
-
-Figs.~\ref{pic:results:zeta_all_now} and~\ref{pic:results:z_all_now} show the measured values of $\zeta$ and $Z$ derived from the non-weighted VSFs based on the $\lambda~=~4\Delta x$, respectively.
+Figs.~\ref{pic:results:zeta_all}e and~\ref{pic:results:z_all}e show the measured values of $\zeta$ and $Z$ derived from the non-weighted VSFs, respectively.
 
 Comparing the weighted and non-weighted samples, we see the following:
-The non-weighted $\zeta$ (Fig.~\ref{pic:results:zeta_all_now}) and $Z$ (Fig.~\ref{pic:results:z_all_now}) trace the interactions between the gas of the clouds and the SN shocks in the same way as we have seen it for the density-weighted VSF.
-In \texttt{M3} and \texttt{M8} we also see that the values of $\zeta$ decrease as the clouds evolve. 
+The non-weighted $\zeta$ (Fig.~\ref{pic:results:zeta_all}e) and $Z$ (Fig.~\ref{pic:results:z_all}e) trace the interactions between the gas of the clouds and the SN shocks in the same way as we have seen it for the density-weighted VSF.
+In \texttt{M3} and \texttt{M8} we also see that the values of $\zeta$ decrease as the clouds evolve, yet not as fast as they do in the density-weighted VSFs. 
 The measurements in \texttt{M4}, however, are almost constant over time. 
 In all the cases, the values of $\zeta$ never cease below 0.5; a behaviour that clearly differs from what we have observed in the density-weighted VSFs.
 
-For the measured $Z$ values we see a similar behaviour. 
+We observe a similar behaviour for measured $Z$. 
 As before, they are almost constant over time and in good agreement with predicted values.
-The only derivations we see compared to the previous results are caused by the interactions between the clouds and incoming SN shock fronts, with levels of disturbance that are identical with our measurements using density-weighted VSFs. 
-Yet, the evolution of $Z$s is smoother here as we do not measure any sign inversion of $\zeta$.
-This means that we do not have any strong peaks in $Z$ indicating the time when most of the turbulent power is transferred to the small scales. 
+The only derivations we see compared to the previous results are caused by the interactions between the clouds and incoming SN shock fronts, with levels of disturbance that are similar to the measurements using density-weighted VSFs. 
+However, the evolution of $Z$s is smoother as there is no sign inversion of $\zeta$.
+This means that we do not have any strong peaks in $Z$ indicating the time when $\zeta(3)$ approaches 0, which happened when the majority of the turbulent power has been transferred to the small scales. 
 
-Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured with the density-weighted (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}) for all refinement levels.
+Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured with the density-weighted (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}) for all Jeans refinement levels.
 The figure clearly shows that the measurements only agree well for the highest refinement level with $\lambda~=~32\Delta x$.
-Yet we would need more data point to be sure that this correlation is indeed real.
-With lower refinement level the measurements correlate less well with each other. 
-However, the differences in the samples appear dominantly when the density-weighted $\zeta$ cease below $\approx$0.5, which is the global minimum for the non-weighted $\zeta$. 
-This means that none of the $\zeta$ computed in all clouds and refinement levels with the non-weighted VSF is measured to be below 0.5.
-Thus, we can trace the discrepancies between the scaling exponents of density-weighted and non-weighted VSFs back to the disability of the non-weighted VSFs to follow the transition form large-scale driven to small-scale dominated distributions of turbulent power. 
+however, we would need more data point to be sure that this correlation is indeed real.
+At lower refinement level the measurements correlate less well with each other. 
+The differences in the samples appear dominantly when the density-weighted $\zeta$ cease below $\approx$0.5, which is the global minimum for the non-weighted $\zeta$. 
+This means that none of the $\zeta$ computed in all clouds and refinement levels with the non-weighted VSF is measured to be below 0.5. 
 
 \begin{figure*}
 	\centering

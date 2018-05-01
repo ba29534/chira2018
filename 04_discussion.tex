@@ -1,28 +1,7 @@
 \section{Discussion}\label{discussion}
 
-The examples in Fig.~\ref{pic:results:vsf_example} illustrate how the clouds and their VSFs react to different scenarios that affect the turbulent structure of the entire clouds. 
-In Fig.~\ref{pic:results:vsf_example}a one sees the standard case where turbulence is fully developed, driven on large scales and decays to small scales.
-This is the dominant case within the first $\sim$1.5~Myr of the simulations.
-During this interval of time the clouds experience the effect of self-gravity for the first time in their evolution and need to adjust to this new condition.
-Until this is the case, their VSFs are dominated by the freely cascading turbulence that previously dominated the kinetic structure of the clouds.
-Furthermore, this implies that we can only reliably examine turbulence within the simulations after 1.5~Myr and carefully need to take this into account in the further discussion \citep[see][]{IbanezMejia2017,Seifried2017b}.
-
-The other examples represent the clouds at later stages of their evolution when the VSFs are dominated by sources that drive the turbulence within the clouds in a more extreme way.
-Fig.~\ref{pic:results:vsf_example}b shows the VSF of \texttt{M3} at a time when the cloud has just been hit by a supernova (SN) shock front. 
-One clearly sees how the amplitude of the VSFs is increased by one to two orders of magnitudes compared to the previous example.
-Especially the power of small scale turbulence ($\ell \lesssim$ few parsecs) is highly amplified as result of the shock, while it reduces the equivalent radius of the cloud.
-Despite the increase of turbulent power at small scales, there is a great amount of energy injected at large scales, as well.
-All this results in a steeper scaling of the VSF.
-However, the effect of SN shocks last for only a short period of time (see below).
-
-The last example, Fig.~\ref{pic:results:vsf_example}c, demonstrates the imprint of gravitational contraction.
-Here, the VSF is almost flat, or even slightly increasing towards smaller separation scales. 
-This kind of profile is typical for gas that is self-gravitationally contracting \citep{Boneberg2015,Burkhart2015} since gas moves into the inner regions of the cloud, reducing the average lag distances, but not necessarily the relative velocities.
-The latter may even be accelerated by the infall.
-As a consequence, large amounts of kinetic energy are transferred to smaller scales which flattens the corresponding VSF.
-
-These interpretations of the examples are verified by the entire time evolution of the clouds. 
-Fig.~\ref{pic:results:zeta_all_normal} shows that the measured $\zeta$ cease with time as the clouds contract under the influence of self-gravity.
+In Sect.~\ref{results} we have seen that the shape of VSFs measured for the gas of simulated molecular clouds evolves in the same way as the clouds themselves.
+For example, Fig.~\ref{pic:results:zeta_all}a demonstrates that the measured $\zeta$ cease with time as the clouds contract under the influence of self-gravity.
 This is evident as the density and boundness of the clouds increases with as, as well as further gas falls into them \citepalias{IbanezMejia2017}.
 
 However, one also sees peaks in the profiles of $\zeta$ that represent a temporary deviation from the global evolution of the clouds.
@@ -30,12 +9,12 @@ The origin of these features can easily be traced back to the SNe occurring in t
 To visualise this better, we add marks to Fig.~\ref{pic:results:zeta_all} that represent the times when the SNe explode and the periods of time when the clouds are heavily accreting gas.
 The data are taken from \citetalias{IbanezMejia2017}, where mean distances between the sites of SNe and the centres of the clouds can also be found.
 Considering that the SNe shock fronts move at speeds of 50--100~km~s$^{-1}$ through the ISM and with distances between 30--100~pc to the clouds, the shocks need around 1~Myr, on average, to reach the clouds.
-Thus, one cannot only relate the major gas accretion events of the clouds to the arrival of those SNe that indeed affect the evolution of the clouds, but also all significant variations in the evolution of $\zeta$.
-In most of the cases, the SNe inject turbulent power into the systems which amplifies the VSFs at all scales, but in particular the large scales.
-The latter causes an elevation of $\zeta$.
-Yet, the interaction between the clouds and the shocks lasts only for less than 0.6~Myr, after which $\zeta$ evolves back into the pre-shock conditions
+Thus, one cannot only relate the major gas accretion events of the clouds to the arrival of those SNe, that indeed affect the evolution of the clouds, but also all significant variations in the evolution of $\zeta$.
+In most of the cases, the SNe inject turbulent power into the systems.
+This amplifies the VSFs at all scales, but in particular the large scales, causing an elevation of $\zeta$.
+However, the interaction between the clouds and the shocks lasts only for less than 0.6~Myr, after which $\zeta$ evolves back into the pre-shock conditions
 
-The behaviour of \texttt{M8} appears to contradict the explanations we have given for the evolution of turbulence within \texttt{M3} and \texttt{M4}.
+The behaviour of \texttt{M8} appears to contradict the explanations we have given for the evolution within \texttt{M3} and \texttt{M4}.
 However, looking at \texttt{M8} in detail this is not the case.
 \citetalias{IbanezMejia2017} show in their Fig.~5 that \texttt{M8} does not react as strongly to the onset of self-gravity as the other clouds do.
 For example, the mass of \texttt{M8} remains almost constant for the first megayear while the other clouds strongly accrete gas from the ISM.
@@ -45,47 +24,46 @@ In the beginning, \texttt{M8} evolves only slightly.
 It loses a small fraction of gas \citepalias[Fig.~5, \textit{middle} panel]{IbanezMejia2017}.
 Therefore, the VSFs increase towards larger separations.
 At $t$~=~1.5~Myr the shock front of the $t$~=~0.8~Myr SN hits the cloud.
-That causes a short periods of extreme gravitational collapse, traced by the dip in $\zeta$.
+That causes a short period of extreme gravitational collapse, traced by the dip in $\zeta$.
 As in the other clouds, the gas relaxes rapidly after the shock.
-However, the cloud continues to gravitationally contract in a more regular way.
+However, the interaction with the shock the cloud has introduced instability into the clouds that continues to gravitationally contract in a more regular way.
 That is seen as slow decrease of $\zeta$ from $t$~=~1.8~Myr on. 
 
-In summary, one can say that the scaling exponent, $\zeta$, that is obtained by fitting a power-law relation onto the measured velocity structure function, is a useful tool to understand and evaluate the time evolution of turbulence within molecular clouds. 
+In summary, one can say that the scaling exponent, $\zeta$, that is obtained by fitting a power-law relation onto the measured VSF, is a useful tool to understand and evaluate the time evolution of turbulence within molecular clouds. 
 It is not only sensitive to both external (SNe) and internal (gravitational collapse) driving sources, but also reacts differently to the individual driving sources. 
 
 However, this diagnostic requires a series of time steps to be significant.
 According to \citet{She1994} and \citet{Boldyrev2002}, $\zeta$(3) is supposed to be equal or larger than unity whenever the gas experiences supersonic turbulence.
-Although this is definitely the case in the model clouds \citepalias{IbanezMejia2016,IbanezMejia2017}, one sees that $\zeta$(3) declines far below 1 due to gravitational collapse.
+Although this is definitely the case in the simulated clouds \citepalias{IbanezMejia2016,IbanezMejia2017}, one sees that $\zeta$(3) declines far below 1 due to gravitational collapse.
 Thus, measuring $\zeta$ for individual moments in time, as observations would do, cannot fully describe the turbulence of molecular clouds.
 
 The principle of "extended self-similarity" \citep[Sect.~\ref{methods:vsf}]{Benzi1993} offers a solution to this problem.
 The principle reflects the nature and the properties of intercloud turbulence, even when it is dominated by gravitational collapse.
-However, we also detect strong deviations that either reduce or increase the measured values of $Z$.
+However, we also detect strong deviations that either reduce or increase the measured values of $Z$ (see Fig.~\ref{pic:results:z_all}a).
 Those derivations can be related to the physical forces that currently dominate the clouds.
 
-We observe a similar behaviour in the time evolution of the self-similarity parameter $Z(p) = \zeta(p) / \zeta(3)$, shown in Fig.~\ref{pic:results:z_all_normal}.
-The peaks in the $Z$ (for example, in \texttt{M4} at $t$~=~4.1~Myr) occur at the times when the scaling exponents of the VSFs, $\zeta$, reach values close or below 0.
-That means that the VSF becomes flat ($\zeta$~=~0) or increases forward smaller scales ($\zeta~<~0$). 
-In this case, self-gravitational contraction clearly dominates the cloud's evolution.
-It transfers the majority of turbulent power from the large to the small scales, where filaments and fragments are forming and accreting gas.
+The peaks in the $Z$ (for example, in \texttt{M4} at $t$~=~4.1~Myr) occur at the times when the respective $\zeta(3)$ reaches values close or below 0.
+This means that the VSF becomes flat ($\zeta$~=~0) or increases forward smaller scales ($\zeta~<~0$). 
+In this case, self-gravitational contraction clearly dominates the cloud's evolution as it transfers turbulent power from the large to the small scales, where filaments and fragments are forming and accreting gas.
+
 The decrease in $Z$ (for example, in \texttt{M3} around $t$~=~1.8~Myr), on the other hand, occur when SN shocks hit and heavily impact the clouds. 
 This causes a sudden, but heavy increase of turbulent power on all scales, though on the larger scales more than on the smaller, resulting in a steepening of the VSF towards larger scales and an increase in $\zeta$.
 The VSFs become more sensitive to the shock the higher their order is.
 Therefore, the $\zeta(3)$ increases more rapidly than $\zeta(2)$ and $\zeta(1)$, causing $Z(2)$ and $Z(1)$ to decrease.
 
 In summary, $Z$ is not as sensitive to gravitational contraction as $\zeta$, although it is very sensitive to the inversion of scales that are dominant in turbulent power.
-It also traces the impact of SN shocks on the clouds.
+However, it traces the impact of SN shocks on the clouds.
 Whenever neither of these two extreme scenarios is acting on the clouds, the values of $Z$ are close to the predicted values (see discussion below).
 This means that $Z$ is, as $\zeta$, a good tracer for the dominant forces driving the turbulence within the cloud, both internally and externally, as long as they are heavily impacting the cloud.
 The disadvantage is that one cannot use $Z$ to distinguish between freely-floating fully-developed and moderate gravitational contraction, as one can do it with $\zeta$.
 However, the advantage is that a single-epoch observation of $Z$ is sufficient to trace extreme motions and driving sources within observed molecular clouds.
 
-At the times when the clouds are not impacted by the above described extreme cases, one sees that the ratio of the VSF scaling exponents is mostly in agreement with predicted values for self-similar turbulence, although the clouds are dominated by gravitationally contracting motions during their evolution.
-The measured $Z$, thereby, do not uniquely follow the predictions of only \citet{Boldyrev2002} or \citet{She1994}, but are normally between the predicted values of both theories. 
+Whenever the turbulence within the clouds is not driven in an extreme way one sees that the ratio of the VSF scaling exponents is mostly in agreement with predicted values for self-similar turbulence, although the clouds are dominated by gravitationally contracting motions during their evolution.
+The measured $Z$, thereby, do not uniquely follow the predictions of only \citet{Boldyrev2002} or \citet{She1994}, but are normally between both the predicted values.
 Recalling that both studies describe supersonic, fully developed turbulent flows, the only difference between them are the different geometries along which they allow the gas to flow.
 In the case of \citet{Boldyrev2002}, the gas flows are sheet-like, while they are filamentary in the work by \citet{She1994}.
 
-Since \texttt{M3} is heavily impacted by many SN shocks and heavy collapse motions, it does not allow us to make strong predictions about its 'steady-state' evolution.
+Since \texttt{M3} is heavily impacted by many SN shocks and strong collapsing motions, it does not allow us to make strong predictions about its 'steady-state' evolution.
 The other two clouds, on the contrary, are less externally impacted.
 This allows us to relate the developments of measured $Z$ to the internal evolution of the clouds.
 In \texttt{M8}, $Z$ follows the predictions by \citet{She1994} for most of the cloud's evolution. 
@@ -203,8 +181,12 @@ As mentioned previously, applying a density threshold is often unavoidable as it
 In observational studies it is even always present as minimal collision rates for excitation or the sensitivity of detectors automatically result in implicit intensity and density thresholds. 
 Although we have only tested two specific setups in this context we have seen the significance of a proper choice of the density threshold, as well as a proper discussion of the obtained results considering the used threshold as one of the defining parameters.
 
+\rc{That those fluctuations really represent the turbulent nature of the ISM gas and not a super-position of multiple shocks, that are too weak to influence the compact clouds, becomes evident in the evolution of $Z$ (see Fig.~\ref{pic:results:z_all}d). }
+
 
 \subsection{The Effect of Density Weighting}\label{discussion:densweight}
+
+\rc{Thus, we can trace the discrepancies between the scaling exponents of density-weighted and non-weighted VSFs back to the disability of the non-weighted VSFs to follow the transition form large-scale driven to small-scale dominated distributions of turbulent power.}
 
 In this subsection, we discuss the effect the ambiguous definition of VSFs has on the measurements. 
 With this we mean that the VSF can be computed with or without taking density weighting into account.
