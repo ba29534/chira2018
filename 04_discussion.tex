@@ -149,22 +149,13 @@ Yet, $Z$ remains a fine probe for the geometry of turbulence and the scales at w
 
 \subsection{The Effect of Density Thresholds}\label{discussion:densthres}
 
-\jcim{Move to results: 
-In Sect.~\ref{results:densthres} we have tested the influence of the density threshold that defines the volume of interest on the behaviour of the VSF.
-In this particular case, we normally define the clouds as volumes of connected gas cells with number densities above a certain value, n$_\mathrm{cloud}$.
-In our case, we choose n$_\mathrm{cloud}$~=~100~cm$^{-3}$.
-Although this approach is in agreement with typical post-processing methods of observational data, by doing so we work with $\leq$1.5\% of the cubes' volumes only.}
-
-\jcim{Removing the density threshold, by setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$, would mean that we analyse the data of the entire data cubes.
-As this would be too computational expensive, we randomly choose a set of 5\% of the total number of cells as reference points and compute relative velocities to these cells only (see Sect.~\ref{results:densthres}).
-We emphasise that this does not mean that we only calculate the relative velocities between those 5\% of cells.
-Rather this subsample of cells represent the starting vectors $\vec{x}$ to which the velocities of all other cells  $\vec{x} + \vec{\ell}$ in the same cube are compared to.
-This way we reduce the risk of ignoring or emphasising any spatial direction or angle.}
-
-\jcim{Furthermore, note that by choosing the starting points randomly we ensure that all parts of the cubes are considered. 
-As a consequence, there is only a little likelihood (5\%~$\times$~1.5\%~=~0.075\%) that cells that are associated with the clouds are chosen.
-Therefore, we emphasise that it is likely that the two subsamples (no density threshold and cloud-only) do not necessarily have a common subset of starting vectors.
-Yet, as we here still calculate relative velocities to all other cells in the cube, and that includes all cells making up the clouds, the resulting VSFs of the n$_\mathrm{cloud}$~=~0~cm$^{-3}$ sample also consists of most of the information of the inner-cloud interactions.}
+\textbf{In Sect.~\ref{results:densthres} we have tested the influence of the density threshold that defines the volume of interest on the behaviour of the VSF.
+In the work presented in this paper, we normally define the clouds as volumes of connected gas cells with number densities above n$_\mathrm{cloud}$~=~100~cm$^{-3}$.
+Although this approach is in agreement with typical post-processing methods of observational data, it also means that we analyse only $\leq$1.5\% of the cubes' volumes, ignoring the more diffuse parts at the outer rims of the molecular clouds and the ISM.
+This raises the question: Are the turbulent motions within the entire ISM and the denser molecular clouds driven by the same processes?
+For targeting this question we have repleated our analysis and set n$_\mathrm{cloud}$~=~0~cm$^{-3}$.
+Figs.~\ref{pic:results:zeta_all}d and~\ref{pic:results:z_all}d illustrate the results.
+}
 
 We see that the structure and behaviour of VSFs strongly depends on whether or not there is a density threshold. 
 In the previous case, where n$_\mathrm{cloud}$~=~100~cm$^{-3}$, we have seen a mostly straight decline of $\zeta$ and a rather constant evolution of $Z$ over time that reflect the contraction of the clouds due to self-gravity.
