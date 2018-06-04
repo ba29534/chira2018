@@ -141,9 +141,22 @@ This means that, when focusing on the cloud-only gas, we only consider those cel
 We have chosen this threshold as it roughly corresponds to the density when CO becomes detectable.
 
 However, \citetalias{IbanezMejia2017} show that there is usually no harsh increase in density between the ISM and the clouds. 
-Instead, the gas becomes continuously denser towards the centres of mass within the clouds. Consequently, introducing a density threshold is a rather artificial, physically weakly motivated distinction between the clouds and the ISM.
+Instead, the gas becomes continuously denser towards the centres of mass within the clouds. 
+Consequently, introducing a density threshold is a rather artificial, physically weakly motivated distinction between the clouds and the ISM.
 Observationally, however, introducing a density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., sensibility of detector) or the nature of the underlying physical processes (for example, excitation rates, or critical density).
 Therefore, it is important to study to which extend a density threshold influences the VSF and its evolution.
+
+\textbf{Furthermore, this approach considers only $\leq$1.5\% of the cubes' volumes.
+Removing the density threshold, by setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$, would results in analysing the data of the entire data cubes.
+As this would be too computational expensive for the test scenario we present here, we randomly choose a set of 5\% of the total number of cells as reference points and compute relative velocities to these cells only.
+We emphasise that this does not mean that we only calculate the relative velocities between those 5\% of cells.
+Rather this subsample of cells represent the starting vectors $\vec{x}$ to which the velocities of all other cells $\vec{x} + \vec{\ell}$ in the same cube are compared to.
+This way we reduce the risk of ignoring or emphasising any spatial direction or angle.}
+
+\textbf{Note that by choosing the starting points randomly we ensure that all parts of the cubes are considered. 
+As a consequence, there is only a little likelihood (5\%~$\times$~1.5\%~=~0.075\%) that cells that are associated with the clouds are chosen.
+Therefore, we emphasise that it is likely that the two subsamples (no density threshold and cloud-only) do not necessarily have a common subset of starting vectors.
+Yet, as we here still calculate relative velocities to all other cells in the cube, and that includes all cells making up the clouds, the resulting VSFs of the n$_\mathrm{cloud}$~=~0~cm$^{-3}$ sample also consists of most of the information of the inner-cloud interactions.}
 
 In Figs.~\ref{pic:results:zeta_all}d and~\ref{pic:results:z_all}d we show the measured values of $\zeta$ and $Z$, respectively, that are derived from the data cubes without introducing an density threshold, meaning $n_\mathrm{cloud}~=$~0~cm$^{-3}$.
 This means that we now do not only calculate the relative velocities between cells that are part of the clouds' volume, but between cells within the entire 400$^3$ cell cut-outs that contain both the clouds and the ISM.
