@@ -3,7 +3,7 @@
 
 \subsection{Cloud models}\label{methods:clouds}
 
-\rc{[general comment: In this sub-section I basically copied the descriptions we have used in the previous paper. I am not sure whether the summary given here in to short as I also wanted to provide a summary of the work we have done with the data already. I would appreciate what you think about the structure of this subsection.]}
+%\rc{[general comment: In this sub-section I basically copied the descriptions we have used in the previous paper. I am not sure whether the summary given here in to short as I also wanted to provide a summary of the work we have done with the data already. I would appreciate what you think about the structure of this subsection.]}
 
 The analysis in this paper is based on a sample of three molecular clouds (MCs) found within a three-dimensional (3D) magnetohydrodynamics~(MHD), adaptive mesh refinement~(AMR) numerical simulation by \citet{IbanezMejia2016}, using the FLASH code \citep{Fryxell2000}.
 \citet[hereafter \citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}, respectively]{IbanezMejia2016,IbanezMejia2017} and \citet[hereafter \citetalias{Chira2018}]{Chira2018} describe the simulations and the clouds in more details. 
@@ -32,10 +32,10 @@ In this paper, we focus on the driving sources of turbulence within the simulate
 
 \subsection{Velocity Structure Functions}\label{methods:vsf}
 
-We probe the power distribution of turbulence throughout the entire simulated MCs by using the so-called velocity structure function (VSF).
-The VSF is a two-point correlation function that measures the mean velocity difference, $\Delta \vec{v} = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})$, between two grid cells $\vec{x}$ and $\vec{x}+\vec{\ell}$ (with $\vec{\ell}$ being the direction vector pointing from the first to the second cell), to the $p^\mathrm{th}$ power as function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
+We probe the power distribution of turbulence throughout the entire simulated MCs by using the velocity structure function (VSF).
+The VSF is a two-point correlation function that measures the mean velocity difference, $\Delta \vec{v} = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})$, between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$ (with $\vec{\ell}$ being the direction vector pointing from the first to the second cell), to the $p^\mathrm{th}$ power as function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
 Thereby, the VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events of random turbulent flows (e.g., SNe) in velocity patterns.
-Those patterns become more prominent the higher order $p$ is \citep{Heyer2004}.
+Those patterns become more prominent the higher the order $p$ is \citep{Heyer2004}.
 
 For data on an Eulerian grid, such as ours, the density-weighted definition of the VSF, $\mathit{S}_p$, is given by
 \begin{equation}
@@ -44,10 +44,10 @@ For data on an Eulerian grid, such as ours, the density-weighted definition of t
 \end{equation}
 \citep[and references within]{Padoan2016a}.
 With this definition one can see that each order of the VSF has a physical meaning. 
-For example, $\mathit{S}_1$ is to the mean relative velocities between cells, reflecting the modes created by different gas flows.
+For example, $\mathit{S}_1$ is to the mean relative velocities between \textbf{two cells}, reflecting the modes created by different gas flows.
 $\mathit{S}_2$ is proportional to the kinetic energy, making it a good probe of how the turbulent energy is transported to different scales.
 
-If the turbulence is fully developed the VSF is supposed to be well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
+\texbf{For fully developed} turbulence is fully developed the VSF is supposed to be well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
 \begin{equation}
 	\mathit{S}_p (\ell) \propto \ell^{\zeta(p)} .
     \label{equ:method:propto_zeta}
@@ -59,10 +59,10 @@ This and the fact that those components are observationally very hard to differe
 
 There are some theoretical studies that predict values of $\zeta$ depending on the nature of turbulence and the order $p$.
 For example, \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal unity for an incompressible, transonic flow.
-This results in the commonly known prediction that the kinetic energy decays with $E_k(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
+This results in the commonly known prediction that the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 
 For a supersonic flow, however, it is always supposed to be greater or equal to unity.
-Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} have extended and generalised the analysis and predict the following.
+Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following.
 For an incompressible filamentary flow \citet{She1994} predict that the VSFs scale with,
 \begin{equation}
 	\zeta_\mathrm{She}(p) = \frac{p}{9} + 2 \left[ 1 - \left( \frac{2}{3} \right)^{\frac{p}{3}} \right] = Z_\mathrm{She}(p) ,
@@ -73,13 +73,13 @@ while supersonic flows with sheet-like geometry are supposed to scale with \cite
 	 \zeta_\mathrm{Boldyrev}(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}} = Z_\mathrm{Boldyrev}(p) .
     \label{equ:method:boldyrev}
 \end{equation}
-\citet{Benzi1993} have introduced the principle of "extended self-similarity".
-It proposes that there is a constant relationship between the scaling exponents of different orders on all lag scales. Normally, the self-similarity parameter, $Z$, normally refers to the 3$^mathrm{rd}$ order VSF and is given by:
+\citet{Benzi1993} introduced the principle of "extended self-similarity".
+It proposes that there is a constant relationship between the scaling exponents of different orders on all lag scales. Normally, the self-similarity parameter, $Z$, normally refers to the 3$^\mathrm{rd}$ order VSF and is given by:
 \begin{equation}
 	Z(p) = \frac{\zeta(p)}{\zeta(3)} .
 	\label{equ:method:z_def}
 \end{equation} 
-Since the mentioned predictions of $\zeta(p)$ are normalised in a way that $\zeta(3)$~=~1 Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) also provide the predictions for $Z(p)$, respectively.
+Since \textbf{the predicted values for $\zeta(p)$ by \citet{She1994} and \citet{Boldyrev2002}} are normalised in a way that $\zeta(3)$~=~1 Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) also provide the predictions for $Z(p)$, respectively.
 
 For the discussion below, we measure $\zeta$ by fitting a power-law, given by
 \begin{equation}
@@ -87,7 +87,7 @@ For the discussion below, we measure $\zeta$ by fitting a power-law, given by
     \label{equ:method:fitting}
 \end{equation}
 with $A$ being the proportionality factor of the power-law to the simulated measurements.
-For the calculations, we only take those cells with a minimal number density of 100~cm$^{-3}$ into account as this threshold defines the volume of the clouds.
+For the calculations, we only take cells with a minimal number density of 100~cm$^{-3}$ into account as this threshold defines the volume of the clouds.
 For reducing the computational effort we divide the range of 3D lag distances, $\ell$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
 This means that the measurements at the given lag interval $\ell_i$ we will show below base on the data with lag distances $\ell_{i-1} < \ell \leq \ell_i$.
 
@@ -110,13 +110,13 @@ Instead they are composed of roughly three different regimes:
 one at small scales at $\ell \lesssim$~3~pc, a second one within 3~pc~$\lesssim \ell \lesssim$~10--15~pc, and the last one at large scales with $\ell >$~15~pc.
 Therefore, only the small and intermediate ranges may be represented by a common power-law relation.
 On larger scales, one observes a local minimum before the VSFs either increase or stagnate.
-The location of the minimum, thereby, coincides with the equivalent radius of the cloud, meaning the radius a cloud of given mass would have if it would be a sphere.
+The location of the minimum coincides with the equivalent radius of the cloud, meaning the radius a cloud of given mass would have if it would be a sphere.
 Thus, in this context the VSF is an accurate tool to measure the size of a molecular cloud.
 On smaller scales, which correspond to individual clumps and cores, one sees significant differences.
 
 The examples in Fig.~\ref{pic:results:vsf_example} illustrate how the clouds and their VSFs react to different scenarios that affect the turbulent structure of the entire clouds. 
-In Fig.~\ref{pic:results:vsf_example}a one sees the standard case where turbulence is fully developed, driven on large scales and decays to small scales.
-This is the dominant case within the first $\sim$1.5~Myr of the simulations.
+\textbf{Fig.~\ref{pic:results:vsf_example}a shows the case where turbulence is driven on large scales and naturally decays towards smaller scales.
+This is the most common behavior seen in all three MCs within the first $\sim$1.5~Myr of the simulations.}
 During this interval of time the clouds experience the effect of self-gravity for the first time in their evolution and need to adjust to this new condition.
 Until this is the case, their VSFs are dominated by the freely cascading turbulence that previously dominated the kinetic structure of the clouds.
 Furthermore, this implies that we can only reliably examine turbulence within the simulations after 1.5~Myr and carefully need to take this into account in the further discussion \citep[see][]{IbanezMejia2017,Seifried2017b}.
@@ -124,7 +124,7 @@ Furthermore, this implies that we can only reliably examine turbulence within th
 The other examples represent the clouds at later stages of their evolution when the VSFs are dominated by sources that drive the turbulence within the clouds in a more extreme way.
 Fig.~\ref{pic:results:vsf_example}b shows the VSF of \texttt{M3} at a time when the cloud has just been hit by a supernova (SN) shock front. 
 One clearly sees how the amplitude of the VSFs is increased by one to two orders of magnitudes compared to the previous example.
-Especially the power of small scale turbulence ($\ell \lesssim$ few parsecs) is highly amplified as result of the shock, while it reduces the equivalent radius of the cloud.
+Especially the power of small scale turbulence ($\ell \lesssim$ few parsecs) is highly amplified \textbf{as a result of the shock, while reducing} the equivalent radius of the cloud.
 Despite the increase of turbulent power at small scales, there is a great amount of energy injected at large scales, as well.
 All this results in a steeper scaling of the VSF.
 However, the effect of SN shocks last for only a short period of time (see below).
