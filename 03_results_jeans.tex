@@ -17,7 +17,6 @@ These features only last for short periods of time (up to 0.6~Myr), but set in q
       \includegraphics[width=\textwidth]{zeta_all_nojeans.pdf}
       \label{pic:results:zeta_all_nojeans}
   \end{subfigure}
-  
   \begin{subfigure}[c]{\textwidth}
       \addtocounter{subfigure}{4}
       \includegraphics[width=\textwidth]{zeta_jeans.pdf}
@@ -150,10 +149,10 @@ The only derivations we see compared to the previous results are caused by the i
 However, the evolution of $Z$s is smoother as there is no sign inversion of $\zeta$.
 This means that we do not have any strong peaks in $Z$ indicating the time when $\zeta(3)$ approaches 0, which happened when the majority of the turbulent power has been transferred to the small scales. 
 
-Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured with the density-weighted (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}) for all Jeans refinement levels.
+Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured with the density-weighted (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}) for all Jeans refinement levels \textbf{(meaning the granularity used for modelling the turbulent motions of the gas, see Sect.~\ref{results:refinement} for more details)}.
 The figure clearly shows that the measurements only agree well for the highest refinement level with $\lambda~=~32\Delta x$.
-however, we would need more data point to be sure that this correlation is indeed real.
-At lower refinement level the measurements correlate less well with each other. 
+However, we would need more data point to be sure that this correlation is indeed real.
+At lower refinement level the measurements\textbf{, as those used for the standard analysis and all other test scenarios but the one presented in Sect.~\ref{results:refinement},} correlate less well with each other. 
 The differences in the samples appear dominantly when the density-weighted $\zeta$ cease below $\approx$0.5, which is the global minimum for the non-weighted $\zeta$. 
 This means that none of the $\zeta$ computed in all clouds and refinement levels with the non-weighted VSF is measured to be below 0.5. 
 
@@ -206,8 +205,8 @@ Besides this, the time evolution of $Z$ based on the $\lambda_J$~=~$8\Delta{}x$ 
 The divergence which is produced when gravity has transferred the majority of power to smaller scales occurs at the same time. 
 Thereby, the depth of the sink is a numerical artefact caused by $\zeta(3)$ being equal or close to 0 at this very time step. 
 
-The picture changes when we analyse the VSFs based on the $\lambda_J$~=~$32\Delta{}x$ runs (Figs.~\ref{pic:results:zeta_all}c,~\ref{pic:results:z_all}c, and~\ref{pic:results:jeans_comp}).
-Here one sees that the measured values of both $\zeta$ (Fig.~\ref{pic:results:zeta_all}c) and $Z$ (Fig.~\ref{pic:results:z_all}c) are similar to those for $\lambda_J$~=~$4\Delta{}x$ for the first 0.2~Myr.
+The picture changes when we analyse the VSFs based on the $\lambda_J$~=~$32\Delta{}x$ runs (Figs.~\ref{pic:results:zeta_all}e,~\ref{pic:results:z_all}e, and~\ref{pic:results:jeans_comp}).
+Here one sees that the measured values of both $\zeta$ (Fig.~\ref{pic:results:zeta_all}e) and $Z$ (Fig.~\ref{pic:results:z_all}e) are similar to those for $\lambda_J$~=~$4\Delta{}x$ for the first 0.2~Myr.
 After this short period, though, the evolutions of $\zeta$ diverge. 
 While $\zeta(1)$ and $\zeta(2)$ continue to decrease in similar, but on lower rates compared to $\lambda_J$~=~$4\Delta{}x$, $\zeta(3)$ increases until it peaks at $t$~=~0.8~Myr and falls steeply down again.
 This divergence has notable impact on the evolution of $Z$, as well. 
