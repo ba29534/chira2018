@@ -53,10 +53,10 @@ the velocity structure function (VSF).
 We probe the power distribution of turbulence throughout the entire simulated MCs by using the VSF.
 The VSF is a two-point correlation function 
 %mm [insert definition]
-\begin{definition}
-	$\mathit{S}_p (\vec{\ell}) = |\Delta \vec{v} (\vec{\ell})|^p $,
+\begin{equation}
+	{S}_p (\ell) = |\Delta \vec{v} (\vec{\ell})|^p ,
     \label{equ:method:def_vsf}
-\end{definition}
+\end{equation}
 that measures the mean velocity difference, $\Delta \vec{v} (\vec{\ell}) = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})$, between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$ (with $\vec{\ell}$ being the direction vector pointing from the first to the second point), to the $p^\mathrm{th}$ power as function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
 The VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events in random turbulent flows (e.g., SNe) in velocity patterns.
 Those patterns become more prominent the higher the order $p$ is \citep{Heyer2004}.
@@ -64,7 +64,7 @@ Those patterns become more prominent the higher the order $p$ is \citep{Heyer200
 %mm For data on an Eulerian grid, such as ours, the density-weighted definition of the VSF, $\mathit{S}_p$, is given by
 \citet{Padoan2016a} defined a density-weighted structure function
 \begin{equation}
-	\mathit{S}^d_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle}.
+	{S}^d_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle}.
     \label{equ:method:def_vsf_dw}
 \end{equation}
 %mm With this definition one can see that each order of the VSF has
