@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{36}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ballesteros-Paredes}
@@ -30,11 +30,20 @@
 \bibitem[{{Boldyrev}(2002)}]{Boldyrev2002}
 {Boldyrev}, S. 2002, \apj, 569, 841
 
+\bibitem[{{Boneberg} {et~al.}(2015){Boneberg}, {Dale}, {Girichidis}, \&
+  {Ercolano}}]{Boneberg2015}
+{Boneberg}, D.~M., {Dale}, J.~E., {Girichidis}, P., \& {Ercolano}, B. 2015,
+  \mnras, 447, 1341
+
 \bibitem[{{Brunt} \& {Heyer}(2013)}]{Brunt2013}
 {Brunt}, C.~M. \& {Heyer}, M.~H. 2013, \mnras, 433, 117
 
 \bibitem[{{Brunt} {et~al.}(2009){Brunt}, {Heyer}, \& {Mac Low}}]{Brunt2009}
 {Brunt}, C.~M., {Heyer}, M.~H., \& {Mac Low}, M.-M. 2009, \aap, 504, 883
+
+\bibitem[{{Burkhart} {et~al.}(2015){Burkhart}, {Collins}, \&
+  {Lazarian}}]{Burkhart2015}
+{Burkhart}, B., {Collins}, D.~C., \& {Lazarian}, A. 2015, \apj, 808, 48
 
 \bibitem[{{Chira} {et~al.}(2018){Chira}, {Kainulainen},
   {Ib{\'a}{\~n}ez-Mej{\'{\i}}a}, {Henning}, \& {Mac Low}}]{Chira2018}

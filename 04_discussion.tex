@@ -1,6 +1,8 @@
 \section{Discussion}\label{discussion}
 
-In Sect.~\ref{results} we have seen that the shape of VSFs measured for the gas of simulated molecular clouds evolves in the same way as the clouds themselves.
+\subsection{Time Evolution}\label{discussion:normal}
+
+In Sect.~\ref{results_normal} we have seen that the shape of VSFs measured for the gas of simulated molecular clouds evolves in the same way as the clouds themselves.
 For example, Fig.~\ref{pic:results:zeta_all}a demonstrates that the measured $\zeta$ cease with time as the clouds contract under the influence of self-gravity.
 This is evident as the density and boundness of the clouds increases \textbf{as} further gas falls into them \citepalias{IbanezMejia2017}.
 
@@ -120,33 +122,6 @@ Future studies need to investigate this point in more detail by performing elabo
 
 
 
-\subsection{The Effect of Jeans Length Refinement}\label{discussion:refinement}
-
-In Sect.~\ref{results:refinement}, we have motivated the need to investigate the influence of Jeans refinement on VSFs.
-In particular, we examine how the choice of using the minimal required refinement compares to a generally recommended refinement level, including the differences in total energy and resonances seen in the power spectra. 
-To do this, we use the data by \citetalias{IbanezMejia2017} that resolve the Jeans length in \texttt{M3} twice ($\lambda_J$~=~$8\Delta{}x$) and eight times ($\lambda_J$~=~$32\Delta{}x$) finer as the original simulations ($\lambda_J$~=~$4\Delta{}x$).
-
-In Fig.~\ref{pic:results:jeans_comp} we see that the choice of refinement level does not have to have a significant influence on the measurements and evolution of both $\zeta$ and $Z$. 
-$\lambda_J$~=~$4\Delta{}x$ and $\lambda_J$~=~$8\Delta{}x$ are in very good agreement with each other.
-This means that, although refining Jeans lengths with 4~cells misses about 13\% of kinetic energy, the effect on the structure and behaviour of the turbulence is rather small and not traced by the VSF analysis.
-
-However, Fig.~\ref{pic:results:jeans_comp} shows that such an agreement is not given with $\lambda_J$~=~$32\Delta{}x$, as latter differs more from $\lambda_J$~=~$4\Delta{}x$ the higher the order of the VSF is.
-Following the explanations in Sect.~\ref{results:refinement}, the behaviour of $\zeta$ and $Z$ in the $\lambda_J$~=~$32\Delta{}x$ runs corresponds to the reaction of the cloud's gas to a shock wave running through the cloud; caused by a supernova that exploded before $t$~=~0~Myr. 
-Indeed one sees a SN at a distance of 172~pc at $t$~=~-1.11~Myr. 
-Due to the distance the SN is too weak to effectively compress the gas within \texttt{M3} and causing a shock.
-This is why it has not been detected previously in the less refined samples.
-However, the SN explodes far below the mid-plane of the simulated disk galaxy, in a region without dense gas.
-This means that the shock wave, that has been injected by the explosion, is less damped as it propagates through the ISM. 
-By the time the front arrives at \texttt{M3} it is still energetic enough to drive strong winds, with velocities above 300~km~s$^{-1}$, at the closer edge of the cloud. 
-This causes an increase of VSFs at longer lag scales and the increase of $\zeta$, as well as the drop in $Z$.
-
-Derivations of measured $Z$ to predicted values do trace external turbulent driving.
-Whether the source is a SN shock front propagating through the cloud or a strong wind, cannot be distinguished by $Z$ only. 
-Yet, $Z$ remains a fine probe for the geometry of turbulence and the scales at which turbulence is driven.
-
-
-
-
 \subsection{The Effect of Density Thresholds}\label{discussion:densthres}
 
 \textbf{In Sect.~\ref{results:densthres} we have tested the influence of the density threshold that defines the volume of interest on the behaviour of the VSF.
@@ -154,7 +129,7 @@ In the work presented in this paper, we normally define the clouds as volumes of
 Although this approach is in agreement with typical post-processing methods of observational data, it also means that we analyse only $\leq$1.5\% of the cubes' volumes, ignoring the more diffuse parts at the outer rims of the molecular clouds and the ISM.
 This raises the question: Are the turbulent motions within the entire ISM and the denser molecular clouds driven by the same processes?
 For targeting this question we have repleated our analysis and set n$_\mathrm{cloud}$~=~0~cm$^{-3}$.
-Figs.~\ref{pic:results:zeta_all}d and~\ref{pic:results:z_all}d illustrate the results.
+Figs.~\ref{pic:results:zeta_all}c and~\ref{pic:results:z_all}c illustrate the results.
 }
 
 We see that the structure and behaviour of VSFs strongly depends on whether or not there is a density threshold. 
@@ -205,7 +180,7 @@ This ends in a situation where the large scales never seem to loose their domina
 In summary, we can trace the discrepancies between the scaling exponents of density-weighted and non-weighted VSFs back to the \textbf{inability} of the non-weighted VSFs to follow the transition form large-scale driven to small-scale dominated distributions of turbulent power.
 
 
-Nevertheless, Fig.~\ref{pic:results:z_all}e illustrates that these differences can be traced by $\zeta$ only. 
+Nevertheless, Fig.~\ref{pic:results:z_all}d illustrates that these differences can be traced by $\zeta$ only. 
 Besides the features created when $\zeta$ becomes close to 0 in the density-weighted VSFs, the measured $Z$ have similar values, evolve and reacts to external driving mechanisms similarly independently based on which approach they are computed. 
 This observation is true for all Jeans refinement levels, as Fig.~\ref{pic:results:comp_weighting} demonstrates.
 
@@ -216,6 +191,46 @@ Thus, it is highly important to clarify which definition of VSF is used and if i
 Yet, our analysis also shows that the principle of self-similarity relativises the deviations between the two approaches as the different orders of the VSFs keep scaling in the same way relative to each other. 
 
 
+
+
+\subsection{The Effect of Jeans Length Refinement}\label{discussion:refinement}
+
+In Sect.~\ref{results:refinement}, we have motivated the need to investigate the influence of Jeans refinement on VSFs.
+In particular, we examine how the choice of using the minimal required refinement compares to a generally recommended refinement level, including the differences in total energy and resonances seen in the power spectra. 
+To do this, we use the data by \citetalias{IbanezMejia2017} that resolve the Jeans length in \texttt{M3} twice ($\lambda_J$~=~$8\Delta{}x$) and eight times ($\lambda_J$~=~$32\Delta{}x$) finer as the original simulations ($\lambda_J$~=~$4\Delta{}x$).
+
+In Fig.~\ref{pic:results:jeans_comp} we see that the choice of refinement level does not have to have a significant influence on the measurements and evolution of both $\zeta$ and $Z$. 
+$\lambda_J$~=~$4\Delta{}x$ and $\lambda_J$~=~$8\Delta{}x$ are in very good agreement with each other.
+This means that, although refining Jeans lengths with 4~cells misses about 13\% of kinetic energy, the effect on the structure and behaviour of the turbulence is rather small and not traced by the VSF analysis.
+
+However, Fig.~\ref{pic:results:jeans_comp} shows that such an agreement is not given with $\lambda_J$~=~$32\Delta{}x$, as latter differs more from $\lambda_J$~=~$4\Delta{}x$ the higher the order of the VSF is.
+Following the explanations in Sect.~\ref{results:refinement}, the behaviour of $\zeta$ and $Z$ in the $\lambda_J$~=~$32\Delta{}x$ runs corresponds to the reaction of the cloud's gas to a shock wave running through the cloud; caused by a supernova that exploded before $t$~=~0~Myr. 
+Indeed one sees a SN at a distance of 172~pc at $t$~=~-1.11~Myr. 
+Due to the distance the SN is too weak to effectively compress the gas within \texttt{M3} and causing a shock.
+This is why it has not been detected previously in the less refined samples.
+However, the SN explodes far below the mid-plane of the simulated disk galaxy, in a region without dense gas.
+This means that the shock wave, that has been injected by the explosion, is less damped as it propagates through the ISM. 
+By the time the front arrives at \texttt{M3} it is still energetic enough to drive strong winds, with velocities above 300~km~s$^{-1}$, at the closer edge of the cloud. 
+This causes an increase of VSFs at longer lag scales and the increase of $\zeta$, as well as the drop in $Z$.
+
+Derivations of measured $Z$ to predicted values do trace external turbulent driving.
+Whether the source is a SN shock front propagating through the cloud or a strong wind, cannot be distinguished by $Z$ only. 
+Yet, $Z$ remains a fine probe for the geometry of turbulence and the scales at which turbulence is driven.
+
+
+\subsection{Comparison to Observational Data}\label{discussion:observation}
+
+\rc{[completely new]}
+
+\input{tab_comp_obs_summary.tex}
+
+\begin{figure*}
+	\includegraphics[width=\textwidth]{compare_observations.pdf}
+	\caption{Summary of measurements of $\zeta$ (\textit{abscissas}) and $Z$ (\textit{ordinates}) for orders $p$~=~1--3 (from \textit{left} to \textit{right}) in this study and in the literature.
+		The grey markers represent the values as presented in Sect.~\ref{results:normal}, while the coloured star markers illustrate the predictions by \citet{She1994} and \citet{Boldyrev2002}. The coloured, circular marker summarise values found in the literature (see legend for precise references). 
+	}
+	\label{pic:discussion:comp_observation}
+\end{figure*}
 
 
 
