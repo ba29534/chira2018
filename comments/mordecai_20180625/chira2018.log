@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.27)  25 JUN 2018 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.27)  25 JUN 2018 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -972,7 +972,7 @@ LaTeX Font Info:    Font shape `OT1/txss/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/txss/m/sl' will be
 (Font)              scaled to size 9.49997pt on input line 4.
  [2]) (./03_results.tex
-<./pics/vsf_example.pdf, id=242, 1517.67pt x 505.89pt>
+<./pics/vsf_example.pdf, id=246, 1517.67pt x 505.89pt>
 File: ./pics/vsf_example.pdf Graphic file (type pdf)
 
 <use ./pics/vsf_example.pdf>
@@ -982,28 +982,28 @@ Package pdftex.def Info: ./pics/vsf_example.pdf used on input line 13.
 Underfull \vbox (badness 2261) has occurred while \output is active []
 
 
-<./pics/zeta_all_nojeans.pdf, id=277, 1517.67pt x 1300.86pt>
+<./pics/zeta_all_nojeans.pdf, id=281, 1517.67pt x 1300.86pt>
 File: ./pics/zeta_all_nojeans.pdf Graphic file (type pdf)
 
 <use ./pics/zeta_all_nojeans.pdf>
 Package pdftex.def Info: ./pics/zeta_all_nojeans.pdf used on input line 71.
 (pdftex.def)             Requested size: 523.5307pt x 448.73764pt.
 
-<./pics/zeta_jeans.pdf, id=278, 1517.67pt x 361.35pt>
+<./pics/zeta_jeans.pdf, id=282, 1517.67pt x 361.35pt>
 File: ./pics/zeta_jeans.pdf Graphic file (type pdf)
 
 <use ./pics/zeta_jeans.pdf>
 Package pdftex.def Info: ./pics/zeta_jeans.pdf used on input line 76.
 (pdftex.def)             Requested size: 523.5307pt x 124.64934pt.
 
-<./pics/z_all_nojeans.pdf, id=280, 1517.67pt x 1300.86pt>
+<./pics/z_all_nojeans.pdf, id=284, 1517.67pt x 1300.86pt>
 File: ./pics/z_all_nojeans.pdf Graphic file (type pdf)
 
 <use ./pics/z_all_nojeans.pdf>
 Package pdftex.def Info: ./pics/z_all_nojeans.pdf used on input line 99.
 (pdftex.def)             Requested size: 523.5307pt x 448.73764pt.
 
-<./pics/z_jeans.pdf, id=281, 1517.67pt x 361.35pt>
+<./pics/z_jeans.pdf, id=285, 1517.67pt x 361.35pt>
 File: ./pics/z_jeans.pdf Graphic file (type pdf)
  <use ./pics/z_jeans.pdf>
 Package pdftex.def Info: ./pics/z_jeans.pdf used on input line 105.
@@ -1046,7 +1046,7 @@ Underfull \hbox (badness 1092) in paragraph at lines 162--164
 ty
  []
 
-<./pics/comp_weighting.pdf, id=762, 1589.94pt x 1084.05pt>
+<./pics/comp_weighting.pdf, id=766, 1589.94pt x 1084.05pt>
 File: ./pics/comp_weighting.pdf Graphic file (type pdf)
 
 <use ./pics/comp_weighting.pdf>
@@ -1055,7 +1055,7 @@ Package pdftex.def Info: ./pics/comp_weighting.pdf used on input line 188.
  [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./pics/comp_weighting.pdf>] <./pics/comp_jeans.pdf, id=876, 1517.67pt x 72
+ [8 <./pics/comp_weighting.pdf>] <./pics/comp_jeans.pdf, id=880, 1517.67pt x 72
 2.7pt>
 File: ./pics/comp_jeans.pdf Graphic file (type pdf)
 
@@ -1064,55 +1064,51 @@ Package pdftex.def Info: ./pics/comp_jeans.pdf used on input line 249.
 (pdftex.def)             Requested size: 523.5307pt x 249.29868pt.
 ) (./04_discussion.tex
 LaTeX Font Info:    Font shape `OT1/txtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/txtt/b/n' tried instead on input line 21.
+(Font)              Font shape `OT1/txtt/b/n' tried instead on input line 23.
  [9]
-Underfull \hbox (badness 1325) in paragraph at lines 60--63
+Underfull \hbox (badness 1325) in paragraph at lines 62--65
 []\OT1/txr/m/n/10 Nevertheless, Fig. []3[](d) il-lus-trates that these dif-fer-
 ences
  []
 
 
-Underfull \hbox (badness 4181) in paragraph at lines 60--63
+Underfull \hbox (badness 4181) in paragraph at lines 62--65
 \OT1/txr/bx/n/10 do not pre-vent ex-tended self-similarity from hold-ing.
  []
 
 
-Underfull \vbox (badness 1199) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-(./tab_comp_obs_summary.tex)
-<./pics/compare_observations.pdf, id=919, 1517.67pt x 505.89pt>
+ [10 <./pics/comp_jeans.pdf>] (./tab_comp_obs_summary.tex)
+<./pics/compare_observations.pdf, id=977, 1517.67pt x 505.89pt>
 File: ./pics/compare_observations.pdf Graphic file (type pdf)
 
 <use ./pics/compare_observations.pdf>
-Package pdftex.def Info: ./pics/compare_observations.pdf used on input line 95.
-
+Package pdftex.def Info: ./pics/compare_observations.pdf used on input line 104
+.
 (pdftex.def)             Requested size: 523.5307pt x 174.50906pt.
-) (./05_conclusion.tex [10 <./pics/comp_jeans.pdf>]
-Underfull \vbox (badness 5533) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./pics/compare_observations.pdf>]) (./chira2018.bbl)
+) (./05_conclusion.tex) (./chira2018.bbl
+[11])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
- [12]
+ [12
+
+ <./pics/compare_observations.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./chira2018.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `chira2018.out' has not changed.
-(rerunfilecheck)             Checksum: 5C571DF77F833F92CB5DB21693B1BED7;1131.
+(rerunfilecheck)             Checksum: 741DDD032AED4AF1BBBF6C1BF014A926;1195.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 11940 strings out of 493089
- 167743 string characters out of 6134842
- 293477 words of memory out of 5000000
- 15033 multiletter control sequences out of 15000+600000
+ 11943 strings out of 493089
+ 167792 string characters out of 6134842
+ 300522 words of memory out of 5000000
+ 15035 multiletter control sequences out of 15000+600000
  75508 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,44p,1085b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,44p,1085b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb></usr/local/texlive/2015/
@@ -1129,10 +1125,10 @@ ive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on chira2018.pdf (12 pages, 492123 bytes).
+Output written on chira2018.pdf (12 pages, 494007 bytes).
 PDF statistics:
- 1153 PDF objects out of 1200 (max. 8388607)
- 553 compressed objects within 6 object streams
- 93 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1165 PDF objects out of 1200 (max. 8388607)
+ 564 compressed objects within 6 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
