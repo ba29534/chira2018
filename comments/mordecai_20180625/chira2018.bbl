@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{40}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ballesteros-Paredes}
@@ -53,9 +53,6 @@
 \bibitem[{{Dekel} \& {Krumholz}(2013)}]{Dekel2013}
 {Dekel}, A. \& {Krumholz}, M.~R. 2013, \mnras, 432, 455
 
-\bibitem[{{Federrath}(2016)}]{Federrath2016}
-{Federrath}, C. 2016, \mnras, 457, 375
-
 \bibitem[{{Fleck}(1980)}]{Fleck1980}
 {Fleck}, Jr., R.~C. 1980, \apj, 242, 1019
 
@@ -73,6 +70,13 @@
   {Heitsch}}]{Hartmann2012}
 {Hartmann}, L., {Ballesteros-Paredes}, J., \& {Heitsch}, F. 2012, \mnras, 420,
   1457
+
+\bibitem[{{Heyer} \& {Dame}(2015)}]{Heyer2015}
+{Heyer}, M. \& {Dame}, T.~M. 2015, \araa, 53, 583
+
+\bibitem[{{Heyer} \& {Brunt}(2007)}]{Heyer2007}
+{Heyer}, M.~H. \& {Brunt}, C. 2007, in IAU Symposium, Vol. 237, Triggered Star
+  Formation in a Turbulent ISM, ed. B.~G. {Elmegreen} \& J.~{Palous}, 9--16
 
 \bibitem[{{Heyer} \& {Brunt}(2004)}]{Heyer2004}
 {Heyer}, M.~H. \& {Brunt}, C.~M. 2004, \apjl, 615, L45
@@ -97,9 +101,6 @@
 {Krumholz}, M.~R., {Bate}, M.~R., {Arce}, H.~G., {et~al.} 2014, Protostars and
   Planets VI, 243
 
-\bibitem[{{Lin} {et~al.}(1965){Lin}, {Mestel}, \& {Shu}}]{Lin1965}
-{Lin}, C.~C., {Mestel}, L., \& {Shu}, F.~H. 1965, \apj, 142, 1431
-
 \bibitem[{{Mac Low}(2003)}]{MacLow2003}
 {Mac Low}, M.-M. 2003, in Lecture Notes in Physics, Berlin Springer Verlag,
   Vol. 614, Turbulence and Magnetic Fields in Astrophysics, ed. E.~{Falgarone}
@@ -108,20 +109,34 @@
 \bibitem[{{Mac Low} \& {Klessen}(2004)}]{MacLow2004}
 {Mac Low}, M.-M. \& {Klessen}, R.~S. 2004, Reviews of Modern Physics, 76, 125
 
-\bibitem[{{McKee} \& {Ostriker}(2007)}]{McKee2007}
-{McKee}, C.~F. \& {Ostriker}, E.~C. 2007, \araa, 45, 565
-
 \bibitem[{{McKee} \& {Zweibel}(1992)}]{McKee1992}
 {McKee}, C.~F. \& {Zweibel}, E.~G. 1992, \apj, 399, 551
+
+\bibitem[{{Miesch} \& {Bally}(1994)}]{Miesch1994}
+{Miesch}, M.~S. \& {Bally}, J. 1994, \apj, 429, 645
 
 \bibitem[{{Miyamoto} {et~al.}(2014){Miyamoto}, {Nakai}, \&
   {Kuno}}]{Miyamoto2014}
 {Miyamoto}, Y., {Nakai}, N., \& {Kuno}, N. 2014, \pasj, 66, 36
 
+\bibitem[{{Padoan} {et~al.}(2003){Padoan}, {Boldyrev}, {Langer}, \&
+  {Nordlund}}]{Padoan2003}
+{Padoan}, P., {Boldyrev}, S., {Langer}, W., \& {Nordlund}, {\AA}. 2003, \apj,
+  583, 308
+
+\bibitem[{{Padoan} {et~al.}(2006){Padoan}, {Juvela}, {Kritsuk}, \&
+  {Norman}}]{Padoan2006}
+{Padoan}, P., {Juvela}, M., {Kritsuk}, A., \& {Norman}, M.~L. 2006, \apjl, 653,
+  L125
+
 \bibitem[{{Padoan} {et~al.}(2016){Padoan}, {Pan}, {Haugb{\o}lle}, \&
   {Nordlund}}]{Padoan2016a}
 {Padoan}, P., {Pan}, L., {Haugb{\o}lle}, T., \& {Nordlund}, {\AA}. 2016, \apj,
   822, 11
+
+\bibitem[{{Roman-Duval} {et~al.}(2011){Roman-Duval}, {Federrath}, {Brunt},
+  {Heyer}, {Jackson}, \& {Klessen}}]{RomanDuval2011}
+{Roman-Duval}, J., {Federrath}, C., {Brunt}, C., {et~al.} 2011, \apj, 740, 120
 
 \bibitem[{{Schmidt} {et~al.}(2008){Schmidt}, {Federrath}, \&
   {Klessen}}]{Schmidt2008}
@@ -148,5 +163,10 @@
 \bibitem[{{Turk} {et~al.}(2012){Turk}, {Oishi}, {Abel}, \& {Bryan}}]{Turk2012}
 {Turk}, M.~J., {Oishi}, J.~S., {Abel}, T., \& {Bryan}, G.~L. 2012, \apj, 745,
   154
+
+\bibitem[{{Zernickel}(2015)}]{Zernickel2015}
+{Zernickel}, A. 2015, PhD thesis, I.~Physikalisches Institut der
+  Universit{\"a}t zu K{\"o}ln, Z{\"u}lpicher Stra{\ss}e 77, 50937, K{\"o}ln,
+  Germany <EMAIL>zernickel@ph1.uni-koeln.de</EMAIL>
 
 \end{thebibliography}
