@@ -3,7 +3,10 @@
 
 \subsection{Cloud models}\label{methods:clouds}
 
-The analysis in this paper is based on a sample of three molecular clouds (MCs) found within a \textbf{three-dimensional (3D), magnetohydrodynamical, adaptive mesh refinement simulation using the FLASH code \citep{Fryxell2000}.  
+%\rc{[general comment: In this sub-section I basically copied the descriptions we have used in the previous paper. I am not sure whether the summary given here in to short as I also wanted to provide a summary of the work we have done with the data already. I would appreciate what you think about the structure of this subsection.]}
+
+The analysis in this paper is based on a sample of three molecular clouds (MCs) found within a \textbf{three-dimensional (3D), magnetohydrodynamical, adaptive mesh refinement simulation %mm by \citetalias{IbanezMejia2016}, 
+using the FLASH code \citep{Fryxell2000}.  
 \citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}, as well as \citet[\citetalias{Chira2018} hereafter]{Chira2018}}, describe the simulations and the clouds in more detail. 
 We summarise the most relevant properties. 
 
@@ -13,6 +16,7 @@ Although hundreds of dense clouds form within the simulated volume, \citetalias{
 In this paper, we use the data within (40~pc)$^{3}$ subregions centred in the high-resolution clouds' centres of mass.
 The internal structures of MCs are resolved using adaptive mesh refinement, focusing grid resolution on dense regions where Jeans unstable structures must be resolved with a minimum of 4 cells ($\lambda_J > 4~\Delta x_{\rm min}$).
 For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}.
+This means that we can trace fragmentation down to 0.4~pc, but cannot fully resolve objects that form at smaller scales.
 The MCs have initial masses at the onset of self-gravity of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter.
 
 However, it is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
@@ -20,10 +24,12 @@ However, it is important to point out that the clouds are embedded within a comp
 \citetalias{Chira2018} studied the properties, evolution, and fragmentation of filaments that self-consistently condense within these clouds. 
 They paid particular attention to the accuracy of typical stability criteria for filaments, comparing their measurements to the theoretical predictions, showing that theoretical models do not capture the complexity of fragmentation due to their simplifying assumptions.
 
+In this paper, we focus on the driving sources of turbulence within the simulated MCs and the signatures they imprint on \textbf{the velocity structure function (VSF)}.
+
 
 \subsection{Velocity Structure Function}\label{methods:vsf}
 
-\textbf{In this paper, we probe the power distribution of turbulence throughout the entire simulated MCs by using the velocity structure function (VSF)}.
+We probe the power distribution of turbulence throughout the entire simulated MCs by using the VSF.
 The VSF is a two-point correlation function,
 \begin{equation}
 	{S}_p (\ell) = \langle \, |\Delta \vec{v}|^p  \, \rangle
@@ -33,25 +39,31 @@ that measures the mean velocity difference to the $p^\mathrm{th}$ power
 \begin{equation}\Delta \vec{v} (\vec{\ell}) = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})
 \end{equation} 
 between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$, with $\vec{\ell}$ being the direction vector pointing from the first to the second point.  
-\textbf{$S_p$ is usually reported as a function of} lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
+%mm 
+    $S_p$ is usually reported as a function of 
+lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
 The VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events in random turbulent flows (e.g., supernovae) in velocity patterns.
 Those patterns become more prominent the higher the value of $p$ \citep{Heyer2004}.
-\textbf{\citet{Padoan2016a} defined a density-weighted velocity structure function}
+%mm
+\citet{Padoan2016a} defined a density-weighted velocity structure function
 \begin{equation}
 	{S}_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle}.
     \label{equ:method:def_vsf_dw}
 \end{equation}
-\textbf{In many cases, though, a three-dimensional computation of the VSF cannot be performed because of the observational constraint that only line-of-sight velocities are available.
-We will therefore compare our three-dimensional (3D) results to one-dimensional (1D), density-weighted VSFs}
-\begin{equation}
-	\mathit{S}_{p,\mathrm{1D}} (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta 
+%mm [moved from Sect 3 and revised]
+   In many cases, though, a three-dimensional computation of the VSF cannot be performed 
+   because of the observational constraint that only line-of-sight velocities are available.  We 
+   will therefore compare our three-dimensional (3D) results to one-dimensional (1D), 
+   density-weighted VSFs
+   \begin{equation}
+	\mathit{S}^d_{p,\mathrm{1D}} (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta 
         \vec{v} \cdot \vec{e}_i|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle} ,
-	\label{equ:results:def_vsf_1d}
-\end{equation}
-\textbf{with $\vec{e}_i$ representing the unit vector along the $i$~=~$x$-, $y$-, or $z$-axis.}
+   \label{equ:results:def_vsf_1d}
+   \end{equation}
+    with $\vec{e}_i$ representing the unit vector along the $i$~=~$x$-, $y$-, or $z$-axis.
 
 \textbf{The first several orders of the VSF have} a physical meaning. 
-For example, $\mathit{S}_1$ \textbf{gives the mean of relative velocities between any two points} reflecting the modes created by different gas flows, while $\mathit{S}_2$ is proportional to the kinetic energy, making it a good probe of how the turbulent energy is \textbf{distributed among} different scales.
+For example, $\mathit{S}_1$ \textbf{ gives the mean of relative velocities between any two points} reflecting the modes created by different gas flows, while $\mathit{S}_2$ is proportional to the kinetic energy, making it a good probe of how the turbulent energy is \textbf{distributed among} different scales.
 
 \textbf{For fully developed turbulence the VSF is well-described} by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
 \begin{equation}
@@ -64,25 +76,34 @@ However, the differences are mostly negligible on the scales we focus on.
 \textbf{Since these decompositions are also hard to perform on observational data, we focus only on the total VSF.}
 
 Theoretical studies predict values of $\zeta$ depending on the nature of the turbulence and the order $p$.
-\citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an \textbf{incompressible flow}.
+For example, \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an \textbf{incompressible flow}.
 This results in the commonly known prediction that the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 
 For a supersonic flow, however, \textbf{$\zeta(3) >1$ is expected.}
 Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following.
 For an incompressible filamentary flow \citet{She1994} predict that
-the VSFs scale with \textbf{power law index}
+the VSFs scale with
+%mm ,
+    power law index
 \begin{equation}
 	\zeta(p) = \frac{p}{9} + 2 \left[ 1 - \left( \frac{2}{3} \right)^{\frac{p}{3}} \right] ,
-	\label{equ:method:she}
+    \label{equ:method:she}
 \end{equation}
-while supersonic flows with sheet-like geometry are \textbf{predicted} to scale with \citep{Boldyrev2002}
+while supersonic flows with sheet-like geometry are 
+%mm supposed 
+     predicted
+to scale with \citep{Boldyrev2002}
 \begin{equation}
-	\zeta(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}}.
-	\label{equ:method:boldyrev}
+	 \zeta(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}}.
+    \label{equ:method:boldyrev}
 \end{equation}
 \citet{Benzi1993} introduced the principle of extended self-similarity.
 It proposes that there is a constant relationship between the scaling
-exponents of different orders at all lag scales \textbf{so that $\zeta$ can be measured from $S_p/S_3$, which typically gives much clearer power-law behavior.}
+exponents of different orders at all lag scales
+%mm
+     so that $\zeta$ can be measured from $S^d_p/S^d_3$, which
+     typically gives much clearer power-law behavior.
+%mmNormally, the self-similarity parameter, $Z$, normally refers to the 3$^\mathrm{rd}$ order VSF and is given by:
 \textbf{The self-similarity parameter is defined as,}
 \begin{equation}
 	Z(p) = \frac{\zeta(p)}{\zeta(3)}.
@@ -92,31 +113,73 @@ Since \textbf{the predicted values for $\zeta(p)$ by \citet{She1994} and \citet{
 
 For the discussion below, we measure $\zeta$ by fitting a power-law,
 given by
+%mm This is fit to the density-weighted value, so I have added the
+%superscript d for completeness.
 \begin{equation}
-	\log_{10}\left[ S_p(\ell) \right] = \log_{10}\left(A\right) + \zeta \log_{10}(\ell) ,
-	\label{equ:method:fitting}
+	\log_{10}\left[ S^d_p(\ell) \right] = \log_{10}\left(A\right) + \zeta \log_{10}(\ell) ,
+    \label{equ:method:fitting}
 \end{equation}
 with $A$ being the proportionality factor of the power-law to the simulated measurements.
 
 \textbf{In order to reduce} the computational effort, we divide the range of 3D lag distances, $|\vec{\ell}|$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
+\mm{[there must be more to your optimization method than this.  Fill in the details?]}
 This means that the measurements at the given lag interval $\ell_i$ we will show below are based on data with lag distances $\ell_{i-1} < \ell \leq \ell_i$.
 
-\textbf{Furthermore, we reduce the computational effort of this study generally focussing on clouds, defined as regions above a fixed number density threshold with fiducial value $n_{\mathrm cloud} = 100$~cm$^{-3}$.  We have chosen this threshold as it roughly corresponds to the density when CO becomes detectable. }
+%mm [I have moved all the methodological material from Sections 3 and 4 back into this section]
+For our calculations, 
+%mm we only take cells with a minimal number density of 100~cm$^{-3}$ into account as this threshold defines the volume of the clouds.
+    we focus on clouds, defined as regions above a fixed number density 
+    threshold with fiducial value $n_{\mathrm cloud} = 100$~cm$^{-3}$.  We have
+    chosen this threshold as it roughly corresponds to the density when CO becomes 
+    detectable. 
 However, \citetalias{IbanezMejia2017} shows that there is usually no sharp increase in density between the ISM and the clouds. 
 Instead, the gas becomes continuously denser towards the centres of mass within the clouds. 
-Consequently, \textbf{our use of} a density threshold is a \textbf{somewhat artificial boundary} between the clouds and the ISM. Observationally, however, introducing a \textbf{column} density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., \textbf{detector sensitivity}) or the nature of the underlying physical processes (for example, excitation rates, or critical densities).
-Therefore, it is important to study \textbf{how a density threshold influences the VSF and its evolution.}
+Consequently, 
+%mmintroducing
+    our use of 
+a density threshold is a 
+%mm rather artificial, physically weakly motivated distinction 
+     somewhat artificial boundary
+between the clouds and the ISM. Observationally, however, introducing a 
+%mm
+    column 
+density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., %mm sensibility of detector)
+     detector sensitivity) 
+or the nature of the underlying physical processes (for example, excitation rates, or critical densities).
+Therefore, it is important to study 
+%mm to what extent 
+     how a density threshold influences the VSF and its evolution.
 
-\textbf{At our fiducial density threshold, we actually consider} only $\leq$1.5\% of the volume in the high resolution cube.
-\textbf{To understand the influence of this limitation we set up a test scenario (see Sect.~\ref{results:densthres}) by removing} the density threshold, by setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$, that results in analysing the entire data cube.
-As this would be too computationally expensive, we randomly choose a set of 5\% of the total number of cells as reference points and compute relative velocities to these cells only.
+%mm Furthermore, this approach considers
+      At our fiducial density threshold, we actually consider
+only $\leq$1.5\% of the volume in the high resolution cube.
+Removing the density threshold, by setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$, results in analysing the entire data cube.
+As this would be too computationally expensive,
+%mm  for the test scenario we present here, 
+     when we study this case
+we randomly choose a set of 5\% of the total number of cells as reference points and compute relative velocities to these cells only.
 We emphasise that this does not mean that we only calculate the relative velocities between these cells.
 Rather this subsample of cells represent the starting vectors $\vec{x}$ to which the velocities of all other cells $\vec{x} + \vec{\ell}$ in the same cube are compared to.
 This way we reduce the risk of ignoring or emphasising any spatial direction or angle.
 
 Note that by choosing the starting points randomly we ensure that all parts of the cubes are considered. 
-As a consequence, there is only a small likelihood (5\%~$\times$~1.5\%~=~0.075\%) that \textbf{any given cell chosen will be in the cloud.}
-Therefore, we emphasise that it is likely that the two subsamples (no density threshold and cloud-only) do not \textbf{have a common subset of starting vectors.
-Nevertheless, the random sample still includes $>4 \times 10^3$ cells in the cloud, so the sample does include information on VSFs of material in the cloud.}
+As a consequence, there is only a small likelihood (5\%~$\times$~1.5\%~=~0.075\%) that
+%mm [this is the chance for any given cell to be in the cloud, but there are 400^3 cells, so 4800 in the volume of the cloud.]
+% cells associated with the clouds are chosen.
+    any given cell chosen will be in the cloud.  
+Therefore, we emphasise that it is likely that the two subsamples (no density threshold and cloud-only) do not 
+%mm necessarily 
+have a common subset of starting vectors.
+%Yet, as we here still calculate relative velocities to all other cells in the cube, and that includes all cells making up the clouds, the resulting VSFs of the n$_\mathrm{cloud}$~=~0~cm$^{-3}$ sample also consists of most of the information of the inner-cloud interactions.
+     Nevertheless, the random sample still includes $>4 \times 10^3$ cells in the cloud, so the  
+     sample does include information on VSFs of material in the cloud.        
+
+%mm [redundant with previous discussion, I think]
+% This means that we now do not only calculate the relative velocities between cells that are part of the clouds' volume, but between cells within the entire 400$^3$ cell cut-outs that contain both the clouds and the ISM.
+% For our calculations we apply the same methods as described in Sect.~\ref{methods}. 
+% Yet, in order to reduce the computational effort we choose only a randomly positioned subset of 3,200,000 cells (=~5\% of the entire 400$^3$ cube) within the entire cubes as reference points, $\vec{x}$. 
+% As the clouds make up only a small fraction of the volume within the cubes ($\approx$1.5\%), this approach makes it more like to pick locations within the modelled ISM, rather than cells within the clouds. 
+% We emphasise that, by doing so, we only influence the choice of $\vec{x}$ in Eq.~(\ref{equ:method:def_vsf}), not $\vec{x+\ell}$ as we still compute the relative velocities relative to every other cell at 3D lag distance $\ell$ within the entire cube. 
+
 
 \endinput

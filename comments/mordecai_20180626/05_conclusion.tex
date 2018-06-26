@@ -1,0 +1,72 @@
+\section{Summary \& Conclusions}\label{conclusions}
+
+In this paper, we analyse the 
+%mm turbulent structures 
+    VSFs 
+of molecular clouds that have formed within 3D adaptive mesh FLASH simulations of the self-gravitating, magnetised, SN-driven ISM by \citetalias{IbanezMejia2016}.
+The main results are as follows.
+
+\begin{itemize}
+\item The scaling of 
+%mm velocity structure functions (VSFs) is sensitive to both internal (gravitational contraction) and external (SN shocks, winds) driving sources of turbulence. 
+     VSFs depends on both internal turbulence driving such as gravitational contraction, 
+     and external driving such as external SN blast waves.
+%mm Applied simulated data, the time evolution of the scaling exponent, $\zeta$, can reveal which driving mechanism dominates the turbulence of an entire molecular cloud. The self-similarity parameter, $Z$, though, is not directly sensitive to gravitational contraction. Yet, it can be used as observational tracer \textbf{for recent interactions with} SNe and winds.
+     We find that the power-law scaling $\zeta$ of 3D VSFs reflects the development 
+     of gravitational contraction, while the extended self-similarity scaling $Z$ 
+     reveals interactions of clouds with large-scale flows and blast waves.
+\item As long as the molecular cloud is not affected by a shock, $Z$ 
+%mm is in good agreement 
+    agrees well
+with predicted values for supersonic flows, 
+%mm
+      even as gravitational collapse proceeds.
+%mm This makes it a fine probe for the properties of dominant turbulent modes, such as the geometry, and their evolution in the context with the evolution of the cloud. 
+\item We tested the influence of Jeans refinement on the VSFs. We find that the absolute amount of kinetic energy does not influence the evolution of $\zeta$ and $Z$, %mm [I don't really understand what this means.  I have tried to guess in my replacement.] as long as the power spectrum is properly resembled, or similarly resembled by the compared samples.
+   but that better resolution of external shocks can produce changes in $Z$.
+\item 
+%mm We see that the behaviour of the VSFs can be tracked with similar results based on 3D (i.e., from simulated data) and 1D (i.e., from observational data) velocity information, as long as there is no dominating flow driving the gas into a direction perpendicular to the line of sight. In the general case of a fully developed turbulent field, both $\zeta$ and $Z$ evolve similarly in both scenarios, even though the actual values might not be in good agreement.
+     Comparison of 3D and 1D VSFs shows differences in detail, but qualitative 
+     agreement in behavior of both $\zeta$ and $Z$, except when strong transverse 
+     flows dominate the velocity field. Thus, observed 1D VSFs can be useful diagnostics. 
+\item %mm We test the influence of introducing a density threshold on the VSFs. We see both quantitative and qualitative differences. The VSFs that based on the unfiltered data are much steeper than the cloud-only VSFs and do not reflect any interaction with any of the driving sources, including SN shocks. The measured $Z$ values are constant in time and and for all clouds. This means that the turbulence we examine in this sub-project reflects the ISM in our entire galactic-scale simulations. The values of $Z$ are slightly below the value predicted for a filamentary flow by \citet{She1994}. We conclude that the turbulence in the modelled ISM consists of vortices that are similar to filamentary flows, yet with a ratio of average length scale of the two moments being more equal to unity than in the filamentary case.
+    We calculated cloud VSFs using a density threshold to isolate the cloud material, 
+    as would characteristically happen in an observation of molecular material. 
+    Without such a threshold, our VSFs are dominated by the diffuse ISM.  The 
+    extended self-similarity scaling $Z$ lies just below the value predicted 
+    for incompressible turbulence by \citet{She1994}. This is consistent with the
+    low Mach number in the hot, diffuse, ISM filling most of the volume of our simulation.
+\item We investigate the influence of defining the VSF with and without density weighting. We find that the qualitative behaviour is traced by both approaches. However, the scaling of the non-weighted VSF $\zeta$ is always positive, 
+%mm and evolve flatter than they do for the 
+   not falling nearly as far as for the
+density-weighted VSF. 
+%mm This means that non-weighted VSFs that are based on smoothed density distributions are biased against large scale motions and may not reveal the entire distribution of turbulent power within a molecular cloud. 
+    The density-weighted VSF reflects the kinetic energy distribution better as 
+    gravitational collapse proceeds to smaller and smaller scales.  (Note that in, 
+    for example, CO observations, optical depth effects may obscure this behavior.) 
+\end{itemize}
+
+Our analysis shows that VSFs are 
+%mm fine 
+    useful
+tools for examining the driving source of turbulence within molecular clouds.
+%mm Therefore, we recommend their use in future studies of molecular clouds.
+However, studies that use VSFs need to precisely review the assumptions and parameters %mm they imply 
+   included
+in their analysis as those can have a significant influence on the 
+%mm out-coming 
+results.
+
+For our simulated clouds, the VSFs illustrate that gravitational contraction dominates the evolution of the clouds.  During contraction, the VSF scaling parameter $\zeta(p)$ drops in value and can even become negative as kinetic energy concentrates on small scales.  Nevertheless, the extended self-similarity scaling parameters $Z(p)$ continue to agree with the analytic prediction for compressible turbulence except for short periods during which SN blast waves 
+%mm accelerate the turbulent powers on all scales
+    increase power on multiple scales.  Because such blast waves are neither
+    homogeneous nor isotropic, they often lead to transient non-power law 
+    scaling of the VSFs, and thus strong departures from uniform turbulent behavior 
+    of $Z(p)$. 
+%mm However, it requires further study to verify this to be the common fragment formation scenario. 
+%mm In particular, a higher Jeans length refinement is needed to resolve the velocity structures on scales of individual grid cells (0.1~pc in this case) better.
+%mm This is crucial for following the local behaviour of the gas as neither the average behaviour of the filaments nor the dominant turbulence driving source of the entire molecular clouds mirror the underling flow patterns of the gas that is related to fragmentation and the formation of future star formation activity. 
+
+
+
+\endinput

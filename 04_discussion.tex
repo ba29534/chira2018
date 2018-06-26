@@ -3,6 +3,8 @@
 \subsection{Time Evolution}\label{discussion:normal}
 
 \mm{[This is new text trying to recast the existing discussion].}
+\rc{Thanks a lot! :)}
+
 We have seen in Sect.~\ref{results} that density-weighted VSFs reflect a combination of uniform, compressible turbulence, large-scale shocks, and gravitational collapse.  Extended self-similarity emphasizes the turbulent nature of these high-Reynolds numbers flows even in regions of gravitational collapse. 
 
 As the clouds gravitationally collapse, the resulting increase in small-scale power flattens or even inverts the density-weighted VSFs, resulting in decreasing or even negative values of $\zeta$ (Fig.~\ref{pic:results:zeta_all}(a)). The increase in small-scale power can also be derived from the increasingly negative binding energy of the clouds as further gas falls into them \citepalias{IbanezMejia2017}.  Extended self-similarity shows VSF ratios characteristic of compressible turbulence (Fig.~\ref{pic:results:z_all}a), as can be seen from their tending to lie between the incompressible limit of \citet{She1994} and the extremely compressible Burgers turbulence limit of \citet{Boldyrev2002}.  The extended self-similarity procedure fails as $\zeta(3)$ passes through zero, however, so it must be interpreted in concert with the raw values of $\zeta$.
@@ -13,14 +15,15 @@ The impact of SN shocks hitting the clouds is to inject power at all scales (Fig
 
 \subsection{Line-of-Sight Velocities}\label{discussion:1d}
 
-\textbf{Our discussion so far has focused on 3D measurements of VSFs (Eq.~[\ref{equ:method:def_vsf}]).
+\textbf{Our discussion has so far focused on 3D measurements of VSFs (Eq.~(\ref{equ:method:def_vsf})).
 In Sect.~\ref{results:1d} we have seen that the $\zeta$ and $Z$ derived from the 1D VSFs generally evolve similarly as those derived from the 3D VSFs.
 Yet, we have also seen that individual sight lines may evolve differently.
 These differences appear to reflect the detailed geometry of shock impacts on the cloud, which are reflected more strongly in the higher-order VSFs.
 For example, for the first 2~Myr of the evolution of \texttt{M4} the values of $Z$ along the $y$-axis are significantly higher than those observed along the other axes and diverge significantly from the values expected for uniform turbulence.
 Recall that a perturbation in $Z$ usually corresponds to an episode of strong shock driving, suggesting an impact along the $y$-axis at this time. 
 Along the other two axes, $Z$ continues to agree with supersonic turbulence \citep{Boldyrev2002}.
-Note that this effect is only visible as we analyse the three dimensions separately, while the driving of the gas along the $y$-axis is averaged out in the 3D VSFs (see Fig.~\ref{pic:results:z_all}a).}
+Note that this effect is only visible as we analyse the three dimensions separately, while the driving of the gas along the $y$-axis is averaged out in the 3D VSFs (see Fig.~\ref{pic:results:z_all}a).
+}
 
 In summary, \textbf{for a fully developed 3D turbulent field we expect that 1D VSFs behave similarly to 3D VSFs.}
 However, when there is a preferred direction along which the gas flows, the 1D and 3D VSFs differ significantly from each other. 
@@ -43,7 +46,7 @@ We also see that \textbf{$Z$ remains constant for the entire simulation in every
 The VSFs for the entire box appear consistent with the prediction for the value in incompressible turbulence \citep{Boldyrev2002}. This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.}
 
 We conclude that the decision of whether or not a density threshold is used \textbf{has a significant and direct influence on the resulting VSFs.
-Indeed,} it is a straight-forward approach to \textbf{focus the analysis} on the actual area of interest.
+Indeed, it is a straight-forward approach to focus the analysis} on the actual area of interest.
 In observational studies such a threshold will anyway always be present as minimal collision rates for excitation or the sensitivity of detectors automatically introduce implicit density or intensity thresholds. 
 Although we have only tested two specific setups in this context we have seen the significance of a proper choice of the density threshold, as well as a proper discussion of the obtained results considering the threshold as one of the defining parameters.
 
@@ -63,6 +66,21 @@ Nevertheless, Fig.~\ref{pic:results:z_all}(d) illustrates that these differences
 Regardless of whether density-weighting is included, the values of $Z$ remain similar, with similar responses to external driving, except for the features created when $\zeta(3)$ passes through zero in the density-weighted VSFs.}
 This observation is true for all Jeans refinement levels, as Fig.~\ref{pic:results:comp_weighting} demonstrates.
 
+
+\begin{figure*}
+	\centering
+    \includegraphics[width=\textwidth]{comp_weighting.pdf}
+    \caption{ Comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured based on density-weighted VSFs (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}). }
+    \label{pic:results:comp_weighting}
+\end{figure*}
+
+\textbf{Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ and $Z$ measured with the density-weighted and non-weighted VSFs for all Jeans refinement levels (meaning the granularity used for modelling the turbulent motions of the gas, see Sect.~\ref{results:refinement} for more details).
+The figure clearly shows that the measurements only agree well for the highest refinement level with $\lambda~=~32\Delta x$.
+However, we would need more data point to be sure that this correlation is indeed real.
+At lower refinement levels the measurements, as those used for the standard analysis and all other test scenarios but the one presented in Sect.~\ref{results:refinement}, correlate less well with each other. 
+The differences in the samples appear dominantly when the density-weighted $\zeta$ cease below $\approx$0.5, which is the global minimum for the non-weighted $\zeta$. 
+This means that none of the $\zeta$ computed in all clouds and refinement levels with the non-weighted VSF is measured to be below 0.5. }
+
 We conclude that deriving the VSF from smooth density distributions without considering density-weighting does not affect the behaviour of $\zeta$ and $Z$, as long as the turbulence is dominated by large scale \textbf{flows, but} it has a significant effect on the measurements when the small scales become dominant.
 The latter is particularly important as this finding has a directly impact on the conclusions drawn based on the scales and mechanisms that drive the turbulence based on the measured $\zeta$.
 Not only does $\zeta$ become insensitive to the influence of gravitational contraction with time, the non-weighted VSFs also do not reflect when the majority of kinetic energy has been transferred to small scales. 
@@ -76,7 +94,7 @@ This means that, although refining Jeans lengths with 4~cells misses about 13\% 
 
 However, Fig.~\ref{pic:results:jeans_comp} shows that the agreement is \textbf{rather poorer} with $\lambda_J$~=~$32\Delta{}x$, as the latter differs more from $\lambda_J$~=~$4\Delta{}x$ the higher the order of the VSF is.
 Following the explanations in Sect.~\ref{results:refinement}, the behaviour of $\zeta$ and $Z$ in the $\lambda_J$~=~$32\Delta{}x$ runs corresponds to the reaction of the cloud's gas to a shock wave running through the cloud; caused by a supernova that exploded before $t$~=~0~Myr. 
-Indeed one sees a SN at a distance of 172~pc at $t$~=~-1.11~Myr. 
+Indeed one sees a SN at a distance of 172~pc at \linebreak $t$~=~-1.11~Myr. 
 Due to the distance the SN is too weak to effectively compress the gas within \texttt{M3} and cause a shock.
 This is why it was not detected in the less refined samples.
 However, the SN explodes far below the mid-plane of the simulated disk galaxy, in a region without dense gas, so \textbf{the blast wave remains strong} as it propagates through the ISM. 
