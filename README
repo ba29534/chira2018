@@ -3,17 +3,13 @@ git GitHub: https://github.com/ba29534/chira2018.git
 
 to do for Roxana:
 - Intro: Why Tan & Miyamoto?
-- Results: insert She & Boldyrev into Fig. 2
-- Discussion: write subsection on observations
+- Fig. 2: insert She & Boldyrev
 - Fig. 4: insert legend with orders
 
 
 
+*** Sect. 3.1:
 
-
-
-
-Sect. 3.1:
 "The location of the minimum coincides with the equivalent radius of the cloud, the radius a cloud of given mass would have if it would be a sphere."
 MM: This is a pretty big claim to make based on one example. Can you make a plot showing the minimum location vs the equivalent radius for all three clouds for several times?  Otherwise, I'd consider cutting it.
 RC: Well, these were observations I've done by comparing Juan's radius plots with the positions of the minima by eye. So, you're right. We should cut this out as long as we don't investigate this in detail.
@@ -22,7 +18,9 @@ RC: Well, these were observations I've done by comparing Juan's radius plots wit
 MM: is that first minimum the thickness of the post-shock region, or the equivalent radius of the cloud?  I'd bet that it's the former.
 RC: Yeah, the minimum still represents the equ. radius from my point-of-view. However, my feeling is that the peak on the smaller-scale edge of the minimum represent the scale at which most of the incoming energy experiences the transition from freely-floating to cascading. Of course, this intuition requires a proper analysis, in the same way as my oracle about the equ. radius. I, though, have neither the time nor the motivation to do it. Yet, it would be a very nice project for a summer or Bachelor's student, don't you think? ;)
 
-Sect 3.6:
+
+*** Sect 3.6:
+
 MM: But this seems to contradict Fig1 that shows shallower slopes after impact by SNe.
 RC: No, it doesn't ;). You have to consider what the evolutionary state of the cloud is before the SN hits it. If you want to draw conclusions from Fig. 1 you need to compare Figs. 1b and 1c, with the latter being the actual state of rest. Thus, when the blast waves start to inject the energy into the cloud, its outer layers are excited first, resulting in *steeper*, not shallower scalings. 
 The only exception here is the SN that explodes close to M8. In this scenario, the cloud's state is similar to Fig. 1a. When the SN shock arrives the cloud, it accelerates the global collapse of the cloud, shifting a lot of kinetic energy to smaller scales. This causes a temporarly shallower scaling of the VSF before the cloud relaxes again. 
