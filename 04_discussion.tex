@@ -70,7 +70,7 @@ This observation is true for all Jeans refinement levels, as Fig.~\ref{pic:resul
 \begin{figure*}
 	\centering
     \includegraphics[width=\textwidth]{comp_weighting.pdf}
-    \caption{ Comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured based on density-weighted VSFs (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}). }
+    \caption{ Comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured based on density-weighted VSFs (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}). \textbf{Note that the given values are based on \texttt{M3} only.}}
     \label{pic:results:comp_weighting}
 \end{figure*}
 
@@ -109,15 +109,16 @@ This causes an increase of VSFs at longer lag scales and the increase of $\zeta$
 
 \rc{[completely new]}
 
-As the majority of studies related to VSFs the work we have presented in this paper is based on simulated data.
+The majority of studies related to VSFs is based on simulated data, as is the work presented in this paper.
 However, there are also some surveys that derive VSFs from observations, or whose data can be used to reconstruct the scaling properties of VSFs. 
 In this section we will discuss our results in context of the observational studies, that we list in Table~\ref{tab:discussion:summary_obs}.
-Most of the velocity information has been deduced from $^{12}$CO and $^{13}$CO observations of young star-forming regions \citep[e.g., Perseus and Taurus][]{Padoan2003}.
-Yet, we also consider observations of more evolved regions, such as those of the HII region NGC 6334 \citep{Zernickel2015}, as the filaments in the simulated molecular clouds use to fragment within the first two megayears of the simulations \citepalias{Chira2018}.
 
 \input{tab_comp_obs_summary.tex}
 
-Fig.~\ref{pic:discussion:comp_observation} summarises the measured scaling exponents and self-similarity parameters found in the literature with our fiducial results (see Sect.~\ref{results:normal}).
+Most of the velocity information has been deduced from $^{12}$CO and $^{13}$CO observations of young star-forming regions \citep[e.g., Perseus and Taurus][]{Padoan2003}.
+Yet, we also consider observations of more evolved regions, such as those of the HII region NGC 6334 \citep{Zernickel2015}, as the filaments in the simulated molecular clouds use to fragment within the first two megayears of the simulations \citepalias{Chira2018}.
+
+Fig.~\ref{pic:discussion:comp_observation} summarises the measured scaling exponents and self-similarity parameters found in the literature with our fiducial results (Figs.~\ref{pic:results:zeta_all}a and~\ref{pic:results:z_all}a).
 We see that the observed values of both $\zeta$ and $Z$ are in general close to each other, as well as to the predicted values by \citet{She1994} and \citet{Boldyrev2002}. 
 Furthermore, we see that the observed values are always positive, meaning that the observed molecular clouds are always dominated by large-scale flows.
 
@@ -129,26 +130,33 @@ Furthermore, we see that the observed values are always positive, meaning that t
 \end{figure*}
 
 
-Compared to these measurements, the distributions of our results show a large scatter over the parameter space (expect for our values of $Z(3)$ that are always equal to unity by definition). 
+Compared to these measurements, the distributions of our results show a large scatter across the parameter space (expect for our values of $Z(3)$ that are always equal to unity by definition). 
 However, we also see that there is a significant fraction of measurements that are in agreement with observational findings. 
 These measurements belong roughly to the evolutionary stages of the modelled clouds after having evolved for 1.5--4~Myr after the onset of self-gravity.
 \citetalias{Chira2018} outline that the clouds consist of a highly hierarchical structure that is dominated by already fragmenting filaments at this point.
 This means that the flows within the clouds experience a transition from cloud-scale dominated, over filament-dominated to core collapse driven motions; which is exactly what we observe in the VSFs, as well.
-Consequently this means that the observed molecular clouds are in a similar stadium in which the turbulence starts to be primarily driven by smaller scale events such as the formation of filaments and (pre-/proto-)stellar cores or, in case of NGC 6334, internal feedback.
-That this reflects the reality is intuitive as all objects show clear signs of star formation that are embedded in hierarchical structures.
+Consequently this means that the observed molecular clouds, that show clear signs of embedded star formation activity, are in a similar stadium where flows become more dominantly driven by smaller scale events such as the formation of hierarchical structures, (pre-/proto-)stellar cores or, in case of NGC 6334, internal feedback.
 
 Note that the interpretation of observational measurements is still difficult for several reason:
-(i) We have already discussed in Sect.~\ref{discussion:1d} that the transformation from 3D to 1D VSFs is not trivial as long as the studied flows are not isotropic, meaning that the dominant directions of flows are randomly distributed. 
-However, this is not the case anymore as soon as the first structures (such as filaments or sheets) form, and in particular not when the first pre-stellar cores start to collapse and accrete.
-(ii) We have also seen that also interactions with SN shocks may trigger a temporary preferred direction, that has the potential to influence the measured 1D VSF completely.
+(i) We have already discussed in Sect.~\ref{discussion:1d} that the transformation from 3D to 1D VSFs is not trivial, in particular when the studied flows are not isotropic.
+This is, for example, the case when the first structures (such as filaments or sheets) form, or the first cores collapse and accrete.
+
+(ii) We have seen that interactions with SN shocks may trigger a preferred direction, that has the potential to influence the measured 1D VSF completely.
+Although the influence of shock fronts on VSFs is transient compared to the lifetime of the entire molecular cloud, it is still long enough to mimic a quasi-steady state in real observations.
+Observing typical shock tracers, such as SiO, may help to identify these set-ups. 
+However, as our highest Jeans-refined test scenario (Sect.~\ref{results:refinement}, $\lambda_\mathrm{J}$~=~32$\Delta$x) has shown strong winds have a similar influence on VSFs as SN blast waves, yet are not as easily traceable as shocks are. 
+
 (iii) We have neglected typical line-of-sight effects that may have a significant influence in the measurements of the local standard of rest velocity which precision is crucial for this kind of study.
+
 (iv) Note that only a small fraction of the listed observational studies in Table~\ref{tab:discussion:summary_obs} aimed to measure the VSFs of the respective objects right away.
 In the majority of cases, the focus of the investigations have been on the general budget of kinetic energy within the molecular cloud, as well as the question whether those clouds follow the Larson's relation.
 It is unclear whether the difference between a relation of the lag distance of two particles and their relative line-of-sight velocity and the connection between the size of the entire molecular cloud and the velocity dispersion of the contained gas has always been considered.
 
-We recommend that  both theoretical and observational investigations investigate questions related to velocity structure functions and their applicability in observational studies in more details in the future.
+\rc{[comments please: maybe the following paragraph is placed better in the conclusion section?]}
+
+We recommend that both theorists and observers discuss in more detail how observational studies may utilise VSFs more in the future.
 From the theoretical point-of-view, extensive line radiative transfer calculations are required to understand the reaction of VSFs to observational artifacts beyond simple projection effects better.
-Besides this, we suggest that observational data, both archived and new ones, are re-examined in order to broaden the number of references and scenarios. 
+Besides this, we suggest that observational data are re-examined in order to broaden the number of references and scenarios. 
 This requires observations with a high spatial resolution of the respective molecular cloud (for a wide range of lag scales and a good statistics for fitting the scaling of VSF) and lines with well-defined line-of-sight velocities (ideally, optically thin lines of intermediate- and high-density tracer). 
 
 

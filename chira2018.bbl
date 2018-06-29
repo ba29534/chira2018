@@ -1,4 +1,4 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{39}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ballesteros-Paredes}
@@ -73,10 +73,6 @@
 
 \bibitem[{{Heyer} \& {Dame}(2015)}]{Heyer2015}
 {Heyer}, M. \& {Dame}, T.~M. 2015, \araa, 53, 583
-
-\bibitem[{{Heyer} \& {Brunt}(2007)}]{Heyer2007}
-{Heyer}, M.~H. \& {Brunt}, C. 2007, in IAU Symposium, Vol. 237, Triggered Star
-  Formation in a Turbulent ISM, ed. B.~G. {Elmegreen} \& J.~{Palous}, 9--16
 
 \bibitem[{{Heyer} \& {Brunt}(2004)}]{Heyer2004}
 {Heyer}, M.~H. \& {Brunt}, C.~M. 2004, \apjl, 615, L45
