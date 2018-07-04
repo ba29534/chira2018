@@ -12,7 +12,7 @@ The impact of SN shocks hitting the clouds is to inject power at all scales (Fig
 
 \subsection{Line-of-sight velocities}\label{discussion:1d}
 
-\textbf{Our discussion has so far focused on 3D measurements of VSFs (Eq.~(\ref{equ:method:def_vsf})).
+Our discussion has so far focused on 3D measurements of VSFs (Eq.~(\ref{equ:method:def_vsf})).
 In Sect.~\ref{results:1d} we have seen that the $\zeta$ and $Z$ derived from the 1D VSFs generally evolve similarly as those derived from the 3D VSFs.
 Yet, we have also seen that individual sight lines may evolve differently.
 These differences appear to reflect the detailed geometry of shock impacts on the cloud, which are reflected more strongly in the higher-order VSFs.
@@ -20,141 +20,137 @@ For example, for the first 2~Myr of the evolution of \texttt{M4} the values of $
 Recall that a perturbation in $Z$ usually corresponds to an episode of strong shock driving, suggesting an impact along the $y$-axis at this time. 
 Along the other two axes, $Z$ continues to agree with supersonic turbulence \citep{Boldyrev2002}.
 This effect is only visible as we analyse the three dimensions separately, while the driving of the gas along the $y$-axis is averaged out in the 3D VSFs (see Fig.~\ref{pic:results:z_all}a).
-}
 
-In summary, \textbf{for a fully developed 3D turbulent field we expect that 1D VSFs behave similarly to 3D VSFs.}
+
+In summary, for a fully developed 3D turbulent field we expect that 1D VSFs behave similarly to 3D VSFs.
 However, when there is a preferred direction along which the gas flows, the 1D and 3D VSFs differ significantly from each other. 
-Thus, we predict that observed VSFs reflect the nature of turbulence within molecular clouds unless there is clear evidence that the gas is driven in a particular direction (e.g., by \textbf{a stellar wind} or SN shock front).
+Thus, we predict that observed VSFs reflect the nature of turbulence within molecular clouds unless there is clear evidence that the gas is driven in a particular direction (e.g., by a stellar wind or SN shock front).
 
 Note that this analysis does not take typical line-of-sight effects, such as optical depth or blending, into account. 
-\textbf{Future studies need to investigate this point in more detail by performing VSF analyses based on full radiative transfer calculations. }
+Future studies need to investigate this point in more detail by performing VSF analyses based on full radiative transfer calculations.
 
 
 
 \subsection{Density thresholds}\label{discussion:densthres}
 
 
-\textbf{We find that the structure and behaviour of VSFs strongly depends on whether or not we assume a density threshold in computing them.
-In the fiducial} case, where n$_\mathrm{cloud}$~=~100~cm$^{-3}$, we have seen a mostly straight decline of $\zeta$ while $Z$ remains fairly constant over time, reflecting the contraction of the clouds due to self-gravity.
-\textbf{On the other hand, if we remove the density threshold, including the entire high-resolution region in the calculation, we observe a completely different picture.
-The high velocities present in the diffuse interstellar medium surrounding the cloud lead to strong large-scale power and thus much steeper VSFs, corresponding to higher values of $\zeta$. }
+We find that the structure and behaviour of VSFs strongly depends on whether or not we assume a density threshold in computing them.
+In the fiducial case, where n$_\mathrm{cloud}$~=~100~cm$^{-3}$, we have seen a mostly straight decline of $\zeta$ while $Z$ remains fairly constant over time, reflecting the contraction of the clouds due to self-gravity.
+On the other hand, if we remove the density threshold, including the entire high-resolution region in the calculation, we observe a completely different picture.
+The high velocities present in the diffuse interstellar medium surrounding the cloud lead to strong large-scale power and thus much steeper VSFs, corresponding to higher values of $\zeta$. 
 There is still a slightly declining trend in $\zeta$, but the evolution is dominated by random fluctuations.
-We also see that \textbf{$Z$ remains constant for the entire simulation in every case.
-The VSFs for the entire box appear consistent with the prediction for the value in incompressible turbulence \citep{Boldyrev2002}. This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.}
+We also see that $Z$ remains constant for the entire simulation in every case.
+The VSFs for the entire box appear consistent with the prediction for the value in incompressible turbulence \citep{Boldyrev2002}. This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.
 
-We conclude that the decision of whether or not a density threshold is used \textbf{has a significant and direct influence on the resulting VSFs.
-Indeed, it is a straight-forward approach to focus the analysis} on the actual area of interest.
+We conclude that the decision of whether or not a density threshold is used has a significant and direct influence on the resulting VSFs.
+Indeed, it is a straight-forward approach to focus the analysis on the actual area of interest.
 In observational studies such a threshold will anyway always be present as minimal collision rates for excitation or the sensitivity of detectors automatically introduce implicit density or intensity thresholds. 
 Although we have only tested two specific setups in this context we have seen the significance of a proper choice of the density threshold, as well as a proper discussion of the obtained results considering the threshold as one of the defining parameters.
+
+
+
 
 \subsection{Density weighting}\label{discussion:densweight}
 
 
-In this subsection, we discuss the effect \textbf{of computing the VSF with or without including density weighting, relying on the results presented in Sect.~\ref{results:densweight}.}
-\textbf{As long as the turbulence is dominated by the large scales, and a density threshold is used,} considering the density weighting does not have a significant effect.
+In this subsection, we discuss the effect of computing the VSF with or without including density weighting, relying on the results presented in Sect.~\ref{results:densweight}.
+As long as the turbulence is dominated by the large scales, and a density threshold is used, considering the density weighting does not have a significant effect.
 However, as the clouds evolve the differences increase:
 the non-weighted VSFs never drop below 0.5.
-This is because the non-weighted VSF treats all cells equally, no matter whether the particular cell represents a dense element of the cloud centre or a diffuse element of the cloud's edge, while the weighted VSF gives more weight to the matter within the \textbf{small-scale, dense, collapsing regions.
+This is because the non-weighted VSF treats all cells equally, no matter whether the particular cell represents a dense element of the cloud centre or a diffuse element of the cloud's edge, while the weighted VSF gives more weight to the matter within the small-scale, dense, collapsing regions.
 The kinetic energy is dominated by these regions.
 Thus, neglecting density weighting decouples the VSF from the kinetic energy distribution. 
-This is particularly important at late times when small-scale collapse dominates.}
+This is particularly important at late times when small-scale collapse dominates.
 
-Nevertheless, Fig.~\ref{pic:results:z_all}(d) illustrates that these differences \textbf{do not prevent extended self-similarity from holding. 
-Regardless of whether density-weighting is included, the values of $Z$ remain similar, with similar responses to external driving, except for the features created when $\zeta(3)$ passes through zero in the density-weighted VSFs.}
+Nevertheless, Fig.~\ref{pic:results:z_all}(d) illustrates that these differences do not prevent extended self-similarity from holding. 
+Regardless of whether density-weighting is included, the values of $Z$ remain similar, with similar responses to external driving, except for the features created when $\zeta(3)$ passes through zero in the density-weighted VSFs.
 This observation is true for all Jeans refinement levels, as Fig.~\ref{pic:results:comp_weighting} demonstrates.
 
 
 \begin{figure*}
 	\centering
     \includegraphics[width=\textwidth]{comp_weighting.pdf}
-    \caption{ Comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured based on density-weighted VSFs (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}). \textbf{We note that the given values are based on \texttt{M3} only.}}
+    \caption{ Comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured based on density-weighted VSFs (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}). We note that the given values are based on \texttt{M3} only.}
     \label{pic:results:comp_weighting}
 \end{figure*}
 
-\textbf{Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ and $Z$ measured with the density-weighted and non-weighted VSFs for all Jeans refinement levels (meaning the granularity used for modelling the turbulent motions of the gas, see Sect.~\ref{results:refinement} for more details).
+Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ and $Z$ measured with the density-weighted and non-weighted VSFs for all Jeans refinement levels (meaning the granularity used for modelling the turbulent motions of the gas, see Sect.~\ref{results:refinement} for more details).
 The figure clearly shows that the measurements only agree well for the highest refinement level with $\lambda~=~32\Delta x$.
-However, we would need more data point to be sure that this correlation is indeed real.
+However, we would need more data points to be sure that this correlation is indeed real.
 At lower refinement levels the measurements, as those used for the standard analysis and all other test scenarios but the one presented in Sect.~\ref{results:refinement}, correlate less well with each other. 
 The differences in the samples appear dominantly when the density-weighted $\zeta$ cease below $\approx$0.5, which is the global minimum for the non-weighted $\zeta$. 
-This means that none of the $\zeta$ computed in all clouds and refinement levels with the non-weighted VSF is measured to be below 0.5. }
+This means that none of the $\zeta$ computed in all clouds and refinement levels with the non-weighted VSF is measured to be below 0.5.
 
-We conclude that deriving the VSF from smooth density distributions without considering density-weighting does not affect the behaviour of $\zeta$ and $Z$, as long as the turbulence is dominated by large scale \textbf{flows, but} it has a significant effect on the measurements when the small scales become dominant.
+We conclude that deriving the VSF from smooth density distributions without considering density-weighting does not affect the behaviour of $\zeta$ and $Z$, as long as the turbulence is dominated by large scale flows, but it has a significant effect on the measurements when the small scales become dominant.
 The latter is particularly important as this finding has a directly impact on the conclusions drawn based on the scales and mechanisms that drive the turbulence based on the measured $\zeta$.
-Not only does $\zeta$ become insensitive to the influence of gravitational contraction with time, the non-weighted VSFs also do not reflect when the majority of kinetic energy has been transferred to small scales. 
+Not only does $\zeta$ become insensitive to the influence of gravitational contraction with time, the non-weighted VSFs also does not reflect when the majority of kinetic energy has been transferred to small scales. 
 
 
 \subsection{Jeans length refinement}\label{discussion:refinement}
 
 In Fig.~\ref{pic:results:jeans_comp} we see that the choice of refinement level does not have to have a significant influence on the measurements and evolution of both $\zeta$ and $Z$. 
-$\lambda_J$~=~$4\Delta{}x$ and $\lambda_J$~=~$8\Delta{}x$ are in \textbf{good agreement with each other.}
+$\lambda_J$~=~$4\Delta{}x$ and $\lambda_J$~=~$8\Delta{}x$ are in good agreement with each other.
 This means that, although refining Jeans lengths with 4~cells misses about 13\% of kinetic energy, the effect on the structure and behaviour of the turbulence is rather small and not traced by the VSF analysis.
 
-However, Fig.~\ref{pic:results:jeans_comp} shows that the agreement is \textbf{rather poorer} with $\lambda_J$~=~$32\Delta{}x$, as the latter differs more from $\lambda_J$~=~$4\Delta{}x$ the higher the order of the VSF is.
+However, Fig.~\ref{pic:results:jeans_comp} shows that the agreement is rather poorer with $\lambda_J$~=~$32\Delta{}x$, as the latter differs more from $\lambda_J$~=~$4\Delta{}x$ the higher the order of the VSF is.
 Following the explanations in Sect.~\ref{results:refinement}, the behaviour of $\zeta$ and $Z$ in the $\lambda_J$~=~$32\Delta{}x$ runs corresponds to the reaction of the cloud's gas to a shock wave running through the cloud; caused by a supernova that exploded before $t$~=~0~Myr. 
 Indeed one sees a SN at a distance of 172~pc at $t=-1.11$~Myr. 
 Due to the distance the SN is too weak to effectively compress the gas within \texttt{M3} and cause a shock.
 This is why it was not detected in the less refined samples.
-However, the SN explodes far below the mid-plane of the simulated disk galaxy, in a region without dense gas, so \textbf{the blast wave remains strong} as it propagates through the ISM. 
-By the time the blast arrives at cloud \texttt{M3}, it is still energetic enough to drive strong winds, with velocities above 300~km~s$^{-1}$, at the closer edge of the cloud. 
+However, the SN explodes far below the mid-plane of the simulated disk galaxy, in a region without dense gas, so the blast wave remains strong as it propagates through the ISM. 
+By the time the blast arrives at cloud \texttt{M3}, it is still energetic enough to impact the cloud with velocities above 300~km~s$^{-1}$, at the closer edge of the cloud. 
 This causes an increase of VSFs at longer lag scales and the increase of $\zeta$, as well as the drop in $Z$.
-\textbf{We conclude that improving the resolution resolves details that can affect the VSF, but that the overall behaviour is already determined by our moderate resolution simulations.}
+We conclude that improving the resolution resolves details that can affect the VSF, but that the overall behaviour is already determined by our moderate resolution simulations.
 
 \subsection{Comparison to observations}\label{discussion:observation}
 
-\rc{[completely new]}
-
-The majority of studies of VSFs \textbf{in molecular clouds are} based on simulated data, as is the work presented in this paper.
+The majority of studies of VSFs in molecular clouds are based on simulated data, as is the work presented in this paper.
 However, there are also some surveys that derive VSFs from observations, or whose data can be used to reconstruct the scaling properties of VSFs. 
 In this section we discuss our results in the context of the observational studies that we list in Table~\ref{tab:discussion:summary_obs}.
 
 \input{tab_comp_obs_summary.tex}
 
-Most of the velocity information \textbf{derives} from $^{12}$CO and $^{13}$CO observations of young star-forming regions \citep[e.g., Perseus and Taurus][]{Padoan2003}.
+Most of the velocity information derives from $^{12}$CO and $^{13}$CO observations of young star-forming regions \citep[e.g., Perseus and Taurus][]{Padoan2003}.
 Yet, we also consider observations of more evolved regions, such as those of the H~{\sc ii} region NGC 6334 \citep{Zernickel2015}, as the filaments in the simulated molecular clouds fragment within the first 2 Myr \citepalias{Chira2018}.
 
 Fig.~\ref{pic:discussion:comp_observation} summarises the measured scaling exponents and self-similarity parameters found in the literature, along with our fiducial results (Figs.~\ref{pic:results:zeta_all}a and~\ref{pic:results:z_all}a).
 We see that the observed values of both $\zeta$ and $Z$ are in general close to each other, as well as to the predicted values by \citet{She1994} and \citet{Boldyrev2002}. 
-Furthermore, we see that the observed values are always positive, meaning that \textbf{none of the observed clouds show signs of being dominated by collapse, though that could be because the fastest flows would lie in optically thick regions inaccessible to the observations.}  
+Furthermore, we see that the observed values are always positive, suggesting that none of the observed clouds show signs of being dominated by collapse, though that could be because the fastest flows would lie in optically thick regions inaccessible to the observations.  
 
-\begin{figure*}
-	\includegraphics[width=\textwidth]{compare_observations.pdf}
+\begin{figure}
+	\includegraphics[width=0.49\textwidth]{compare_observations.pdf}
 	\caption{Summary of measurements of $\zeta$ (\textit{abscissas}) and $Z$ (\textit{ordinates}) for orders $p$~=~1--3 (from \textit{left} to \textit{right}). The grey markers represent the values presented in Sect.~\ref{results:normal}, while the coloured star markers illustrate the predictions by \citet{She1994} and \citet{Boldyrev2002}. The coloured, circular marker summarise values found in the literature (see legend for precise references and Table~\ref{tab:discussion:summary_obs}). 
 	}
 	\label{pic:discussion:comp_observation}
-\end{figure*}
+\end{figure}
 
 
 Compared to these measurements, the distributions of our results show a large scatter across the parameter space (except for our values of $Z(3)$ that are always equal to unity by definition). 
 However, we also see that there is a significant fraction of values in our models that agree with observational findings. 
 These measurements belong roughly to the evolutionary stages of the modelled clouds after having evolved for 1.5--4~Myr after the onset of self-gravity.
-\citetalias{Chira2018} \textbf{find}
-that the clouds consist of a highly hierarchical structure that is dominated by already fragmenting filaments at this point.
+\citetalias{Chira2018} find that the clouds consist of a highly hierarchical structure that is dominated by already fragmenting filaments at this point.
 This means that the flows within the clouds experience a transition from cloud-scale dominated, through filament-dominated, to core-collapse driven motions; which is exactly what we observe in the VSFs, as well.
-Consequently this means that the observed molecular clouds, that show clear signs of embedded star formation activity, are in a similar \textbf{stage} where flows are dominated by the formation of hierarchical structures, (pre-/proto-)stellar cores or, in the case of NGC 6334, internal feedback.
+Consequently this means that the observed molecular clouds, that show clear signs of embedded star formation activity, are in a similar stage where flows are dominated by the formation of hierarchical structures, (pre-/proto-)stellar cores or, in the case of NGC 6334, internal feedback.
 
 We find that the interpretation of observational measurements is still difficult for several reasons:
 \begin{enumerate}
 \item We have already discussed in Sect.~\ref{discussion:1d} that the transformation from 3D to 1D VSFs is not trivial, in particular when the studied flows are not isotropic.
 This is, for example, the case when the first structures (such as filaments or sheets) form, or the first cores collapse and accrete.
-\item We have seen that interactions with SN shocks may trigger a preferred direction, that has the potential \textbf{strongly influence the measured 1D VSF.}
+\item We have seen that interactions with SN shocks may trigger a preferred direction, that has the potential to strongly influence the measured 1D VSF.
 Although the influence of shock fronts on VSFs is transient compared to the lifetime of the entire molecular cloud, it is still long enough to mimic a quasi-steady state in real observations.
-Observing typical shock tracers, such as SiO, may help to identify these \textbf{situations}. 
-However, as our highest Jeans-refined test scenario (Sect.~\ref{results:refinement}, $\lambda_\mathrm{J}$~=~32$\Delta$x) has shown, strong winds have a similar influence on VSFs as SN blast waves, yet are not as easily traceable as shocks are. \mm{I'm not sure that I understand this point: don't strong winds also produce shocks?}
-\item 
-\mm{[I don't understand this point at all.  If you think it is worth keeping, please explain it in more detail for an observationally naive audience (eg me). I have replaced it with thoughts on the optical depth.]}
-We have neglected typical line-of-sight effects that may have a significant influence in the measurements of the local standard of rest velocity which precision is crucial for this kind of study.
-      Our simulated observations neglect optical depth effects, and so reflect velocities all the way through the clouds, including in high column density regions of dynamical collapse where motions are fast at small scales.  However CO reaches optical depth unity at relatively low column densities, so observed VSFs will only reflect the motions of the surface layers of dense molecular clouds.  
+Observing typical shock tracers, such as SiO, may help to identify these situations. 
+\item \textbf{We have neglected typical line-of-sight effects that may have a significant influence in the measurements of the local standard of rest velocity which precision is crucial for this kind of study.
+Our projections ignore optical depth effects, and so reflect velocities all the way through the clouds, including high column density regions of dynamical collapse where motions are fast at small scales.  However, CO reaches optical depth unity at relatively low column densities, so observed VSFs will only reflect the motions of the surface layers of dense molecular clouds.  
+Therefore, single-tracer observations are rather not suitable for studying the dynamical structure of molecular clouds. 
+For a proper VSF analysis it would be advisable to utilise a variety of tracers to cover the different phases of the clouds, as well as to populate the statistics of lag distances more reliably.}
 \item Only a small fraction of the listed observational studies in Table~\ref{tab:discussion:summary_obs} aimed to measure the VSFs of the respective objects right away.
 In the majority of cases, the focus of the investigations have been on the general budget of kinetic energy within the molecular cloud, as well as the question whether those clouds follow the Larson's relation.
 It is unclear whether the difference between a relation of the lag distance of two particles and their relative line-of-sight velocity and the connection between the size of the entire molecular cloud and the velocity dispersion of the contained gas has always been considered.
 \end{enumerate}
 
-\rc{[comments please: maybe the following paragraph is placed better in the conclusion section?]}
-
 We recommend that both theorists and observers discuss in more detail how observational studies may utilise VSFs more in the future.
-From the theoretical point-of-view, full line radiative transfer calculations are required to understand the reaction of VSFs to observational artifacts beyond simple projection effects better.
-\mm{[not sure what this means]} Besides this, we suggest that observational data are re-examined in order to broaden the number of references and scenarios. 
-This requires observations with a high spatial resolution of the respective molecular cloud for a wide range of lag scales and a good statistics for fitting the scaling of VSF, and lines with well-defined line-of-sight velocitie, ideally, optically thin lines of intermediate- and high-density tracers. 
+From the theoretical point-of-view, full line radiative transfer calculations are required to understand the reaction of VSFs to observational artefacts beyond simple projection effects better.
+This requires observations with a high spatial resolution of the respective molecular cloud for a wide range of lag scales and a good statistics for fitting the scaling of VSF, and lines with well-defined line-of-sight velocities, ideally, optically thin lines of intermediate- and high-density tracers. 
 
 
 
