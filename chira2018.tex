@@ -6,6 +6,7 @@
 \usepackage{txfonts,graphics,graphicx,epstopdf,float,lscape,longtable,dcolumn,footnote,subcaption,caption,color,url,hyperref,listings,esvect}
 \usepackage{rotating,afterpage}
 \usepackage{ulem}
+\usepackage[symbol]{footmisc}
 
 % Added by Juan
 \usepackage{soul,xcolor}
@@ -36,7 +37,7 @@
 \graphicspath{{./pics/}}
 
 %opening
-\title{How do velocity structure functions trace gas dynamics in simulated molecular clouds?}
+\title{How do velocity structure functions trace gas dynamics in simulated molecular clouds?\footnotemark[1] }
 \author{
 	R.-A.~Chira\inst{\ref{mpia}} \and
 	J.~C.~Ib\'a\~{n}ez-Mej\'{\i}a\inst{\ref{koeln},\ref{mpe}} \and 
@@ -54,16 +55,14 @@
         Astrophysik, Universit\"at Heidelberg, Albert-Ueberle-Str.\ 2, 69120 Heidelberg, Germany\label{ita}
 }
 
-\date{draft of \today
-%, \\ \rc{replies to some of the comments are given in the README file}
-}
+\date{\today}
 
 \abstract
 	{ %context    	
-                Supersonic disordered flows accompany the formation and evolution of molecular clouds (MCs). It has been argued that this is turbulence that can support against gravitational collapse and promote the formation of hierarchical sub-structures. Yet, little is still known about what drives gas dynamics on MC scales.
+                Supersonic disordered flows accompany the formation and evolution of molecular clouds (MCs). It has been argued that this is turbulence that can support against gravitational collapse and promote the formation of hierarchical sub-structures. However, little is known about what drives gas dynamics on MC scales.
     	}
 	{ %aims
-    	We investigate the time evolution of gas dynamics within simulated MCs. We focus on the following questions: What physical process dominantes the driving of the disordered flows seen?  How can these flows be characterized? Are they consistent with turbulence? Do the simulated flows agree with the observations?
+    	We investigate the time evolution of gas dynamics within simulated MCs. We focus on the following questions: What physical process dominates the driving of the disordered flows seen?  How can these flows be characterized? Are they consistent with turbulence? Do the simulated flows agree with the observations?
     	} 
 	{ %methods 
 	We follow the gas motions within three MCs that have formed self-consistently within kiloparsec-scale numerical simulations of the interstellar medium (ISM). The simulated ISM evolves under the influence of physical processes including self-gravity, magnetic fields, supernovae-driven turbulence, and radiative heating and cooling. We characterize the flow using velocity structure functions (VSFs) and compare the obtained parameters with predicted and observed values.
@@ -72,10 +71,10 @@
     	We demonstrate that the scaling exponent of VSFs and the self-similarity parameter are sensitive tools that trace the dominant driving sources of the flow. The trends are generally robust against the influence of projection, Jeans refinement level, and density-weighting. Yet, the detailed evolution may vary significantly depending on the density threshold. 
     	}
 	{ %conclusions
-        We conclude that the VSF is a well placed and stable method for examining the composition, structure and evolution of turbulence within MCs. Yet, it is essential to clearly define the underlying conditions, assumptions of the analysis, as well as the phase of the ISM that is studied to make the results comparable. We find clear indicators of how the VSF reacts to the dynamics in the simulated clouds: Gravitational contraction causes a flattening of the VSF that has no imprint on the self-similarity of the VSF, unless the collapse is triggered by a shock. This injection of energy by shocks is visible in in the VSFs and the self-similarity parameters, but decays within a short period of time. Our results agree well to observed VSFs of molecular clouds with embedded star formation activities.
+        We conclude that the VSF is a well placed and stable method for examining the composition, structure and evolution of turbulence within MCs. Yet, it is essential to clearly define the underlying conditions and assumptions of the analysis, as well as the phase of the ISM that is studied to make the results comparable. We find clear indicators of how the VSF reacts to the dynamics in the simulated clouds: Gravitational contraction dominates the turbulent flows in the simulations. It causes a flattening of the VSF that has no imprint on its self-similarity. The injection of energy by shocks, on the other hand, is visible in the VSFs and the self-similarity parameters, but the injected energy decays within a short period of time. Our results agree well with observed VSFs of molecular clouds with embedded star formation activities.
     	}
 	
-	\keywords{keywords}
+	\keywords{Turbulence -- ISM: kinematics and dynamics -- ISM: structure -- ISM: clouds}
 
 \begin{document}
 	\maketitle

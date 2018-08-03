@@ -1,0 +1,655 @@
+\documentclass{aa}		% two-column
+% \documentclass[referee]{aa}		% referee one-column
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,enumerate}
+\usepackage{txfonts,graphics,graphicx,epstopdf,float,lscape,longtable,dcolumn,footnote,subcaption,caption,color,url,hyperref,listings,esvect}
+\usepackage{rotating,afterpage}
+\usepackage{ulem}
+\usepackage[symbol]{footmisc}
+
+\usepackage{natbib}
+	\bibpunct{(}{)}{;}{a}{}{,} % to follow the A&A style
+
+\defcitealias{IbanezMejia2016}{Paper I}
+\defcitealias{IbanezMejia2017}{Paper II}
+\defcitealias{Chira2018}{Paper III}
+
+\input{alias}
+
+%opening
+\title{How do velocity structure functions trace gas dynamics in simulated molecular clouds?\footnotemark[1] }
+\author{
+	R.-A.~Chira\inst{\ref{mpia}} \and
+	J.~C.~Ib\'a\~{n}ez-Mej\'{\i}a\inst{\ref{koeln},\ref{mpe}} \and 
+	M.-M.~Mac~Low\inst{\ref{amnh},\ref{ita}} \and
+	Th.~Henning\inst{\ref{mpia}}
+  }
+\institute{
+	Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, 69117 Heidelberg, Germany\\ \email{roxana-adela.chira@alumni.uni-heidelberg.de}\label{mpia}
+	\and I.\ Physikalisches Institut, Universit\"at zu K\"oln,
+        Z\"ulpicher Straße 77, 50937 K\"oln, Germany\\ \email{ibanez@ph1.uni-koeln.de}\label{koeln}
+        \and Max-Planck-Institut f\"ur Extraterrestrische Physik,
+          Giessenbachstrasse 1, 85748 Garching, Germany\label{mpe}
+	\and Dept.\ of Astrophysics, American Museum of Natural History, 79th St.\ at Central Park West, New York, NY 10024, USA\\ \email{mordecai@amnh.org}\label{amnh}
+	\and Zentrum f\"ur Astronomie, Institut f\"ur Theoretische
+        Astrophysik, Universit\"at Heidelberg, Albert-Ueberle-Str.\ 2, 69120 Heidelberg, Germany\label{ita}
+}
+
+\date{\today}
+
+\abstract
+	{ %context    	
+                Supersonic disordered flows accompany the formation and evolution of molecular clouds (MCs). It has been argued that this is turbulence that can support against gravitational collapse and promote the formation of hierarchical sub-structures. However, little is known about what drives gas dynamics on MC scales.
+    	}
+	{ %aims
+    	We investigate the time evolution of gas dynamics within simulated MCs. We focus on the following questions: What physical process dominates the driving of the disordered flows seen?  How can these flows be characterized? Are they consistent with turbulence? Do the simulated flows agree with the observations?
+    	} 
+	{ %methods 
+	We follow the gas motions within three MCs that have formed self-consistently within kiloparsec-scale numerical simulations of the interstellar medium (ISM). The simulated ISM evolves under the influence of physical processes including self-gravity, magnetic fields, supernovae-driven turbulence, and radiative heating and cooling. We characterize the flow using velocity structure functions (VSFs) and compare the obtained parameters with predicted and observed values.
+    	}
+	{ %results
+    	We demonstrate that the scaling exponent of VSFs and the self-similarity parameter are sensitive tools that trace the dominant driving sources of the flow. The trends are generally robust against the influence of projection, Jeans refinement level, and density-weighting. Yet, the detailed evolution may vary significantly depending on the density threshold. 
+    	}
+	{ %conclusions
+        We conclude that the VSF is a well placed and stable method for examining the composition, structure and evolution of turbulence within MCs. Yet, it is essential to clearly define the underlying conditions and assumptions of the analysis, as well as the phase of the ISM that is studied to make the results comparable. We find clear indicators of how the VSF reacts to the dynamics in the simulated clouds: Gravitational contraction dominates the turbulent flows in the simulations. It causes a flattening of the VSF that has no imprint on its self-similarity. The injection of energy by shocks, on the other hand, is visible in the VSFs and the self-similarity parameters, but the injected energy decays within a short period of time. Our results agree well with observed VSFs of molecular clouds with embedded star formation activities.
+    	}
+	
+	\keywords{Turbulence -- ISM: kinematics and dynamics -- ISM: structure -- ISM: clouds}
+
+\begin{document}
+	\maketitle
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\footnotetext[1]{The simulation data, as well as the scripts this work is based on are published only only. The data are accessible via \url{https://doi.org/10.5531/sd.astro.3}.}
+
+\section{Introduction}\label{intro}
+
+It has long been known that star formation preferentially occurs within molecular clouds. 
+However, the physics of the star formation process is still not completely understood.
+It is obvious that gravity is the key factor for star formation as it drives collapse motions and operates on all scales.
+However, one needs additional processes that stabilise the gas or terminate star formation quickly in order to explain the low star formation efficiencies observed in molecular clouds. 
+Although there are many processes that act at the different scales of molecular clouds, turbulent support has often been argued to be the best candidate for this task.
+
+In the literature, turbulence plays an ambiguous role in the context of star formation. 
+In most of the cases, turbulence is expected to stabilise molecular clouds on large scales \citep{Fleck1980,McKee1992,MacLow2003}, while feedback processes and shear motions heavily destabilise or even disrupt cloud-like structures \citep{Tan2013,Miyamoto2014}. 
+However, it remains unclear whether there are particular mechanisms that dominate the driving of turbulence within molecular clouds, as every process is supposed to be traced by typical features in the observables.
+Yet, these features are either not seen or are too ambiguous to clearly reflect the dominant driving mode.
+For example, turbulence that is driven by large-scale velocity dispersions during global collapse \citep{Ballesteros2011a,Ballesteros2011b,Hartmann2012} produces P-Cygni line profiles that have not yet been observed on scales of entire molecular clouds. 
+Internal feedback, on the contrary, seems more promising as it drives turbulence from small to large scales \citep{Dekel2013,Krumholz2014}.
+Observations, though, demonstrate that the required driving sources need to act on scales of entire clouds; which typical feedback, such as radiation, winds, jets, or supernovae (SNe), cannot achieve \citep{Heyer2004,Brunt2009,Brunt2013}.
+
+There have been many theoretical studies that have examined the nature and origin of turbulence within the various phases of the interstellar medium \citep[ISM;][and references within]{MacLow2004}. 
+The most established characterization of turbulence in general was by \citet{Kolmogorov1941} who investigated fully developed, incompressible turbulence driven on scales larger than the object of interest, and dissipating on scales much smaller than those of interest.
+In the scope of this paper this object is a single molecular cloud. 
+Molecular clouds are highly compressible, though.
+Only a few analytical studies have treated this case.
+\citet{She1994} and \citet{Boldyrev2002}, for example, generalise and extend the predicted scaling of the decay of turbulence to supersonic turbulence.
+\citet{Galtier2011} and \citet{Banerjee2013} provide an analytic description of the scaling of mass-weighted structure functions.
+
+In this paper, we examine three molecular clouds that formed self-consistently from SN-driven turbulence in the simulations by \citet[\citetalias{IbanezMejia2016} and \linebreak \citetalias{IbanezMejia2017} hereafter]{IbanezMejia2016,IbanezMejia2017} and study how the turbulence within the clouds' gas evolves.
+The key questions we address are the following: 
+What dominates the turbulence within the simulated molecular clouds? 
+How can structure functions inform us about the evolutionary state of MCs and the dominant physical processes within them?
+
+In Sect.~\ref{methods}, we introduce the simulated clouds in the context of the underlying physics involved in the simulations.
+Furthermore, we describe the theoretical basics of velocity structure functions.
+Sect.~\ref{results} demonstrates that the velocity structure function is a useful tool to characterise the dominant driving mechanisms of turbulence in molecular clouds and can be applied to both simulated and observed data. 
+We examine the influences of utilising one-dimensional velocity measurements, different Jeans refinement levels, density thresholds and density weighting on the applicability of the velocity structure function and the results obtained with it in Sect.~\ref{discussion}.  
+At the end of this section, we will also compare our results to observational studies.
+We summarise our findings and conclusions in Sect.~\ref{conclusions}.
+
+
+\section{Methods}\label{methods}
+
+
+\subsection{Cloud models}\label{methods:clouds}
+
+The analysis in this paper is based on a sample of three molecular clouds (MCs) identified within a three-dimensional (3D), magnetohydrodynamical, adaptive mesh refinement simulation using the FLASH code \citep{Fryxell2000}.  
+\citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}, as well as \linebreak \citet[\citetalias{Chira2018} hereafter]{Chira2018}, describe the simulations and the clouds in more detail. 
+We summarise the most relevant properties. 
+
+The numerical simulation models a $1\times1\times40$~kpc$^3$ section of the multi-phase, turbulent ISM of a disk galaxy, where dense structures form self-consistently in convergent, turbulent flows \citepalias{IbanezMejia2016}.  
+The model includes gravity---a background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time---supernova-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
+Although hundreds of dense clouds form within the simulated volume, \citetalias{IbanezMejia2017} focused on three clouds, which were re-simulated at a much higher spatial resolution, which we map to a uniform grid of 0.1 pc zones.
+In this paper, we use the data within (40~pc)$^{3}$ subregions centred on the high-resolution clouds' centres of mass.
+The internal structures of MCs are resolved using adaptive mesh refinement, focusing grid resolution on dense regions where Jeans unstable structures must be resolved with a minimum of 4 cells ($\lambda_J > 4~\Delta x_{\rm min}$).
+For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}.
+The MCs have initial masses at the onset of self-gravity of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter.
+
+It is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
+\citetalias{IbanezMejia2017} described the time evolution of the properties of all three clouds in detail, in particular, mass, size, velocity dispersion, and accretion rates, in the context of MC formation and evolution within a galactic environment.
+\citetalias{Chira2018} studied the properties, evolution, and fragmentation of filaments that self-consistently condense within these clouds. 
+We paid particular attention on the accuracy of typical stability criteria for filaments, comparing the results to the theoretical predictions, showing that simplified analytic models do not capture the complexity of fragmentation due to their simplifying assumptions.
+
+
+\subsection{Velocity Structure Function}\label{methods:vsf}
+
+In this paper, we probe the power distribution of turbulence throughout the entire simulated MCs by using the velocity structure function (VSF).
+The VSF is a two-point correlation function,
+\begin{equation}
+	{S}_p (\ell) = \langle \, |\Delta \vec{v}|^p  \, \rangle
+	\label{equ:method:def_vsf}
+\end{equation}
+that measures the mean velocity difference to the $p^\mathrm{th}$ power
+\begin{equation}\Delta \vec{v} (\vec{\ell}) = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})
+\end{equation} 
+between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$, with $\vec{\ell}$ being the direction vector pointing from the first to the second point.  
+$S_p$ is usually reported as a function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
+The VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events in random turbulent flows (e.g., supernovae) in velocity patterns.
+Those patterns become more prominent the higher the value of $p$ is \citep{Heyer2004}.
+\citet{Padoan2016a} defined a density-weighted velocity structure function
+\begin{equation}
+	{S}_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle}.
+	\label{equ:method:def_vsf_dw}
+\end{equation}
+In many cases, though, a three-dimensional computation of the VSF cannot be performed because of the observational constraint that only line-of-sight velocities are available.
+We will therefore compare our three-dimensional (3D) results to one-dimensional (1D), density-weighted VSFs
+\begin{equation}
+	\mathit{S}_{p,\mathrm{1D}} (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta 
+        \vec{v} \cdot \vec{e}_i|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle} ,
+	\label{equ:results:def_vsf_1d}
+\end{equation}
+with $\vec{e}_i$ representing the unit vector along the $i$~=~$x$-, $y$-, or $z$-axis.
+
+The first several orders of the VSF have a physical meaning. 
+For example, $\mathit{S}_1$ gives the mean of relative velocities between any two points reflecting the modes created by different gas flows, while $\mathit{S}_2$ is proportional to the kinetic energy, making it a good probe of how the turbulent energy is distributed among different scales.
+
+For fully developed turbulence the VSF is well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
+\begin{equation}
+	\mathit{S}_p (\ell) \propto \ell^{\zeta(p)}.
+	\label{equ:method:propto_zeta}
+\end{equation}
+Note that the scaling exponent of that power-law relation, $\zeta$, depends on many parameters, such as the order of the VSF, as well as the properties and composition of the studied turbulent flow, such as its geometry, compressibility, or magnetization.
+Many studies of VSFs distinguish between longitudinal and transverse velocity components, or compressible and solenoidal components, because those are expected to behave differently, especially towards larger lag distances \citep{Gotoh2002,Schmidt2008,Benzi2010}.
+However, the differences are mostly negligible on scales we focus on. 
+Since these decompositions are also difficult to perform on observational data, we focus on the total VSF.
+
+Theoretical studies predict values of $\zeta$ depending on the nature of the turbulence and the order $p$.
+\citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an incompressible flow.
+This results in the commonly known prediction that the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
+
+For a supersonic flow, however, $\zeta(3) >1$ is expected.
+Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following.
+For an incompressible filamentary flow \citet{She1994} predict that
+the VSFs scale with power law index
+\begin{equation}
+	\zeta(p) = \frac{p}{9} + 2 \left[ 1 - \left( \frac{2}{3} \right)^{\frac{p}{3}} \right] ,
+	\label{equ:method:she}
+\end{equation}
+while supersonic flows with sheet-like geometry are predicted to scale with \citep{Boldyrev2002}
+\begin{equation}
+	\zeta(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}}.
+	\label{equ:method:boldyrev}
+\end{equation}
+\citet{Benzi1993} introduced the principle of extended self-similarity.
+It proposes that there is a constant relationship between the scaling
+exponents of different orders at all lag scales so that $\zeta$ can be measured from $S_p/S_3$, which typically gives a much clearer power-law behaviour.
+The self-similarity parameter is defined as,
+\begin{equation}
+	Z(p) = \frac{\zeta(p)}{\zeta(3)}.
+	\label{equ:method:z_def}
+\end{equation} 
+Since the predicted values for $\zeta(p)$ by \citet{She1994} and \citet{Boldyrev2002} are normalised so that $\zeta(3)$~=~1, Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) also provide the predictions for $Z(p)$, respectively.
+
+For the discussion below, we measure $\zeta$ by fitting a power-law,
+given by
+\begin{equation}
+	\log_{10}\left[ S_p(\ell) \right] = \log_{10}\left(A\right) + \zeta \log_{10}(\ell) ,
+	\label{equ:method:fitting}
+\end{equation}
+with $A$ being the proportionality factor of the power-law to the simulated measurements.
+
+In order to reduce the computational effort, we divide the range of 3D lag distances, $|\vec{\ell}|$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
+This means that the measurements at the given lag interval $\ell_i$ we will show below are based on data with lag distances $\ell_{i-1} < \ell \leq \ell_i$.
+
+Furthermore, we reduce the computational effort of this study generally focussing on clouds, defined as regions above a fixed number density threshold with fiducial value $n_{\mathrm cloud} = 100$~cm$^{-3}$.  We have chosen this threshold as it roughly corresponds to the density when CO becomes detectable.
+However, \citetalias{IbanezMejia2017} shows that there is usually no sharp increase in density between the ISM and the clouds. 
+Instead, the gas becomes continuously denser towards the centres of mass within the clouds. 
+Consequently, our use of a density threshold is a somewhat artificial boundary between the clouds and the ISM. Observationally, however, introducing a column density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., detector sensitivity) or the nature of the underlying physical processes (for example, excitation rates, or critical densities).
+Therefore, it is important to study how a density threshold influences the VSF and its evolution.
+
+At our fiducial density threshold, we actually consider only $\leq$1.5\% of the volume in the high resolution cube.
+To understand the influence of this limitation we set up a test scenario (see Sect.~\ref{results:densthres}) by removing the density threshold, by setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$, that results in analysing the entire data cube.
+As this would be too computationally expensive, we randomly choose a set of 5\% of the total number of cells as reference points and compute relative velocities to these cells only.
+We emphasise that this does not mean that we only calculate the relative velocities between these cells.
+Rather this subsample of cells represent the starting vectors $\vec{x}$ to which the velocities of all other cells $\vec{x} + \vec{\ell}$ in the same cube are compared to.
+This way we reduce the risk of ignoring or emphasising any spatial direction or angle.
+
+Note that by choosing the starting points randomly we ensure that all parts of the cubes are considered. 
+As a consequence, there is only a small likelihood (5\%~$\times$~1.5\%~=~0.075\%) that any given cell chosen will be in the cloud.
+Therefore, we emphasise that it is likely that the two subsamples (no density threshold and cloud-only) do not have a common subset of starting vectors.
+Nevertheless, the random sample still includes $>4 \times 10^3$ cells in the cloud, so the sample does include information on VSFs of material in the cloud.
+
+
+\section{Results}\label{results}
+
+In this section, we present our results on how VSFs reflect the distribution of turbulent power within molecular clouds.
+
+\subsection{Examples}\label{results:example}
+
+Fig.~\ref{pic:results:vsf_example} shows three examples of VSFs, (a) cloud \texttt{M4} at $t$~=~1.2~Myr after self-gravity has been activated in the simulations, (b) \texttt{M3} at $t$~=~3.5~Myr, and (c) \texttt{M3} at $t$~=~4.0~Myr.
+All plots show the density-weighted VSFs of orders $p$~=~1--3.
+The solid lines show the fitted power-law relations as given in Eq.~(\ref{equ:method:fitting}).
+
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{vsf_example.pdf}
+	\caption{Examples of velocity structure functions as function of the lag scale $\ell$ and order $p$. 
+		The dots (connected by dashed lines) show the values computed from the simulation.
+		The solid lines represent the power-law relations fitted to the respective structure functions.
+	}
+	\label{pic:results:vsf_example}
+\end{figure*}
+
+The examples demonstrate that, in general, the measured VSFs cannot be described by a single power-law relation over the entire range of $\ell$.
+Instead they are composed of roughly three different regimes: 
+one at small scales at $\ell \lesssim$~3~pc, a second one within 3~pc~$\lesssim \ell \lesssim$~10--15~pc, and the last one at large scales with $\ell >$~15~pc.
+We find that only the small and intermediate ranges may be represented by a common power-law relation.
+On larger scales, one observes a local minimum before the VSFs either increase or stagnate.
+Thus, in this context the VSF is an accurate tool to measure the size of a molecular cloud.
+On smaller scales, which correspond to individual clumps and cores, one sees significant differences.
+
+The examples in Fig.~\ref{pic:results:vsf_example} illustrate how VSFs react to different scenarios that affect the turbulent structure of the entire clouds. 
+Fig.~\ref{pic:results:vsf_example}(a) shows the case where turbulence is driven on large scales and naturally decays towards smaller scales.
+This is the most common behavior seen in all three MCs within the first $\sim$1.5~Myr of the simulations.
+During this interval of time the clouds experience the effect of self-gravity for the first time in their evolution and need to adjust to this new condition.
+Until this is the case, their VSFs are dominated by the freely cascading turbulence that previously dominated the kinetic structure of the clouds.
+Furthermore, this implies that we can only reliably examine turbulence within the simulations after 1.5~Myr and carefully need to take this into account in the further discussion \citep[see][]{IbanezMejia2017,Seifried2017b}.
+
+The other examples represent the clouds at later stages of their evolution when the VSFs are dominated by sources that drive the flow within the clouds in a more extreme way.
+Fig.~\ref{pic:results:vsf_example}(b) shows the VSF of \texttt{M3} at a time when the cloud has just been hit by a SN shock front. 
+One clearly sees how the amplitude of the VSFs is increased by one to two orders of magnitude compared to the previous example.
+Especially the power at small scales ($\ell \lesssim$ few parsecs) is highly amplified as a result of the shock.
+Despite the increase of turbulent power at small scales, a large amount of energy is injected at large scales, as well.
+All this results in a steeper slope of the VSF.
+However, the effect of SN shocks last for only a short period of time (see below).
+
+The last example, Fig.~\ref{pic:results:vsf_example}(c), demonstrates the imprint of gravitational contraction.
+Here, the VSF is almost flat, or even slightly increasing towards smaller separation scales. 
+This kind of profile is typical for gas that is gravitationally contracting \citep{Boneberg2015,Burkhart2015}.
+Gas moves into the inner regions of the cloud, reducing the average lag distances, but not necessarily the relative velocities.
+The latter may even be accelerated by the infall.
+As a consequence, large amounts of kinetic energy are transferred to smaller scales which flattens the corresponding VSF.
+
+\subsection{Time Evolution}\label{results:normal}
+
+Fig.~\ref{pic:results:zeta_all}(a) summarises the time evolution of the power-law index $\zeta(p)$ fit to the density-weighted VSF obtained for each cloud, and each order $p$.
+The figure shows several interesting features.
+First, initially, at $t$~=~0~Myr, all calculated values of $\zeta$ are above the predicted values (see Eqs.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev})).
+This suggests that we are seeing excess power at large scales from the initial convergent flows that formed the clouds.
+Second, $\zeta$ for all orders decreases with time as the clouds gravitationally collapse.
+Distributed gravitational collapse causes an increase in relative velocities at increasingly small scales as material falls into filaments and nodes.  The increase in small-scale power leads to a flattening of the VSF and thus a decrease in $\zeta$.
+Third, occasionally one observes bumps and dips in all orders of VSFs (e.g., \texttt{M3} or \texttt{M8} around $t$~=~1.7~Myr). 
+These features only last for short periods of time (up to 0.6~Myr), but set in rather abruptly and represent sudden changes in large-scale power that change the VSF slope. 
+
+\begin{figure*}[!htb]
+	\centering  
+  
+  \begin{subfigure}[c]{\textwidth}
+      \includegraphics[width=\textwidth]{zeta_all_nojeans.pdf}
+      \label{pic:results:zeta_all_nojeans}
+  \end{subfigure}
+  \begin{subfigure}[c]{\textwidth}
+      \addtocounter{subfigure}{4}
+      \includegraphics[width=\textwidth]{zeta_jeans.pdf}
+      \label{pic:results:zeta_all_jeans}
+  \end{subfigure}
+  
+  \caption{Time evolution of scaling exponent $\zeta(p)$ of the $p^\mathrm{th}$ order VSF. Panels (a)--(d) show the measurements for \texttt{M3}~(\textit{left}), \texttt{M4}~(\textit{middle}), and \texttt{M8}~(\textit{right}), respectively. Of these, (a) represents the standard analysis while the other rows illustrate the results of different variations in the analysis as noted in the figures. Panel (e) shows the values of $\zeta$ measured within \texttt{M3} as a function of the Jeans refinement level the cloud has been modelled with. Note that these more expensive runs were not run for as long as the fiducial run.  In all panels, the grey dotted vertical lines mark the times than a SN explodes in the vicinity of the corresponding cloud, while the blue areas indicate periods of enhanced mass accretion onto the clouds. The coloured horizontal lines show the predicted values for incompressible turbulence \citep[dash-dotted lines;][]{She1994} and for highly compressible, supersonic turbulence \citep[dashed lines;][]{Boldyrev2002}.}
+	\label{pic:results:zeta_all}
+\end{figure*}
+
+Fig.~\ref{pic:results:z_all}(a) shows the corresponding time evolution of the self-similarity parameter, $Z$. 
+One sees that most of the time the measured values of $Z$ are in agreement or at least closely approaching the predicted values. 
+The occasional peaks in $Z$ (for example, in \texttt{M4} at $t$~=~4.1~Myr) occur at times when the scaling exponents of the VSFs $\zeta(3)$ reach values close to or below 0.
+A decrease in $Z$ (for example, in \texttt{M3} around $t$~=~1.8~Myr) occurs when SN shocks hit and heavily impact the clouds, producing stronger effects in higher order VSFs.
+
+\begin{figure*}[!htb]
+	\centering  
+  
+  \begin{subfigure}[c]{\textwidth}
+      \includegraphics[width=\textwidth]{z_all_nojeans.pdf}
+      \label{pic:results:z_all_nojeans}
+  \end{subfigure}
+  
+  \begin{subfigure}[c]{\textwidth}
+      \addtocounter{subfigure}{4}
+      \includegraphics[width=\textwidth]{z_jeans.pdf}
+      \label{pic:results:z_all_jeans}
+  \end{subfigure}
+  
+  \caption{Like Fig.~\ref{pic:results:zeta_all}, but for the measured self-similarity parameter $Z = \zeta(p) / \zeta(3)$ of the $p^\mathrm{th}$ order VSF.}
+	\label{pic:results:z_all}
+\end{figure*}
+
+In the rest of this section, we study how VSFs computed in different ways compare to these density weighted results.
+We compare the findings with the results we have obtained with our original setup.
+In Sect.~\ref{discussion}, we will discuss and interpret these results in more detail.
+
+
+\subsection{Line-of-Sight VSF}\label{results:1d}
+
+Previously, we have seen how the VSF behaves and evolves within the clouds.
+By doing so, we derived the relative velocities based on the 3D velocity vectors from the simulations.
+However, observed VSFs can only be measured using line-of-sight velocities.
+Thus, in this subsection we investigate how VSFs derived from 1D relative velocities compare to the 3D VSFs presented before.
+
+Figures~\ref{pic:results:zeta_all}(b) and~\ref{pic:results:z_all}(b) show measured $\zeta$ and $Z$, respectively, derived based on Eq.~(\ref{equ:results:def_vsf_1d}). 
+We see that, in most of the cases, all 1D VSFs agree well with each other, as well as with the corresponding 3D VSFs.
+There are cases in which the 1D VSF evolves temporarily or completely differently than the 3D VSF for a short period of time.
+For example, the 1D VSF along the x-axis in \texttt{M3} initially behaves like the corresponding 3D VSF, though with lower absolute values of $\zeta$ (or higher values of $Z$).
+However, during the period $t$~=~2.5--3.8~Myr the functions diverge. 
+While the 3D $\zeta$ decreases further and switches sign, the $\zeta$ based on the 1D VSF along the $x$-axis shows a local maximum before converging with the 3D $\zeta$ again. 
+
+
+\subsection{Density Thresholds}\label{results:densthres}
+
+We now examine the VSFs of the entire data cubes without setting a density threshold ($n_\mathrm{cloud}~=$~0~cm$^{-3}$).  Figure~\ref{pic:results:zeta_all}(c) shows $\zeta$, while Figure~\ref{pic:results:z_all}(c) shows $Z$ in this case.
+These figures clearly illustrate that the measurements in the samples without density threshold completely differ from those with the density threshold.
+The measured values of $\zeta$ are much higher in the ISM than in the cloud-only sample.
+Although we see a similar decline of $\zeta$ in \texttt{M4} and \texttt{M8} as the gas contracts under the influence of gravity in the vicinity of the clouds, $\zeta$ generally evolves differently here than in the analysis that is focused on the clouds.
+We see a high rate of random fluctuations in the evolution of $\zeta$, as well.
+Furthermore, contrary to all of our other test scenarios, we see here that all $Z$ are constant in time and within all clouds, with values slightly lower than those predicted by \citet{She1994} for incompressible flows.  
+This is consistent with the high sound speed in the hot gas that fills most of the volume of the computational box, which results in subsonic flows predominating.
+
+
+\subsection{Density Weighting}\label{results:densweight}
+
+As mentioned in Sect.~\ref{methods:vsf}, Eq.~(\ref{equ:method:def_vsf}) represents the definition of the density-weighted VSF.
+While this represents the observational situation better, the theoretical predictions were developed for the unweighted statistic.  Thus a comparison of results for the two variations in our model is of interest.
+There are a few studies that have targeted this question 
+\citep[e.g.,][]{Benzi1993,Schmidt2008, Benzi2010,Gotoh2002}.  
+However, all of them considered isotropic, homeogeneous, turbulent flows that are not comparable to our clouds.
+\citet{Padoan2016a} use both methods, but not on the same set of data. 
+
+In this section, we investigate the influence of density weighting on VSFs by repeating the original analysis with the non-weighted VSF given by Eq.~\ref{equ:method:def_vsf}.
+Figs.~\ref{pic:results:zeta_all}(d) and~\ref{pic:results:z_all}(d) show the measured values of $\zeta$ and $Z$ derived from the non-weighted VSFs, respectively.
+
+Comparing the weighted and non-weighted samples, we see the following:
+The non-weighted $\zeta$ (Fig.~\ref{pic:results:zeta_all}d) traces the interactions between the gas of the clouds and the SN shocks in the same way as occurs for the density-weighted VSF.
+In \texttt{M3} and \texttt{M8} we also see that the values of $\zeta$ decrease as the clouds evolve, yet not as fast as they do in the density-weighted VSFs. 
+The measurements in \texttt{M4}, however, are almost constant over time. 
+In all the cases, the values of $\zeta$ never decrease below 0.5; a behaviour that clearly differs from what we have observed in the density-weighted VSFs. 
+The density weighting weakens the influence of the highly compressible flows in the densest regions, but not so much as in the case with no density threshold. 
+Consequently, the evolution of $Z$s (see Fig.~\ref{pic:results:z_all}d) becomes smoother, as well, as there is no sign inversion of $\zeta$.
+As a result the values of $Z$ fluctuate slightly when shocks hit, and otherwise vary between the compressible and incompressible limits.
+
+
+
+\subsection{Jeans Length Refinement}\label{results:refinement}
+
+The results we have discussed so far are based on simulation data presented in \citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}.
+Due to the huge computational expense of the variety of physical and numerical processes (fluid dynamics, AMR, supernovae, magnetic fields, radiative heating and cooling, and many more) within those simulations, though, they have required some compromises.
+One of these compromises was the Jeans refinement criterion used as part of the AMR mechanisms.
+The authors resolved local Jeans lengths by only four cells ($\lambda_J=4\Delta{}x$).
+This is the minimal requirement for modelling self-gravitating gas in disks in order to avoid artificial fragmentation \citep{Truelove1998}. 
+Other studies, for example by \citet{Turk2012}, have shown that a significantly higher refinement is needed to reliably resolve turbulent structures and flows within disks to resolve turbulence.  In our case, the key question is how quickly the turbulent cascade fills in after the multiple steps of refinement to higher resolution required to develop the high resolution cubes we use.  
+Although we have a different physical situtation, the earlier results still emphasize the importance of how well the Jeans length is resolved.
+
+In the appendix of \citetalias{IbanezMejia2017}, the authors examine the effect the number of cells used for the Jeans refinement has on the measured kinetic energy.
+For this, they have rerun the simulations of \texttt{M3} twice; 
+once with $\lambda_J=8\Delta{}x$ for the first 3~Myr after self-gravity was activated, and once with $\lambda_J=32\Delta{}x$ for the first megayear of the cloud's evolution.
+The authors show that the $\lambda_J=32\Delta{}x$ simulations smoothly recover the energy power spectrum on all scales already after this first megayear.
+The other two setups do this, as well, but only over longer timescales.
+This is why one can only reliably trust the findings in this paper after the clouds have evolved for approximately 1.5~Myr \citep[see also][]{IbanezMejia2017,Seifried2017b}.
+
+Furthermore, \citetalias{IbanezMejia2017} calculated the difference in the cloud's total kinetic energy as a function of time and refinement level.
+They found that the $\lambda_J = 4\Delta{}x$ simulations miss a significant amount of kinetic energy, namely up to 13\% compared to $\lambda_J = 8\Delta{}x$ and 33\% compared to $\lambda_J = 32\Delta{}x$.
+However, they also observed that these differences peak around $t=0.5$~Myr and decrease afterwards, as the $\lambda_J = 4\Delta{}x$ and $\lambda_J = 8\Delta{}x$ simulations adjust to the new refinement levels.
+Thus, the results we have derived from the $\lambda_J = 4\Delta{}x$ simulations need to be evaluated with respect to this lack of turbulent energy, although the clouds' dynamics remains dominated by gravitational collapse.
+It also means that the $\lambda_J = 4\Delta{}x$ data become more reliable the longer the simulations evolve.
+
+In order to study  how the level of Jeans refinement influences the behaviour of the VSFs, we investigate the \texttt{M3} data of the \linebreak $\lambda_J = 8\Delta{}x$ and $\lambda_J = 32\Delta{}x$ simulations.
+Figs.~\ref{pic:results:zeta_all}e and \ref{pic:results:z_all}e show $\zeta$ and $Z$ for  $\lambda_J = 8\Delta{}x$ and $\lambda_J = 32\Delta{}x$.
+In Fig.~\ref{pic:results:jeans_comp} we directly compare the measurements of all refinement levels relative to $\lambda_J = 4\Delta{}x$.
+
+$\lambda_J = 8\Delta{}x$ shows the same behaviour as $\lambda_J = 4\Delta{}x$, with values in both samples being in good agreement as the top panel of Fig.~\ref{pic:results:jeans_comp} demonstrates. 
+Over the entire observed time span, the measured values of $\zeta$ decrease as the VSF become flatter.
+At the time the SNe interact with the cloud, over the course of about a megayear after traveling across the distance from the point of explosion to the cloud, the VSFs steeply increase toward larger scales causing values of $\zeta$ (Fig.~\ref{pic:results:zeta_all}e) to jump.
+Compared to the $\lambda_J = 4\Delta{}x$ sample, the peak in $\zeta$ is smoother and lasts longer at higher Jeans resolution.
+
+These same effects can be seen in Fig.~\ref{pic:results:z_all}e where the drop of $Z$ due to the SN shock lasts longer than it did for $\lambda_J = 4\Delta{}x$. 
+Besides this, the time evolution of $Z$ for $\lambda_J = 8\Delta{}x$ is as sensitive to the turbulence-related events as it was for $\lambda_J = 4\Delta{}x$.
+The divergence produced when gravity has transferred the majority of power to smaller scales occurs at the same time. 
+sThe actual depth of the drop is a numerical artefact caused by $\zeta(3)$ being equal or close to zero at this very time step. 
+
+The picture changes when we analyse the VSFs based on the $\lambda_J = 32\Delta{}x$ runs (Figs.~\ref{pic:results:zeta_all}e,~\ref{pic:results:z_all}e, and~\ref{pic:results:jeans_comp}).
+Here one sees that the measured values of both $\zeta$ (Fig.~\ref{pic:results:zeta_all}e) and $Z$ (Fig.~\ref{pic:results:z_all}e) are similar to those for $\lambda_J = 4\Delta{}x$ for the first 0.2~Myr.
+After this short period, though, the evolution of $\zeta$ diverge. 
+While $\zeta(1)$ and $\zeta(2)$ continue to decrease similar to $\lambda_J = 4\Delta{}x$ but at lower rate, $\zeta(3)$ increases until it peaks at $t=0.8$~Myr and falls steeply again.
+This divergence has notable impact on the evolution of $Z$, as well. 
+The bottom panel of Fig.~\ref{pic:results:jeans_comp} illustrates the different evolutions of measured $\zeta$ and $Z$ in the two simulations more clearly.
+One sees that the differences between the samples follow the same pattern for all orders of $p$.
+The differences, though, increase with the order:
+While the values for $\zeta(1)$ are still in good agreement, the measured values of $\zeta(2)$ and $\zeta(3)$ for $\lambda_J = 32\Delta{}x$ are 40\% and 100\% higher than those measured for $\lambda_J = 4\Delta{}x$, respectively.
+Consequently, this causes differences in $Z(p)$ of 30--52\% between the simulations.
+At $t$~=~1.2~Myr, the last time step of this sample, the values of all $\zeta$ equal the measurements of $\lambda_J = 4\Delta{}x$ again.
+As the cost of extending the $\lambda_J = 32\Delta{}x$ simulation is prohibitive, we cannot determine whether this agreement will continue.
+
+\begin{figure*}
+	\centering
+    \includegraphics[width=\textwidth]{comp_jeans.pdf}
+    \caption{Comparison of VSF scaling exponents, $\zeta$ (\textit{left}), and self-similarity parameters, $Z$ (\textit{right}), depending on the Jeans refinement of the simulation runs the data are based on. The abscissas give values from $\lambda_J = 4\Delta{}x$, while the ordinates give values from $\lambda_J = 8\Delta{}x$ (\textit{top}) and $\lambda_J = 32\Delta{}x$ (\textit{bottom}). All data points refer to the \texttt{M3} cloud and represent different lags in the same time step in the respective simulations. 
+    }
+    \label{pic:results:jeans_comp}
+\end{figure*}
+
+
+
+\section{Discussion}\label{discussion}
+
+\subsection{Time evolution}\label{discussion:normal}
+
+We have seen in Sect.~\ref{results} that density-weighted VSFs reflect a combination of uniform, compressible turbulence, large-scale shocks, and gravitational collapse.  Extended self-similarity emphasizes the turbulent nature of these high-Reynolds numbers flows even in regions of gravitational collapse. 
+
+As the clouds gravitationally collapse, the resulting increase in small-scale power flattens or even inverts the density-weighted VSFs, resulting in decreasing or even negative values of $\zeta$ (Fig.~\ref{pic:results:zeta_all}(a)). The increase in small-scale power can also be derived from the increasingly negative binding energy of the clouds as further gas falls into them \citepalias{IbanezMejia2017}.  Extended self-similarity shows VSF ratios characteristic of compressible turbulence (Fig.~\ref{pic:results:z_all}a), as can be seen from their tending to lie between the incompressible limit of \citet{She1994} and the extremely compressible Burgers turbulence limit of \citet{Boldyrev2002}.  The extended self-similarity procedure fails as $\zeta(3)$ passes through zero, however, so it must be interpreted in concert with the raw values of $\zeta$.
+
+The impact of SN shocks hitting the clouds is to inject power at all scales (Fig.~\ref{pic:results:vsf_example}).  The resulting VSFs tend to lose their power-law character. Fitting a power-law to them anyway results in substantial perturbations from the predictions for compressible turbulence even under extended self-similarity.  Fig.~\ref{pic:results:z_all} shows times of SN explosions and periods of strong accretion onto the clouds.  We note that the SN shock fronts move at speeds of 50--100~km~s$^{-1}$ through the ISM and the explosions occur at distances of 30--100~pc from the clouds, so the shocks take around 1~Myr to reach the clouds. Perturbations in $Z$ not associated with zero-crossings by $\zeta(3)$ are consistent with being caused by SN shock front interactions with the clouds.  These shock interactions last for only a fraction of a megayear, though, after which the turbulent nature of the flow reasserts itself.
+
+
+
+\subsection{Line-of-sight velocities}\label{discussion:1d}
+
+Our discussion has so far focused on 3D measurements of VSFs (Eq.~(\ref{equ:method:def_vsf})).
+In Sect.~\ref{results:1d} we have seen that the $\zeta$ and $Z$ derived from the 1D VSFs generally evolve similarly as those derived from the 3D VSFs.
+Yet, we have also seen that individual sight lines may evolve differently.
+These differences appear to reflect the detailed geometry of shock impacts on the cloud, which are reflected more strongly in the higher-order VSFs.
+For example, for the first 2~Myr of the evolution of \texttt{M4} the values of $Z$ along the $y$-axis are significantly higher than those observed along the other axes and diverge significantly from the values expected for uniform turbulence.
+Recall that a perturbation in $Z$ usually corresponds to an episode of strong shock driving, suggesting an impact along the $y$-axis at this time. 
+Along the other two axes, $Z$ continues to agree with supersonic turbulence \citep{Boldyrev2002}.
+This effect is only visible as we analyse the three dimensions separately, while the driving of the gas along the $y$-axis is averaged out in the 3D VSFs (see Fig.~\ref{pic:results:z_all}a).
+
+
+In summary, for a fully developed 3D turbulent field we expect that 1D VSFs behave similarly to 3D VSFs.
+However, when there is a preferred direction along which the gas flows, the 1D and 3D VSFs differ significantly from each other. 
+Thus, we predict that observed VSFs reflect the nature of turbulence within molecular clouds unless there is clear evidence that the gas is driven in a particular direction (e.g., by a stellar wind or SN shock front).
+
+Note that this analysis does not take typical line-of-sight effects, such as optical depth or blending, into account. 
+Future studies need to investigate this point in more detail by performing VSF analyses based on full radiative transfer calculations.
+
+
+
+\subsection{Density thresholds}\label{discussion:densthres}
+
+
+We find that the structure and behaviour of VSFs strongly depends on whether or not we assume a density threshold in computing them.
+In the fiducial case, where n$_\mathrm{cloud}$~=~100~cm$^{-3}$, we have seen a mostly straight decline of $\zeta$ while $Z$ remains fairly constant over time, reflecting the contraction of the clouds due to self-gravity.
+On the other hand, if we remove the density threshold, including the entire high-resolution region in the calculation, we observe a completely different picture.
+The high velocities present in the diffuse interstellar medium surrounding the cloud lead to strong large-scale power and thus much steeper VSFs, corresponding to higher values of $\zeta$. 
+There is still a slightly declining trend in $\zeta$, but the evolution is dominated by random fluctuations.
+We also see that $Z$ remains constant for the entire simulation in every case.
+The VSFs for the entire box appear consistent with the prediction for the value in incompressible turbulence \citep{Boldyrev2002}. This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.
+
+We conclude that the decision of whether or not a density threshold is used has a significant and direct influence on the resulting VSFs.
+Indeed, it is a straight-forward approach to focus the analysis on the actual area of interest.
+In observational studies such a threshold will anyway always be present as minimal collision rates for excitation or the sensitivity of detectors automatically introduce implicit density or intensity thresholds. 
+Although we have only tested two specific setups in this context we have seen the significance of a proper choice of the density threshold, as well as a proper discussion of the obtained results considering the threshold as one of the defining parameters.
+
+
+
+
+\subsection{Density weighting}\label{discussion:densweight}
+
+
+In this subsection, we discuss the effect of computing the VSF with or without including density weighting, relying on the results presented in Sect.~\ref{results:densweight}.
+As long as the turbulence is dominated by the large scales, and a density threshold is used, considering the density weighting does not have a significant effect.
+However, as the clouds evolve the differences increase:
+the non-weighted VSFs never drop below 0.5.
+This is because the non-weighted VSF treats all cells equally, no matter whether the particular cell represents a dense element of the cloud centre or a diffuse element of the cloud's edge, while the weighted VSF gives more weight to the matter within the small-scale, dense, collapsing regions.
+The kinetic energy is dominated by these regions.
+Thus, neglecting density weighting decouples the VSF from the kinetic energy distribution. 
+This is particularly important at late times when small-scale collapse dominates.
+
+Nevertheless, Fig.~\ref{pic:results:z_all}(d) illustrates that these differences do not prevent extended self-similarity from holding. 
+Regardless of whether density-weighting is included, the values of $Z$ remain similar, with similar responses to external driving, except for the features created when $\zeta(3)$ passes through zero in the density-weighted VSFs.
+This observation is true for all Jeans refinement levels, as Fig.~\ref{pic:results:comp_weighting} demonstrates.
+
+
+\begin{figure*}
+	\centering
+    \includegraphics[width=\textwidth]{comp_weighting.pdf}
+    \caption{ Comparison of $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}) measured based on density-weighted VSFs (\textit{abscissas}) and non-weighted VSFs (\textit{ordinates}). We note that the given values are based on \texttt{M3} only.}
+    \label{pic:results:comp_weighting}
+\end{figure*}
+
+Fig.~\ref{pic:results:comp_weighting} summarises the comparison of $\zeta$ and $Z$ measured with the density-weighted and non-weighted VSFs for all Jeans refinement levels (meaning the granularity used for modelling the turbulent motions of the gas, see Sect.~\ref{results:refinement} for more details).
+The figure clearly shows that the measurements only agree well for the highest refinement level with $\lambda~=~32\Delta x$.
+However, we would need more data points to be sure that this correlation is indeed real.
+At lower refinement levels the measurements, as those used for the standard analysis and all other test scenarios but the one presented in Sect.~\ref{results:refinement}, correlate less well with each other. 
+The differences in the samples appear dominantly when the density-weighted $\zeta$ cease below $\approx$0.5, which is the global minimum for the non-weighted $\zeta$. 
+This means that none of the $\zeta$ computed in all clouds and refinement levels with the non-weighted VSF is measured to be below 0.5.
+
+We conclude that deriving the VSF from smooth density distributions without considering density-weighting does not affect the behaviour of $\zeta$ and $Z$, as long as the turbulence is dominated by large scale flows, but it has a significant effect on the measurements when the small scales become dominant.
+The latter is particularly important as this finding has a directly impact on the conclusions drawn based on the scales and mechanisms that drive the turbulence based on the measured $\zeta$.
+Not only does $\zeta$ become insensitive to the influence of gravitational contraction with time, the non-weighted VSFs also does not reflect when the majority of kinetic energy has been transferred to small scales. 
+
+
+\subsection{Jeans length refinement}\label{discussion:refinement}
+
+In Fig.~\ref{pic:results:jeans_comp} we see that the choice of refinement level has no significant influence on the measurements and evolution of both $\zeta$ and $Z$. 
+$\lambda_J$~=~$4\Delta{}x$ and $\lambda_J$~=~$8\Delta{}x$ are in good agreement with each other.
+This means that, although refining Jeans lengths with 4~cells misses about 13\% of kinetic energy, the effect on the structure and behaviour of the turbulence is rather small and not traced by the VSF analysis.
+
+However, Fig.~\ref{pic:results:jeans_comp} shows that the agreement is rather poorer with $\lambda_J$~=~$32\Delta{}x$, as the latter differs more from $\lambda_J$~=~$4\Delta{}x$ the higher the order of the VSF is.
+Following the explanations in Sect.~\ref{results:refinement}, the behaviour of $\zeta$ and $Z$ in the $\lambda_J$~=~$32\Delta{}x$ runs corresponds to the reaction of the cloud's gas to a shock wave running through the cloud; caused by a supernova that exploded before $t$~=~0~Myr. 
+Indeed one sees a SN at a distance of 172~pc at $t=-1.11$~Myr. 
+Due to the distance the SN is too weak to effectively compress the gas within \texttt{M3} and cause a shock.
+This is why it was not detected in the less refined samples.
+However, the SN explodes far below the mid-plane of the simulated disk galaxy, in a region without dense gas, so the blast wave remains strong as it propagates through the ISM. 
+By the time the blast arrives at cloud \texttt{M3}, it is still energetic enough to impact the cloud with velocities above 300~km~s$^{-1}$, at the closer edge of the cloud. 
+This causes an increase of VSFs at longer lag scales and the increase of $\zeta$, as well as the drop in $Z$.
+We conclude that improving the resolution resolves details that can affect the VSF, but that the overall behaviour is already determined by our moderate resolution simulations.
+
+\subsection{Comparison to observations}\label{discussion:observation}
+
+The majority of studies of VSFs in molecular clouds are based on simulated data, as is the work presented in this paper.
+However, there are also some surveys that derive VSFs from observations, or whose data can be used to reconstruct the scaling properties of VSFs. 
+In this section we discuss our results in the context of the observational studies that we list in Table~\ref{tab:discussion:summary_obs}.
+
+\begin{table*} 
+\centering 
+	\begin{tabular}{llccc} 
+	\centering 
+		Reference 	& Comments & p & $\zeta$ & Z \\ \hline  \hline
+        \citet{Heyer2004}	& $^{12}$CO J = 1-0, & 1 &  0.49 $\pm$  0.15 &  --- \\ 
+                            & Perseus \& Solar Neighborhood & & & \\ \hline
+        \citet{Heyer2015} 	& $^{12}$CO \& $^{13}$CO J = 1-0, 30  MCs & 1 &  0.24 $\pm$ 0.00 & --- \\ 
+                            & $^{12}$CO \& $^{13}$CO J = 1-0, Taurus &  1 &  0.26 $\pm$  0.00 & --- \\  \hline
+        \citet{Miesch1994} 	& $^{13}$CO J = 1-0, & 1 &  0.43 $\pm$  0.15 & --- \\ 
+                            & 12 clouds and subregions of GMCs & 2 &  0.86 $\pm$  0.30 &  --- \\  \hline
+        \citet{Padoan2003}	& $^{13}$CO J = 1-0, Perseus & 1 &  0.50 $\pm$  0.00 &  0.42 $\pm$  0.00 \\ 
+                            &  & 2 &  0.83 $\pm$  0.00 &  0.72 $\pm$  0.00 \\ 
+                            &		 & 3 &  1.18 $\pm$  0.00 &  1.00 $\pm$  0.00 \\ 
+                            & $^{13}$CO J = 1-0, Taurus & 1 &  0.46 $\pm$  0.00 &  0.42 $\pm$  0.00 \\ 
+                            &		 & 2 &  0.77 $\pm$  0.00 &  0.72 $\pm$  0.00 \\ 
+                            &		 & 3 &  1.10 $\pm$  0.00 &  1.00 $\pm$  0.00 \\  \hline
+        \citet{Padoan2006} 	& $^{13}$CO J = 1-0, Perseus & 2 &   0.80 $\pm$  0.10    &  --- \\  \hline
+        \citet{RomanDuval2011} & $^{13}$CO J = 1-0, 367 clouds  from the GRS survey & 1 & 0.50  $\pm$   0.30  &   --- \\  \hline
+        \citet{Zernickel2015} & $^{13}$CO J = 1-0, NGC 6334 & 1 &  0.38 $\pm$  0.00  &   --- \\ 
+                            &		 & 2 &  0.76  $\pm$    0.01 &  --- \\ 
+                            & $^{13}$CO J = 1-0, NGC 6334, $\ell \leq$ 4 pc  & 1 &  0.48 $\pm$  0.01 &  --- \\
+                            & & 2 &  0.79 $\pm$  0.01 &  --- 
+	\end{tabular} 
+	\caption{Summary of observed $\zeta$ and Z in the literature.} 
+	\label{tab:discussion:summary_obs} 
+\end{table*} 
+
+
+Most of the velocity information derives from $^{12}$CO and $^{13}$CO observations of young star-forming regions \citep[e.g., Perseus and Taurus][]{Padoan2003}.
+Yet, we also consider observations of more evolved regions, such as those of the H~{\sc ii} region NGC 6334 \citep{Zernickel2015}, as the filaments in the simulated molecular clouds fragment within the first 2 Myr \citepalias{Chira2018}.
+
+Fig.~\ref{pic:discussion:comp_observation} summarises the measured scaling exponents found in the literature, along with our fiducial results (Figs.~\ref{pic:results:zeta_all}a).
+We see that the observed values of $\zeta$ are in general close to each other, as well as to the predicted values by \citet{She1994} and \citet{Boldyrev2002}. 
+Furthermore, we see that the observed values are always positive, suggesting that none of the observed clouds show signs of being dominated by collapse, though that could be because the fastest flows would lie in optically thick regions inaccessible to the observations.  
+
+\begin{figure}
+	\includegraphics[width=0.49\textwidth]{compare_observations.pdf}
+	\caption{Summary of measurements of $\zeta$ (\textit{abscissas}) and $Z$ (\textit{ordinates}) for orders $p$~=~1--3 (from \textit{left} to \textit{right}). The grey boxes represent the values presented in Sect.~\ref{results:normal}. The orange solid and blue dashed lines represent the average and median values of the distributions, respectively. The coloured star markers illustrate the predictions by \citet{She1994} and \citet{Boldyrev2002}. The coloured, circular markers summarise values found in the literature (see legend for precise references).
+	}
+	\label{pic:discussion:comp_observation}
+\end{figure}
+
+
+Compared to these measurements, the distributions of our results show a large scatter across the parameter space. 
+However, we also see that there is a significant fraction of values in our models that agree with observational findings. 
+These measurements belong roughly to the evolutionary stages of the modelled clouds after having evolved for 1.5--4~Myr after the onset of self-gravity.
+\citetalias{Chira2018} find that the clouds consist of a highly hierarchical structure that is dominated by already fragmenting filaments at this point.
+This means that the flows within the clouds experience a transition from cloud-scale dominated, through filament-dominated, to core-collapse driven motions; which is exactly what we observe in the VSFs, as well.
+Consequently this means that the observed molecular clouds, that show clear signs of embedded star formation activity, are in a similar stage where flows are dominated by the formation of hierarchical structures, (pre-/proto-)stellar cores or, in the case of NGC 6334, internal feedback.
+
+We find that the interpretation of observational measurements is still difficult for several reasons:
+\begin{enumerate}
+\item We have already discussed in Sect.~\ref{discussion:1d} that the transformation from 3D to 1D VSFs is not trivial, in particular when the studied flows are not isotropic.
+This is, for example, the case when the first structures (such as filaments or sheets) form, or the first cores collapse and accrete.
+\item We have seen that interactions with SN shocks may trigger a preferred direction, that has the potential to strongly influence the measured 1D VSF.
+Although the influence of shock fronts on VSFs is transient compared to the lifetime of the entire molecular cloud, it is still long enough to mimic a quasi-steady state in real observations.
+Observing typical shock tracers, such as SiO, may help to identify these situations. 
+\item We have neglected typical line-of-sight effects that may have a significant influence on the measurements of the local standard of rest velocity which precision is crucial for this kind of study.
+Our projections ignore optical depth effects, and reflect velocities all the way through the clouds, including high column density regions of dynamical collapse where motions are fast at small scales.  However, CO reaches optical depth of unity at relatively low column densities. This means that the observed VSFs will only reflect the motions of the surface layers of dense molecular clouds.  
+Therefore, single-tracer observations are not suitable for studying the dynamical structure of molecular clouds. 
+For a proper VSF analysis it would be advisable to utilise a variety of tracers to cover the different phases of the clouds, as well as to populate the statistics of lag distances more reliably.
+\item Only a small fraction of the listed observational studies in Table~\ref{tab:discussion:summary_obs} aimed to measure the VSFs of the respective objects right away.
+In the majority of cases, the focus of the investigations has been on the general budget of kinetic energy within the molecular cloud, as well as the question whether those clouds follow the Larson's relation.
+It is unclear whether the difference between a relation of the lag distance of two particles and their relative line-of-sight velocity and the connection between the size of the entire molecular cloud and the velocity dispersion of the contained gas has always been considered.
+\end{enumerate}
+
+We recommend that both theorists and observers discuss in more detail how observational studies may utilise VSFs in the future.
+From the theoretical point-of-view, full line radiative transfer calculations are required to evaluate observational biases simple projection effects better.
+This requires observations with a high spatial resolution of the respective molecular cloud for a wide range of lag scales and a good statistics for fitting the scaling of VSF, and lines with well-defined line-of-sight velocities, ideally, optically thin lines of intermediate- and high-density tracers. 
+
+
+\section{Summary \& Conclusions}\label{conclusions}
+
+In this paper, we analyse the VSFs of molecular clouds that have formed within 3D MHD adaptive-mesh-refinement FLASH simulations of the self-gravitating, magnetised, SN-driven ISM by \citetalias{IbanezMejia2017}.
+The main results are as follows.
+
+\begin{itemize}
+\item The scaling of VSFs depends on both internal turbulence driving such as gravitational contraction, and external driving such as external SN blast waves. We find that the power-law scaling $\zeta$ of 3D VSFs reflects the development of gravitational contraction, while the extended self-similarity scaling $Z$ reveals interactions of clouds with large-scale flows and blast waves.
+\item As long as the molecular cloud is not affected by a shock, $Z$ agrees well with predicted values for supersonic flows, even as gravitational collapse proceeds.
+\item We tested the influence of Jeans refinement on the VSFs. We find that the absolute amount of kinetic energy does not influence the evolution of $\zeta$ and $Z$, but that better resolution of external shocks can produce changes in both quantities.
+\item Comparison of 3D and 1D VSFs shows differences in detail, but qualitative agreement in behaviour of both $\zeta$ and $Z$, except when strong transverse flows dominate the velocity field. Thus, observed 1D VSFs can be useful diagnostics. 
+\item We calculated cloud VSFs using a density threshold to isolate the cloud material, as would characteristically happen in an observation of molecular material. Without such a threshold, our VSFs are dominated by the diffuse ISM. In that case, the extended self-similarity scaling $Z$ lies just below the value predicted for incompressible turbulence by \citet{She1994}. This is consistent with the low Mach number in the hot, diffuse, ISM filling most of the volume of our simulation.
+\item We investigate the influence of defining the VSF with and without density weighting. We find that the qualitative behaviour is traced by both approaches. However, the scaling of the non-weighted VSF $\zeta$ is always positive, not falling nearly as far as for the density-weighted VSF. The density-weighted VSF reflects the kinetic energy distribution better as gravitational collapse proceeds to smaller and smaller scales. (Note that in, for example, CO observations, optical depth effects may obscure this behaviour.) 
+\item We compared our results with measurements of both $\zeta$ and $Z$ in observational studies. We see that our findings agree well with observations within periods in which the clouds' flows are dominated by global gravitational contraction and strong structure formation, as well as starting fragmentation; which reflects the conditions of embedded star formation activities within the observed molecular clouds.
+\end{itemize}
+
+Our analysis shows that VSFs are useful tools for examining the driving source of turbulence within molecular clouds.
+However, studies that use VSFs need to precisely review the assumptions and parameters included in their analysis as those can have a significant influence on the results.
+
+For our simulated clouds, the VSFs illustrate that gravitational contraction dominates the evolution of the clouds.
+During contraction, the VSF scaling parameter $\zeta$(p) drops in value and can even become negative as kinetic energy concentrates on small scales.
+Nevertheless, the extended self-similarity scaling parameters $Z$(p) continue to agree with the analytic prediction for compressible turbulence except for short periods during which SN blast waves increase power on multiple scales.
+Because such blast waves are neither homogeneous nor isotropic, they often lead to transient non-power law scaling of the VSFs, and thus strong departures from uniform turbulent behaviour of $Z$(p).
+
+ 
+ 	\begin{acknowledgements}
+         	M-MML received support from US NSF grant AST11-09395 and thanks the A. von Humboldt-Stiftung for support.  
+         	JCI-M was additionally supported by the Deutsche Forschungsgemeinschaft (DFG) via
+the  Collaborative  Research  Center  SFB  956  ``Conditions and  Impact  of  Star  Formation'' (subproject  C5) and the  DFG  Priority  Program 1573 ‘The physics of the interstellar medium’
+ 	\end{acknowledgements}
+
+ 	\bibliographystyle{aa} % style aa.bst
+ 	\bibliography{ref}
+        
+\end{document}

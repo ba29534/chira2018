@@ -3,22 +3,22 @@
 
 \subsection{Cloud models}\label{methods:clouds}
 
-The analysis in this paper is based on a sample of three molecular clouds (MCs) found within a three-dimensional (3D), magnetohydrodynamical, adaptive mesh refinement simulation using the FLASH code \citep{Fryxell2000}.  
+The analysis in this paper is based on a sample of three molecular clouds (MCs) identified within a three-dimensional (3D), magnetohydrodynamical, adaptive mesh refinement simulation using the FLASH code \citep{Fryxell2000}.  
 \citetalias{IbanezMejia2016} and \citetalias{IbanezMejia2017}, as well as \citet[\citetalias{Chira2018} hereafter]{Chira2018}, describe the simulations and the clouds in more detail. 
 We summarise the most relevant properties. 
 
 The numerical simulation models a $1\times1\times40$~kpc$^3$ section of the multi-phase, turbulent ISM of a disk galaxy, where dense structures form self-consistently in convergent, turbulent flows \citepalias{IbanezMejia2016}.  
 The model includes gravity---a background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time---supernova-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
 Although hundreds of dense clouds form within the simulated volume, \citetalias{IbanezMejia2017} focused on three clouds, which were re-simulated at a much higher spatial resolution, which we map to a uniform grid of 0.1 pc zones.
-In this paper, we use the data within (40~pc)$^{3}$ subregions centred in the high-resolution clouds' centres of mass.
+In this paper, we use the data within (40~pc)$^{3}$ subregions centred on the high-resolution clouds' centres of mass.
 The internal structures of MCs are resolved using adaptive mesh refinement, focusing grid resolution on dense regions where Jeans unstable structures must be resolved with a minimum of 4 cells ($\lambda_J > 4~\Delta x_{\rm min}$).
 For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}.
 The MCs have initial masses at the onset of self-gravity of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter.
 
-However, it is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
+It is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
 \citetalias{IbanezMejia2017} described the time evolution of the properties of all three clouds in detail, in particular, mass, size, velocity dispersion, and accretion rates, in the context of MC formation and evolution within a galactic environment.
 \citetalias{Chira2018} studied the properties, evolution, and fragmentation of filaments that self-consistently condense within these clouds. 
-They paid particular attention to the accuracy of typical stability criteria for filaments, comparing their measurements to the theoretical predictions, showing that theoretical models do not capture the complexity of fragmentation due to their simplifying assumptions.
+We paid particular attention on the accuracy of typical stability criteria for filaments, comparing the results to the theoretical predictions, showing that simplified analytic models do not capture the complexity of fragmentation due to their simplifying assumptions.
 
 
 \subsection{Velocity Structure Function}\label{methods:vsf}
@@ -35,7 +35,7 @@ that measures the mean velocity difference to the $p^\mathrm{th}$ power
 between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$, with $\vec{\ell}$ being the direction vector pointing from the first to the second point.  
 $S_p$ is usually reported as a function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
 The VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events in random turbulent flows (e.g., supernovae) in velocity patterns.
-Those patterns become more prominent the higher the value of $p$ \citep{Heyer2004}.
+Those patterns become more prominent the higher the value of $p$ is \citep{Heyer2004}.
 \citet{Padoan2016a} defined a density-weighted velocity structure function
 \begin{equation}
 	{S}_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle}.
@@ -60,8 +60,8 @@ For fully developed turbulence the VSF is well-described by a power-law relation
 \end{equation}
 Note that the scaling exponent of that power-law relation, $\zeta$, depends on many parameters, such as the order of the VSF, as well as the properties and composition of the studied turbulent flow, such as its geometry, compressibility, or magnetization.
 Many studies of VSFs distinguish between longitudinal and transverse velocity components, or compressible and solenoidal components, because those are expected to behave differently, especially towards larger lag distances \citep{Gotoh2002,Schmidt2008,Benzi2010}.
-However, the differences are mostly negligible on the scales we focus on. 
-Since these decompositions are also hard to perform on observational data, we focus only on the total VSF.
+However, the differences are mostly negligible on scales we focus on. 
+Since these decompositions are also difficult to perform on observational data, we focus on the total VSF.
 
 Theoretical studies predict values of $\zeta$ depending on the nature of the turbulence and the order $p$.
 \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an incompressible flow.
@@ -82,7 +82,7 @@ while supersonic flows with sheet-like geometry are predicted to scale with \cit
 \end{equation}
 \citet{Benzi1993} introduced the principle of extended self-similarity.
 It proposes that there is a constant relationship between the scaling
-exponents of different orders at all lag scales so that $\zeta$ can be measured from $S_p/S_3$, which typically gives much clearer power-law behaviour.
+exponents of different orders at all lag scales so that $\zeta$ can be measured from $S_p/S_3$, which typically gives a much clearer power-law behaviour.
 The self-similarity parameter is defined as,
 \begin{equation}
 	Z(p) = \frac{\zeta(p)}{\zeta(3)}.
