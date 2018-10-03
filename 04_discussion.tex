@@ -2,11 +2,15 @@
 
 \subsection{Time evolution}\label{discussion:normal}
 
-We have seen in Sect.~\ref{results} that density-weighted VSFs reflect a combination of uniform, compressible turbulence, large-scale shocks, and gravitational collapse.  Extended self-similarity emphasizes the turbulent nature of these high-Reynolds numbers flows even in regions of gravitational collapse. 
+We have seen in Sect.~\ref{results} that density-weighted VSFs reflect a combination of uniform, compressible turbulence, large-scale shocks, and gravitational collapse.  Extended self-similarity emphasises the turbulent nature of these high-Reynolds numbers flows even in regions of gravitational collapse. 
 
 As the clouds gravitationally collapse, the resulting increase in small-scale power flattens or even inverts the density-weighted VSFs, resulting in decreasing or even negative values of $\zeta$ (Fig.~\ref{pic:results:zeta_all}(a)). The increase in small-scale power can also be derived from the increasingly negative binding energy of the clouds as further gas falls into them \citepalias{IbanezMejia2017}.  Extended self-similarity shows VSF ratios characteristic of compressible turbulence (Fig.~\ref{pic:results:z_all}a), as can be seen from their tending to lie between the incompressible limit of \citet{She1994} and the extremely compressible Burgers turbulence limit of \citet{Boldyrev2002}.  The extended self-similarity procedure fails as $\zeta(3)$ passes through zero, however, so it must be interpreted in concert with the raw values of $\zeta$.
 
-The impact of SN shocks hitting the clouds is to inject power at all scales (Fig.~\ref{pic:results:vsf_example}).  The resulting VSFs tend to lose their power-law character. Fitting a power-law to them anyway results in substantial perturbations from the predictions for compressible turbulence even under extended self-similarity.  Fig.~\ref{pic:results:z_all} shows times of SN explosions and periods of strong accretion onto the clouds.  We note that the SN shock fronts move at speeds of 50--100~km~s$^{-1}$ through the ISM and the explosions occur at distances of 30--100~pc from the clouds, so the shocks take around 1~Myr to reach the clouds. Perturbations in $Z$ not associated with zero-crossings by $\zeta(3)$ are consistent with being caused by SN shock front interactions with the clouds.  These shock interactions last for only a fraction of a megayear, though, after which the turbulent nature of the flow reasserts itself.
+The impact of SN shocks hitting the clouds is to inject power at all scales (Fig.~\ref{pic:results:vsf_example}). 
+The resulting VSFs tend to lose their power-law character. Fitting a power-law to them anyway results in substantial perturbations from the predictions for compressible turbulence even under extended self-similarity.
+Fig.~\ref{pic:results:z_all} shows times of SN explosions and periods of strong accretion onto the clouds. 
+\textbf{Remembering that it takes the shock front about 1~Myr for propagating from the site of the SN explosion to the molecular cloud,} perturbations in $Z$ not associated with zero-crossings by $\zeta(3)$ are consistent with being caused by SN shock front interactions with the clouds.  
+These shock interactions last for only a fraction of a megayear, though, after which the turbulent nature of the flow reasserts itself.
 
 
 
@@ -33,14 +37,20 @@ Future studies need to investigate this point in more detail by performing VSF a
 
 \subsection{Density thresholds}\label{discussion:densthres}
 
-
 We find that the structure and behaviour of VSFs strongly depends on whether or not we assume a density threshold in computing them.
 In the fiducial case, where n$_\mathrm{cloud}$~=~100~cm$^{-3}$, we have seen a mostly straight decline of $\zeta$ while $Z$ remains fairly constant over time, reflecting the contraction of the clouds due to self-gravity.
 On the other hand, if we remove the density threshold, including the entire high-resolution region in the calculation, we observe a completely different picture.
 The high velocities present in the diffuse interstellar medium surrounding the cloud lead to strong large-scale power and thus much steeper VSFs, corresponding to higher values of $\zeta$. 
 There is still a slightly declining trend in $\zeta$, but the evolution is dominated by random fluctuations.
 We also see that $Z$ remains constant for the entire simulation in every case.
-The VSFs for the entire box appear consistent with the prediction for the value in incompressible turbulence \citep{Boldyrev2002}. This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.
+The VSFs for the entire box appear consistent with the prediction for the value in incompressible turbulence \citep{Boldyrev2002}. 
+This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.
+
+\textbf{
+    Furthermore, the results here demonstrate that the effect of SNe, and the interaction of the produced shock fronts and the ISM acts rather locally. 
+    This means that a single SN is not able to affect the gas dynamics on scales of our entire cubes (40$^3$~pc$^3$), at least not in the same way as it does so on scales of individual molecular clouds.
+    Rather the VSFs reflect the superposition of several SNe that can only combined drive the turbulence of the diffuse ISM.
+}
 
 We conclude that the decision of whether or not a density threshold is used has a significant and direct influence on the resulting VSFs.
 Indeed, it is a straight-forward approach to focus the analysis on the actual area of interest.
@@ -95,11 +105,20 @@ This means that, although refining Jeans lengths with 4~cells misses about 13\% 
 However, Fig.~\ref{pic:results:jeans_comp} shows that the agreement is rather poorer with $\lambda_J$~=~$32\Delta{}x$, as the latter differs more from $\lambda_J$~=~$4\Delta{}x$ the higher the order of the VSF is.
 Following the explanations in Sect.~\ref{results:refinement}, the behaviour of $\zeta$ and $Z$ in the $\lambda_J$~=~$32\Delta{}x$ runs corresponds to the reaction of the cloud's gas to a shock wave running through the cloud; caused by a supernova that exploded before $t$~=~0~Myr. 
 Indeed one sees a SN at a distance of 172~pc at $t=-1.11$~Myr. 
-Due to the distance the SN is too weak to effectively compress the gas within \texttt{M3} and cause a shock.
+\textbf{
+As the power of the shock ceases rapidly with distance, the SN is too weak to effectively compress the gas within \texttt{M3}.
+}
 This is why it was not detected in the less refined samples.
+
 However, the SN explodes far below the mid-plane of the simulated disk galaxy, in a region without dense gas, so the blast wave remains strong as it propagates through the ISM. 
 By the time the blast arrives at cloud \texttt{M3}, it is still energetic enough to impact the cloud with velocities above 300~km~s$^{-1}$, at the closer edge of the cloud. 
 This causes an increase of VSFs at longer lag scales and the increase of $\zeta$, as well as the drop in $Z$.
+
+\textbf{
+    Note that this test scenario emphasises the importance of properly resolving the cascade of turbulence. 
+    The appendix B of \citetalias{IbanezMejia2017} demonstrate that the three simulations show significant differences within the first 1.2~Myr of the cloud's evolution that is covered by all simulation runs. 
+}
+
 We conclude that improving the resolution resolves details that can affect the VSF, but that the overall behaviour is already determined by our moderate resolution simulations.
 
 \subsection{Comparison to observations}\label{discussion:observation}
