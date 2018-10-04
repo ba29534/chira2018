@@ -41,10 +41,10 @@
 
 \textbf{
     With both approaches we obtain a set of discrete descriptions of VSFs as function of time (as the routines have been applied for all snapshots) and lag distance (which is identical with the grid of lag distances we have introduced above).
-    In order to derive the scaling parameters, $\zeta$, of the VSFs as function of time and order, we use python's \texttt{curve_fit} package to fit the power-law relation presented in Eq.~\rc{!!! ref !!!} to the measured VSFs.
+    In order to derive the scaling parameters, $\zeta$, of the VSFs as function of time and order, we use python's \texttt{curve\_fit} package to fit the power-law relation presented in Eq.~\rc{!!! ref !!!} to the measured VSFs.
     Due to the rather irregular behaviour of our VSFs at larger scales, we define the weighting function in such a way that is emphasis the region of $\ell\,\leq$~8~pc and ceases with 1~pc/$\ell$[pc]. 
     \rc{!!! check !!!}
-    The similarity parameters, $Z$, are computed by applying Eq.~~\rc{!!! ref !!!} on the results of the fitting procedure, and all results are presented in Sect.~\ref{results}.
+    The similarity parameters, $Z$, are computed by applying Eq.~\rc{!!! ref !!!} on the results of the fitting procedure, and all results are presented in Sect.~\ref{results}.
 }
 
 \begin{figure*}
@@ -58,10 +58,10 @@
 \end{figure*}
 
 \textbf{
-    From \texttt{curve_fit} we also obtain the $\chi^2$ errors for measured $\zeta$. 
+    From \texttt{curve\_fit} we also obtain the $\chi^2$ errors for measured $\zeta$. 
     In Fig.~\ref{pic:appFitting:error_vsfhr04_zeta_z} we show a reduced version of Fig.~\ref{pic:results:zeta_all}(a).
     This means that we only plot the time evolution of $\zeta$ for all three clouds.
-    Additionally, we added shades of the same colours of the respective lines that represent the error areas as derived by \texttt{curve_fit}.
+    Additionally, we added shades of the same colours of the respective lines that represent the error areas as derived by \texttt{curve\_fit}.
     We see that as long as the VSFs are not too flat in the inner and intermediate regions, meaning that $|\zeta|\,\gtrsim$~\rc{!!! 0.1 !!!} the relative errors $\Delta \zeta / \zeta$ are within a range of 5--12\%. 
     If the VSFs are, however, flat the level of relative errors increases significantly as there are many reasonable combination of $\zeta$ and the proportionality constant that may lead to similar results. 
 }
