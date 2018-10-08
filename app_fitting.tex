@@ -82,12 +82,22 @@
     In Fig.~\ref{pic:appFitting:error_vsfhr04_zeta_z} we show a reduced version of Fig.~\ref{pic:results:zeta_all}(a).
     This means that we only plot the time evolution of $\zeta$ for all three clouds.
     Additionally, we added shades of the same colours of the respective lines that represent the error areas as derived by \texttt{curve\_fit}.
-    We see that as long as the VSFs are not too flat in the inner and intermediate regions, meaning that $|\zeta|\,\gtrsim$~0.1 the relative errors $\Delta \zeta / \zeta$ are within a range of 5--12\%. 
-    If the VSFs are, however, flat the level of relative errors increases significantly as there are many reasonable combination of $\zeta$ and the proportionality constant that may lead to similar results. 
+    We see that the relative errors, $\Delta \zeta / \zeta$, are mostly within a range of 5--12\%. 
+    Only when $\zeta$ becomes very negative, the errors increase as it is harder to unify the fall in $S_\mathrm{p}$ with larger $\ell$ with the requirement that $S_\mathrm{p} (\ell=0)$~=~0 (as there is no relative velocity measurable within one cell).
 }
 
-
-\rc{continue?}
+\textbf{
+    The errors of $Z$ are computed by the Gaussian error propagation, given by:
+}
+\begin{align}\Delta Z(p) &= \sqrt{ \left( \frac{\partial Z(p)}{\partial \zeta(p)} \cdot \Delta\zeta(p) \right)^2 + \left( \frac{\partial Z(p)}{\partial \zeta(3)} \cdot \Delta\zeta(3) \right)^2 } \\
+        &= \sqrt{ \left( \frac{\Delta\zeta(p)}{\zeta(3)} \right)^2 + \left( \frac{ \zeta(p) \cdot \Delta\zeta(3)}{\zeta(3)^2} \right)^2 }.
+        \label{equ:appFitting:z_error}
+\end{align}
+\textbf{
+    In general, the relative errors of $Z$ are, as well, around 10\%.
+    Yet, we see exceptions with very large errors. 
+    The reason for this is that at these times $\zeta$(3) is either equal to 0 or very close to it, which causes Eq.~\ref{equ:appFitting:z_error} to diverge.
+}
 
 \textbf{
     The codes for both deriving the VSFs, computing the scaling parameters, as well as for creating the figures of this manuscript are accessible via: \newline
