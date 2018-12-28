@@ -1,18 +1,30 @@
 \section{Fitting Procedures and Errors}\label{appFitting}
 
 \textbf{
-    In this section we give more details on how we compute the VSFs and their scaling parameters.
-    As described in Sect.~\ref{methods:vsf} our previous discussions are based on VSFs that are computed from average relative velocities. 
+    In this section we provide more details on how we compute the VSFs and their scaling parameters.
+    As described in Sect.~\ref{methods:vsf} the discussions in the main part of this manuscript are based on VSFs that are computed from average relative velocities. 
     This means the following:
 }
 
 \textbf{ 
-    We map the 3D FLASH data of the original simulations \citepalias{IbanezMejia2016} onto data cubes. 
+    We map the 3D FLASH AMR data of the original simulations \citepalias{IbanezMejia2016,IbanezMejia2017} onto data cubes. 
     Those cubes consists of 400$^3$ subcubes, each representing a volume of (0.1~pc)$^3$, with the centre of the cubes being close to the centres of the molecular clouds. 
 }
 
 \textbf{
-    As a consequence, we can only offer a discrete representation of the velocity information. 
+    Note that the FLASH AMR simulations contain, in our case, ten levels of resolution; and the decision which region is resolved up to which level depends on the density of the respective grid cell \citepalias{IbanezMejia2017}.
+    Therefore, the simulations cover a range of resolutions from 30.4~pc in regions of $|$10$|$-- $|$20$|$~pc around the midplane of the modelled galactic plane down to 0.06--0.10~pc within a (100~pc)$^3$ box around the centre of mass of the three molecular clouds presented in this manuscript, as well as in \citetalias{IbanezMejia2017} and \citetalias{Chira2018}. 
+    Therefore, the resolution we have chosen for the data cubes this study is based on represents either the highest resolved level (in case of \texttt{M8}) or slightly lower resolved level (in case of \texttt{M3} and \texttt{M4}) offered by the simulations.
+}
+
+\textbf{
+    Note the zoom-in regions, meaning the regions around the molecular clouds that is modelled at the highest resolution level, is much larger than the volume we map into the box grid. 
+    We have adopted this size as it is sufficient for covering the clouds' volumes, and thus more efficient for further analyses. 
+    In addition, this choice prevents us from resolution edge effects as the transitions from this resolution level and the next lowest are several tens of zones away. 
+}
+
+\textbf{
+    A consequence of mapping the data onto a regular box grid is that we can only offer a discrete representation of the velocity information. 
     No matter whether a density threshold is applied or not, this binning still represents an amount of data that is computationally hard to process.
     For deriving and analysing the VSFs we coarsen the grid of projected lag distances, $\ell_i = |\vec{\ell}|_i$, so that separates the range between 0.1 and 30~pc into only 40 equidistant bins.
 }
@@ -29,7 +41,7 @@
 
 \textbf{
     The second approach targets the case when we do not apply any density threshold, or setting n$_\mathrm{cloud}$~=~0.
-    In this case, we use python's random number generator \rc{!!! name of package !!!} to generate a set of cells within the entire data cubes that reflect 5\% of the total volume. 
+    In this case, we use numpy's random number generator \texttt{random.rand} to generate a set of cells within the entire data cubes that reflect 5\% of the total volume. 
     Thereby, we check that there are no duplicates within the sample.
     The so generated set of starting point is used for the analysis.
     As it is too computationally expensive to derive all relative velocities between all cells with the discrete shells, as we have done in the first approach, we derived a discrete distribution of relative velocities as function of lag distance using the Discrete Fast-Fourier-Transformation (\texttt{FFT}) offered by python.
@@ -41,12 +53,11 @@
     With both approaches we obtain a set of discrete descriptions of VSFs as function of time (as the routines have been applied for all snapshots) and lag distance (which is identical with the grid of lag distances we have introduced above).
     In order to derive the scaling parameters, $\zeta$, of the VSFs as function of time and order, we use python's \texttt{curve\_fit} package to fit the power-law relation presented in Eq.~\ref{equ:method:fitting} to the measured VSFs.
     Due to the rather irregular behaviour of our VSFs at larger scales, we define the weighting function in such a way that is emphasis the inner region of clouds, $\ell\,\leq$~8~pc, and ceases outside with 1~pc/$\ell$[pc]. 
-    \rc{!!! check !!!}
 }
 
 \textbf{
     Although the average radii of our clouds are, on average, larger than 8~pc we choose this limit due the variable behaviour of the VSFs at the edges of the clouds. 
-    As can be seen in Fig.~\ref{pic:results:vsf_example}, as well as in the figures shown in Appendix~\ref{appFigures} the shape of VSFs changes over time, or better according to the interactions with the acting forces.
+    As can be seen in Fig.~\ref{pic:results:vsf_example}, as well as in the figures shown in Appendix~\ref{appInertial} the shape of VSFs changes over time, or better according to the interactions with the acting forces.
     Neither SNe blast waves nor gravitational contraction are able to act on all scales of the clouds simultaneously. 
     Instead, the shocks and accelerations propagate through the clouds at affect different parts of the clouds at different times.
     This is reflected in the evolution of VSFs, as well.
@@ -94,7 +105,7 @@
         \label{equ:appFitting:z_error}
 \end{align}
 \textbf{
-    In general, the relative errors of $Z$ are, as well, around 10\%.
+    \noindent In general, the relative errors of $Z$ are, as well, around 10\%.
     Yet, we see exceptions with very large errors. 
     The reason for this is that at these times $\zeta$(3) is either equal to 0 or very close to it, which causes Eq.~\ref{equ:appFitting:z_error} to diverge.
 }
