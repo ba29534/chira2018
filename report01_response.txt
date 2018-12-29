@@ -25,20 +25,72 @@ Somewhere after equation (9), and at the beginning of section 3.2, the authors s
 
 
 C)
-Figures 2 and 3 shows vertical dashed lines indicating the time of explosions of nearby SNe. Such lines are very useful and should remain in the figures. However, the authors should define in the text (and/or figure captions) what they mean by “nearby” SNe. They should also explain why there seems to be essentially no correlation between such SN events and features in the VSFs (or at least in the plots of \zeta versus time). One would expect to see a major feature in all VSFs just after each SN event. Such correlation is missing even in the case of the VSF without density threshold, where most of the cells are from relatively low density gas that should be easily accelerated by nearby SNe. Furthermore, the highest resolution simulation does show a strong feature just after the first SN, around t=0.7-0.8 Myr, as expected, but such feature is completely missing in the two lower-resolution simulations (bottom panels of figure 2). One would conclude that the lower-resolution sim!
- ulations 
- are unable to capture the transfer of kinetic energy from the SN remnants to the surrounding gas (both low and high density gas), while such transfer of energy does occur in the higher resolution run. If so, it would not be surprising if the main (lower-resolution) simulations generated VSFs that are generally not power laws and are also generally too steep (before gravity has the time to make them shallower, and generally even too shallow). This lack of correlation between SN events and VSFs may seem to suggest an important numerical problem, and it should be addressed by the authors.
+Figures 2 and 3 shows vertical dashed lines indicating the time of explosions of nearby SNe. Such lines are very useful and should remain in the figures. However, the authors should define in the text (and/or figure captions) what they mean by “nearby” SNe. They should also explain why there seems to be essentially no correlation between such SN events and features in the VSFs (or at least in the plots of \zeta versus time). One would expect to see a major feature in all VSFs just after each SN event. Such correlation is missing even in the case of the VSF without density threshold, where most of the cells are from relatively low density gas that should be easily accelerated by nearby SNe. Furthermore, the highest resolution simulation does show a strong feature just after the first SN, around t=0.7-0.8 Myr, as expected, but such feature is completely missing in the two lower-resolution simulations (bottom panels of figure 2). One would conclude that the lower-resolution simulations are unable to capture the transfer of kinetic energy from the SN remnants to the surrounding gas (both low and high density gas), while such transfer of energy does occur in the higher resolution run. If so, it would not be surprising if the main (lower-resolution) simulations generated VSFs that are generally not power laws and are also generally too steep (before gravity has the time to make them shallower, and generally even too shallow). This lack of correlation between SN events and VSFs may seem to suggest an important numerical problem, and it should be addressed by the authors.
 
 One possibility is that the problem partly arises from a lack of resolution of the early evolution of the SN remnants. The authors should compare the spatial resolution (grid size) at the locations of the SN explosions with the criterion for numerical convergence of SN remnants derived by Kim and Ostriker (2015), which states that both the grid size and the initial SN radius must be smaller than one third of the shell-formation radius, which results into a maximum value of the ambient density above which the evolution of the SN remnants is not numerically converged. The authors should apply this convergence criterion to their simulations and describe their findings.
+
+>> Indeed, there seems to be a significant misunderstanding of the term "nearby SN".
+>> As already mentioned in the text (we have moved the paragraph into Sect. 3.1), 
+>> we mean SNe that have exploded at distances between  30--100pc from the clouds' 
+>> centres of mass. As the shock fronts propagate with  50--100 km/s through the ISM
+>> it takes the blast waves about 1 Myr to reach the clouds. This means that *it is not 
+>> possible that a cloud is impacted by a SN immediately after the explosions*. In the 
+>> given example, the SN exploded at t = 0.7 Myr. That means the first impact between
+>> the blast wave and the outer skirts of the clouds *cannot occur before*  t = 1.5 Myr.
+>> And at this time, we indeed see a major feature, as the referee expects. 
+>> As mentioned, we have moved the paragraph to an earlier part of the paper and 
+>> added additional information and references to it. 
+>>
+>> According the concern of resolving the SN explosion sides correctly, we would like 
+>> to point to the fact that the Jeans refinement is just significant in very dense region
+>> when the Jeans length becomes comparable to the length of the AMR grid cells.
+>> As all our SNe explode in diffuse regions within the ISM (see Paper II) and all are
+>> represented by a punctual injection of energy and momentum, the side of their explosion
+>> is identically refined within all presented simulations. This means that there is no difference
+>> between the simulations with different refinement levels when it comes to simulate the
+>> SNe themselves. The differences arise when the blast waves approach and enter the
+>> cloud (M3) as the Jeans length of the enclosed gas is similar to the minimal size of the 
+>> grid cells here and the dynamics needs to be modelled more carefully -- by applying 
+>> the Jeans refinement -- than in the ISM cells. 
+>> Consequently, we see the winds that are driven by the blast wave in all the simulations
+>> (we have added a comment on this in the revised manuscript;  but it can also be seen
+>> in the online material). The real difference between the simulations is that only the 
+>> lambda = 32 cells / Jeans length simulation is able to adjust its power spectrum fast 
+>> enough to the new 0.06 pc resolution of the simulation for the t=-1.11 Myr SN to
+>> impact M3 significantly. In the other cases, the blast wave of the SN drives strong winds
+>> forwards the cloud that are, though, not strong enough to really compress or accelerate
+>> the gas within. The winds rather add up to an additional component of the "normal"
+>> external driving of the turbulence.
+
+
 
 D)
 Related to the above point.
 
-In the fourth paragraph of section 3.1 the author state that the cloud M3 has just been hit by a SN shock front at t=3.5 Myr. But judging from the vertical dashed lines in figure 2, t=3.5 is one of the instants in time furthest away from SN explosions. (At the end of the paragraph the authors write “steeper slope”, but I think they mean “shallower slope”.) This contradiction should be resolved.
+In the fourth paragraph of section 3.1 the author state that the cloud M3 has just been hit by a SN shock front at t=3.5 Myr. But judging from the vertical dashed lines in figure 2, t=3.5 is one of the instants in time furthest away from SN explosions. 
 
-In the second paragraph of section 4.5 the authors try to explain the large difference between the VSFs at the highest resolution versus those in the lower-resolution runs. They say the origin is a SN that exploded at t=-1.11 Myr, at a distance of 172 pc from the cloud. I don’t understand this explanation, because the same SN should have affected also the lower-resolution runs. Furthermore, the biggest feature in the highest-resolution VSFs is a bump at t~0.8 Myr, which seems to happen just after a nearby SN at t~0.7 Myr. There is no sign of such a bump in the lower-resolution runs, even if the same SN is present there as well. Towards the end of the paragraph the authors explain that the increase in \zeta in the highest-resolution run is due to the deposition of the SN energy at large scale, which is probably correct (though the main reason should be the nearby SN at t~0.7 Myr, rather than the far-away one), but it is not clear why high resolution should be needed to captur!
- e such a 
- large-scale process.
+>> To summarise the explanations given to point C: The SNe *do not explode* next to the clouds 
+>> (or even within). They explode within a radius of up to 100pc and need about 1 Myr to  
+>> travel through the ISM to the clouds. This means that the SN that causes the feature at 
+>>  t = 3.5 Myr needs to explode between t = 2.2 -- 2.8 Myr (depending on the distance and
+>> propagation speed) to reach the cloud "in time". This points to the SN at t=2.7 Myr, 
+>> and by tracing the propagation from the cloud back to the source that is exactly the 
+>> one that causes the feature.
+
+(At the end of the paragraph the authors write “steeper slope”, but I think they mean “shallower slope”.) This contradiction should be resolved.
+
+>> No, we mean steeper as one needs compare the slope in this example with those in the time
+>> steps before. Those are similar to the example in Fig. 1(c) and much shallower than the 
+>> shocked VSF in Fig. 1(b). This is more obvious in Fig. 2(a) where one clearly sees that 
+>> zeta (the slope) increases significantly at t = 3.5 Myr relative to the time steps before.
+>> For course, if one compares Fig. 1(a) and (b) with each other, Fig. 1(b) is shallower. Yet,
+>> we emphasise that such a comparison is difficult as the examples are not from the same cloud.
+
+
+In the second paragraph of section 4.5 the authors try to explain the large difference between the VSFs at the highest resolution versus those in the lower-resolution runs. They say the origin is a SN that exploded at t=-1.11 Myr, at a distance of 172 pc from the cloud. I don’t understand this explanation, because the same SN should have affected also the lower-resolution runs. Furthermore, the biggest feature in the highest-resolution VSFs is a bump at t~0.8 Myr, which seems to happen just after a nearby SN at t~0.7 Myr. There is no sign of such a bump in the lower-resolution runs, even if the same SN is present there as well. Towards the end of the paragraph the authors explain that the increase in \zeta in the highest-resolution run is due to the deposition of the SN energy at large scale, which is probably correct (though the main reason should be the nearby SN at t~0.7 Myr, rather than the far-away one), but it is not clear why high resolution should be needed to capture such a large-scale process.
+
+>> See comments above.
+
 
 E)
 In section 2.1 the authors write that the maximum resolution is \Delta x=0.1 pc. They also write that they use data from 40 pc regions, centered on the MCs, mapped to a uniform resolution of 0.1 pc. It would be useful if the authors also specified the resolution of the root grid (for the readers who are not familiar with the preceeding papers). This is particularly important in the case of the VSFs without a threshold density, where the majority of the randomly selected cells must reside in non-refined regions, reducing significantly the range of scales probed by the VSFs (and their power-law fits).
@@ -48,9 +100,7 @@ In section 2.1 the authors write that the maximum resolution is \Delta x=0.1 pc.
 F)
 In the first paragraph of section 3.2, the authors interpret the too steep power laws at t=0 as the result of initial convergent flows forming the clouds. I think a possible interpretation is that the simulations are dominated by numerical dissipation, and thus the structure functions 1) are not power laws and 2) are far too steep, while with a much higher (root-grid) resolution they would be power laws with realistic slopes. Because of the very large Reynolds number of MC motions, a turbulent cascade is unavoidable in nature. Thus, realistic MC simulations (with a large enough dynamic range) should recover a velocity scaling characteristic of turbulent flows, even in the absence of self-gravity. Perhaps the Jeans refinement strategy adopted in this work is not sufficient to resolve the turbulence, without a more generous root-grid size and/or more aggressive density/velocity refinement strategies.
 
-This interpretation is reinforced by the case of the VSFs without density threshold, where it should be even easier (at lower gas density) to resolve the turbulent cascade due to the energy injection from SNe, yet those VSFs are even steeper, with values of zeta that remains unrealistically high during the whole simulation. This is shown in section 3.4. In that section, the authors should stress this result, and should admit that it clearly shows the inability of their simulations to resolve the SN-driven turbulence even in the general ISM (not just the dense gas). Below, in that same section, they comment that the values of Z for these VSFs are consistent with mildly compressible turbulence, but that result is irrelevant given that the values of \zeta are completely inconsistent with turbulent flows (it is well known that the extended self-similarity applies well into the dissipation range, including the numerical dissipation range of simulations, so reasonable values of Z !
- can be fo
- und even if the turbulence is not resolved). So, what’s the point of claiming that the Z values are consistent with incompressible turbulence while neglecting to stress that the more important \zeta values are completely inconsistent with turbulence? The consistency of Z with incompressible turbulence would seem irrelevant, and stressing that fact without mentioning the inconsistency of the \zeta values is a misleading statement.
+This interpretation is reinforced by the case of the VSFs without density threshold, where it should be even easier (at lower gas density) to resolve the turbulent cascade due to the energy injection from SNe, yet those VSFs are even steeper, with values of zeta that remains unrealistically high during the whole simulation. This is shown in section 3.4. In that section, the authors should stress this result, and should admit that it clearly shows the inability of their simulations to resolve the SN-driven turbulence even in the general ISM (not just the dense gas). Below, in that same section, they comment that the values of Z for these VSFs are consistent with mildly compressible turbulence, but that result is irrelevant given that the values of \zeta are completely inconsistent with turbulent flows (it is well known that the extended self-similarity applies well into the dissipation range, including the numerical dissipation range of simulations, so reasonable values of Z can be found even if the turbulence is not resolved). So, what’s the point of claiming that the Z values are consistent with incompressible turbulence while neglecting to stress that the more important \zeta values are completely inconsistent with turbulence? The consistency of Z with incompressible turbulence would seem irrelevant, and stressing that fact without mentioning the inconsistency of the \zeta values is a misleading statement.
 
 G)
 In sections 3.6 and 4.5, the authors overlook the importance of their finding that the VSFs of the highest resolution run is very different from the VSFs of the lower resolution simulations. This is a serious problem, which could potentially invalidate the results of this paper. This is even more so because the higher resolution run shows a strong effect of the first nearby SN on the VSFs, which is entirely missed by the lower resolution runs, suggesting that the effect of SN driving is largely missed at the lower resolutions. The authors should more clearly admit the large difference in the highest-resolution run. Section 4.5 opens by saying that the Jeans refinement plays no role in the VSFs, referring to the two cases where that is true, and neglecting to mention it actually makes a huge difference in the third case (the highest resolution run). If the authors want to open the section with such a sentence, they should also write, in the same sentence (not many lines below!
@@ -141,6 +191,12 @@ At the end of the same paragraph, the authors state that there is a local minimu
 K)
 The conclusion section should be largely rewritten to reflect my main comments above, and particularly the fact that the values of \zeta are inconsistent with turbulent flows and with the observations during most of the evolution of the simulated clouds and also for the case without density threshold.
 
+>> We have revised the conclusion section according to our revisions. Though, we think
+>> that, with all the cleared missunderstandings, we can agree on that the conclusion does 
+>> not need as fundamental changes as the referee suggested.
+
+
+
 L)
 In figures 2 and 3, it would be useful to have an idea of the uncertainty in the estimated values of \zeta. The authors should estimate error bars for the derived values of \zeta, describe how they derive them, and plot them in figures 2 and 3. If the figures would be too cluttered with all the error bars, they could plot the error bars only for some representative times, perhaps for 4 or 5 times equally spread over the 5-6 Myr of evolution of the three clouds.
 
@@ -161,6 +217,10 @@ Above equation (6), the authors write that the She-Leveque result is for a “fi
 
 N)
 The second paragraph of section 3.3 states that in most cases all the 1D VSFs agree with each other. It seems to me that figure 2 gives quite a different picture, as the VSFs from different directions are very different from each other, though the difference is definitely smaller in the cloud M4. The authors should correct that statement, or otherwise explain more precisely to what pieces of figure 2 they apply their statement.
+
+
+
+
 
 O)
 The legends in figures 2 and 3, rows c and d, are confusing. In c, it says “density threshold analysis”, but it is actually the case with no density threshold. In d, it says “density weighted analysis”, but it is actually the case without density weighting. Please clean up those contradictions in the legends.
