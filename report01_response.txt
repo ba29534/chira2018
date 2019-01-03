@@ -1,6 +1,14 @@
-I apologize for the delay of this report due to family holidays during August-September.
+Dear referee,
 
-The paper presents an interesting analysis of velocity scaling in simulations of molecular clouds (MCs). The topic and the results are of great interest for the star-formation community and worth publishing in this Journal. However, the current draft needs further work before I can recommend it for publication.
+we thank you for the detailed report.
+We, as well, have to apologise for the delayed re-submission as some of us do not work in science anymore and there was a bereavement in my family.
+We edited the manuscript according to your recommendations. The changes are marked by bold face in the PDFs. Please find additional responses to your comments below, marked by leading ">>".
+
+Yours sincerely,
+R.-A. Chira,
+J. Ibanez-Mejia, M.-M. MacLow, Th. Henning
+
+-----------------------------------------------------
 
 A)
 My main concern regards the ability of the simulations to capture the turbulent cascade of energy. The few examples of velocity structure functions (VSFs) shown in figure 1 don’t seem to be very close to power laws, or to power laws characteristic of turbulent flows (the derived zeta slopes are often much too large, at least before the onset of gravitational collapse). This suggests that numerical dissipation may so dominant that virtually no inertial range interval is resolved. If so, the derived values of zeta may not be physically relevant, but rather controlled by numerics.
@@ -102,11 +110,28 @@ In the first paragraph of section 3.2, the authors interpret the too steep power
 
 This interpretation is reinforced by the case of the VSFs without density threshold, where it should be even easier (at lower gas density) to resolve the turbulent cascade due to the energy injection from SNe, yet those VSFs are even steeper, with values of zeta that remains unrealistically high during the whole simulation. This is shown in section 3.4. In that section, the authors should stress this result, and should admit that it clearly shows the inability of their simulations to resolve the SN-driven turbulence even in the general ISM (not just the dense gas). Below, in that same section, they comment that the values of Z for these VSFs are consistent with mildly compressible turbulence, but that result is irrelevant given that the values of \zeta are completely inconsistent with turbulent flows (it is well known that the extended self-similarity applies well into the dissipation range, including the numerical dissipation range of simulations, so reasonable values of Z can be found even if the turbulence is not resolved). So, what’s the point of claiming that the Z values are consistent with incompressible turbulence while neglecting to stress that the more important \zeta values are completely inconsistent with turbulence? The consistency of Z with incompressible turbulence would seem irrelevant, and stressing that fact without mentioning the inconsistency of the \zeta values is a misleading statement.
 
+>> Indeed, a 1:1 comaprison between the predictions and our measurements is not 
+>> possible for several reasons. We hope that our additions to Sect. 3.2 takes these 
+>> aspects more into account. Yet, we are confident that our simulations are not 
+>> dominated by numerical dissipation as we are able to resolve both the dissipation 
+>> and the inertial range with all refinement levels. This can be seen in Fig. 25 of 
+>> Ibanez-Mejia et al. (2017, their Appendix B). Here, we also see that the excesses 
+>> compared to Kolmogorov due to shock and cooling fronts are also visible in the 
+>> power spectra. We confess (and also mentioned it in the original version of this 
+>> manuscript) that the AMR zoom-in method that is used to improve the resolution 
+>> within the clouds requires time for the turbulence to settle into the new set of 
+>> grid; and the lower the Jeans refinement is the longer it takes turbulence to do 
+>> so. Yet, we already pointed out that even the 4cells/Jeans length simulations do 
+>> not require more than 1.5 Myr for the adjustments and results from there on are 
+>> to be trusted in all refinement levels.
+
+
 G)
-In sections 3.6 and 4.5, the authors overlook the importance of their finding that the VSFs of the highest resolution run is very different from the VSFs of the lower resolution simulations. This is a serious problem, which could potentially invalidate the results of this paper. This is even more so because the higher resolution run shows a strong effect of the first nearby SN on the VSFs, which is entirely missed by the lower resolution runs, suggesting that the effect of SN driving is largely missed at the lower resolutions. The authors should more clearly admit the large difference in the highest-resolution run. Section 4.5 opens by saying that the Jeans refinement plays no role in the VSFs, referring to the two cases where that is true, and neglecting to mention it actually makes a huge difference in the third case (the highest resolution run). If the authors want to open the section with such a sentence, they should also write, in the same sentence (not many lines below!
- ), that t
- he statement applies only to the lower resolution runs, while the third run results in very different VSFs.
+In sections 3.6 and 4.5, the authors overlook the importance of their finding that the VSFs of the highest resolution run is very different from the VSFs of the lower resolution simulations. This is a serious problem, which could potentially invalidate the results of this paper. This is even more so because the higher resolution run shows a strong effect of the first nearby SN on the VSFs, which is entirely missed by the lower resolution runs, suggesting that the effect of SN driving is largely missed at the lower resolutions. The authors should more clearly admit the large difference in the highest-resolution run. Section 4.5 opens by saying that the Jeans refinement plays no role in the VSFs, referring to the two cases where that is true, and neglecting to mention it actually makes a huge difference in the third case (the highest resolution run). If the authors want to open the section with such a sentence, they should also write, in the same sentence (not many lines below), that the statement applies only to the lower resolution runs, while the third run results in very different VSFs.
 In the same paragraph, the authors write that the SN blast causes an increase in the VSF at longer lag scales, thus the increase in \zeta in the higher resolution run. This is not a good explanation, because if this were primarily an issue of large-scale energy injection, then it would not require a high-resolution run to be seen. The authors should correct that argument, and provide clear explanations for the very large differences of the VSFs at the highest resolution relative to the lower-resolution cases.
+
+>> See comment above.
+
 
 H)
 The authors should explain the change in both results and interpretation relative to paper I. In paper I they found the velocity scaling (expressed by Larson’s relation) were shallower before gravity, and steeper at later time with the introduction of self-gravity, completely the opposite of what they find in this work. They interpreted that as showing that the observed velocity scaling could be explained only as the effect of self-gravity. Here, both results and interpretation are quite the opposite: the velocity scaling before gravity is even too steep compared with observations or turbulence simulations (rather than too shallow as in paper I), while the effect of self-gravity is to make the scaling shallower, and even much shallower than in the observations or in simulations of supersonic turbulence. I understand that the Larson velocity-size relation and the VSFs are not defined in the same way, but nevertheless I wouldn’t expect them to show
@@ -215,10 +240,14 @@ The presentation of the VSFs around equations (6) and (7) is a bit confused. Bot
 
 Above equation (6), the authors write that the She-Leveque result is for a “filamentary flow”. The most dissipative structures in incompressible turbulence are filamentary, but the flow itself cannot be described as filamentary.
 
+>> Thank you for pointing out our inaccurancy here. We have added
+>> the respective changes to the manuscript.
+
+
 N)
 The second paragraph of section 3.3 states that in most cases all the 1D VSFs agree with each other. It seems to me that figure 2 gives quite a different picture, as the VSFs from different directions are very different from each other, though the difference is definitely smaller in the cloud M4. The authors should correct that statement, or otherwise explain more precisely to what pieces of figure 2 they apply their statement.
 
-
+>> We have added appropriate changes to the paper.
 
 
 
@@ -234,7 +263,7 @@ What are the grey horizontal lines in figure 2? Maybe they are meant to be blue 
 >> Apologises again. The grey horizontal line was a relic from previous
 >> version and has been removed.
 >> However, we abstain from making the other lines thinner. To make from 
->> distinguishable even in a printed version would mean to make them so 
+>> distinguishable even in a printed version would mean to make them so
 >> thin that they are hard to see at all. Compared to our range of scales
 >> the values predicted by She-Leveque and Boldyrev are too close to each
 >> others...

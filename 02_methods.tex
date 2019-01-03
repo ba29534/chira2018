@@ -14,6 +14,9 @@ In this paper, we use the data within (40~pc)$^{3}$ subregions centred on the hi
 The internal structures of MCs are resolved using adaptive mesh refinement, focusing grid resolution on dense regions where Jeans unstable structures must be resolved with a minimum of 4 cells ($\lambda_J > 4~\Delta x_{\rm min}$).
 For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}.
 The MCs have initial masses at the onset of self-gravity of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter.
+\textbf{
+    For illustrations of the morphologies of the three clouds we refer to Fig.~1 of \citetalias{Chira2018}.
+}
 
 It is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
 \citetalias{IbanezMejia2017} described the time evolution of the properties of all three clouds in detail, in particular, mass, size, velocity dispersion, and accretion rates, in the context of MC formation and evolution within a galactic environment.
@@ -68,8 +71,8 @@ Theoretical studies predict values of $\zeta$ depending on the nature of the tur
 This results in the commonly known prediction that the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 
 For a supersonic flow, however, $\zeta(3) >1$ is expected.
-Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following.
-For an incompressible filamentary flow \citet{She1994} predict that
+Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following \textbf{intermittency corrections to \citeauthor{Kolmogorov1941}'s scaling law}.
+For an incompressible \textbf{turbulence with filamentary dissipative structures} \citet{She1994} predict that
 the VSFs scale with power law index
 \begin{equation}
 	\zeta(p) = \frac{p}{9} + 2 \left[ 1 - \left( \frac{2}{3} \right)^{\frac{p}{3}} \right] ,
@@ -80,6 +83,10 @@ while supersonic flows with sheet-like geometry are predicted to scale with \cit
 	\zeta(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}}.
 	\label{equ:method:boldyrev}
 \end{equation}
+\textbf{\noindent
+    Note that both equations return a value of $\zeta(3)~=$~1, this is only an exact result for the \citeauthor{She1994} model, while it is a result of normalisation in case of \citeauthor{Boldyrev2002}. 
+}
+
 \citet{Benzi1993} introduced the principle of extended self-similarity.
 It proposes that there is a constant relationship between the scaling
 exponents of different orders at all lag scales so that $\zeta$ can be measured from $S_p/S_3$, which typically gives a much clearer power-law behaviour.
@@ -88,7 +95,10 @@ The self-similarity parameter is defined as,
 	Z(p) = \frac{\zeta(p)}{\zeta(3)}.
 	\label{equ:method:z_def}
 \end{equation} 
-Since the predicted values for $\zeta(p)$ by \citet{She1994} and \citet{Boldyrev2002} are normalised so that $\zeta(3)$~=~1, Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) also provide the predictions for $Z(p)$, respectively.
+\textbf{\noindent
+    As mentioned before, both Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) return values of $\zeta(3)$~=~1.
+    Therefore, those equations also offer predictions for $Z(p)$, respectively.
+}
 
 For the discussion below, we measure $\zeta$ by fitting a power-law,
 given by
@@ -97,7 +107,9 @@ given by
 	\label{equ:method:fitting}
 \end{equation}
 with $A$ being the proportionality factor of the power-law to the simulated measurements.
-\textbf{For more details of the fitting procedure we refer to Sect.~\ref{appFitting} in the Appendix.}
+\textbf{
+	For more details of the fitting procedure we refer to Sect.~\ref{appFitting} in the Appendix.
+}
 
 In order to reduce the computational effort, we divide the range of 3D lag distances, $|\vec{\ell}|$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
 This means that the measurements at the given lag interval $\ell_i$ we will show below are based on data with lag distances $\ell_{i-1} < \ell \leq \ell_i$.

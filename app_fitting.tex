@@ -8,17 +8,17 @@
 
 \textbf{ 
     We map the 3D FLASH AMR data of the original simulations \citepalias{IbanezMejia2016,IbanezMejia2017} onto data cubes. 
-    Those cubes consists of 400$^3$ subcubes, each representing a volume of (0.1~pc)$^3$, with the centre of the cubes being close to the centres of the molecular clouds. 
+    Those cubes consists of 400$^3$ subcubes, each representing a volume of (0.1~pc)$^3$, with the centre of the cubes being the centres of the molecular clouds. 
 }
 
 \textbf{
-    Note that the FLASH AMR simulations contain, in our case, ten levels of resolution; and the decision which region is resolved up to which level depends on the density of the respective grid cell \citepalias{IbanezMejia2017}.
-    Therefore, the simulations cover a range of resolutions from 30.4~pc in regions of $|$10$|$-- $|$20$|$~pc around the midplane of the modelled galactic plane down to 0.06--0.10~pc within a (100~pc)$^3$ box around the centre of mass of the three molecular clouds presented in this manuscript, as well as in \citetalias{IbanezMejia2017} and \citetalias{Chira2018}. 
-    Therefore, the resolution we have chosen for the data cubes this study is based on represents either the highest resolved level (in case of \texttt{M8}) or slightly lower resolved level (in case of \texttt{M3} and \texttt{M4}) offered by the simulations.
+    Note that the FLASH AMR simulations take ten levels of resolution into account; and the decision which region is resolved up to which level depends on the density of the respective grid cell \citepalias{IbanezMejia2017}.
+    Therefore, the simulations cover a range of resolutions from 30.4~pc in regions of $|$10$|$-- $|$20$|$~pc around the midplane of the modelled galactic plane down to 0.06--0.10~pc within (100~pc)$^3$ boxes around the centre of mass of the three molecular clouds presented in this manuscript, as well as in \citetalias{IbanezMejia2017} and \citetalias{Chira2018}. 
+    Therefore, the resolution we have chosen for the data cubes corresponds to either the highest resolved level (in case of \texttt{M8}) or slightly lower resolved level (in case of \texttt{M3} and \texttt{M4}) offered by the simulations.
 }
 
 \textbf{
-    Note the zoom-in regions, meaning the regions around the molecular clouds that is modelled at the highest resolution level, is much larger than the volume we map into the box grid. 
+    Note that the zoom-in regions, meaning the regions around the molecular clouds that is modelled at the highest resolution level, is much larger than the volume we map into the box grid. 
     We have adopted this size as it is sufficient for covering the clouds' volumes, and thus more efficient for further analyses. 
     In addition, this choice prevents us from resolution edge effects as the transitions from this resolution level and the next lowest are several tens of zones away. 
 }
@@ -30,7 +30,7 @@
 }
 
 \textbf{
-    Going back to the simulated data we apply two approaches: 
+    After mapping the data onto the box grids we apply two approaches: 
     The first strategy considers the density threshold, n$_\mathrm{cloud}$.
     This means that we pick only those cells from the data cubes that contain number densities equal to or larger than n$_\mathrm{cloud}$.
     These cells represent the starting points $\vec{x}$ (see Eqs.~\ref{equ:method:def_vsf}--\ref{equ:method:def_vsf_1d}).
@@ -58,14 +58,14 @@
 \textbf{
     Although the average radii of our clouds are, on average, larger than 8~pc we choose this limit due the variable behaviour of the VSFs at the edges of the clouds. 
     As can be seen in Fig.~\ref{pic:results:vsf_example}, as well as in the figures shown in Appendix~\ref{appInertial} the shape of VSFs changes over time, or better according to the interactions with the acting forces.
-    Neither SNe blast waves nor gravitational contraction are able to act on all scales of the clouds simultaneously. 
+    Neither SN blast waves nor gravitational contraction are able to act on all scales of the clouds simultaneously. 
     Instead, the shocks and accelerations propagate through the clouds at affect different parts of the clouds at different times.
     This is reflected in the evolution of VSFs, as well.
-    For example, when a shock front, produced during a SN explosion, impacts one of the clouds, it does not compress all the cloud's gas at the same time.
-    Rather it compresses the matter within a segment at edge of the cloud that is closest to the SN site.
+    For example, when a shock front impacts a cloud it does not compress all the cloud's gas at the same time.
+    Rather it compresses the matter within a segment at the edge of the cloud that is closest to the SN site.
     From there on, the shock propagates through the cloud.
     Yet, by the time when the shock front reaches the far end of the cloud the closer end, where the interaction between blast wave and cloud has started, relaxes already; within a short period of time as our observations in Sect.~\ref{results} show.
-    In terms of VSF this scenario the described scenario means the following:
+    In terms of VSF the described scenario means the following:
     In the first step, when the blast wave shocks the cloud first, the values of $S_\mathrm{p}$ increases at large lag scales first.
     This is because of the distribution of cells belonging to the cloud. 
     As the density of the cloud increases forwards the centre of the cloud, there is a higher number of cells closer to the centre than to the edges. 
@@ -111,7 +111,7 @@
 }
 
 \textbf{
-    The codes for both deriving the VSFs, computing the scaling parameters, as well as for creating the figures of this manuscript are accessible via: \newline
+    The codes for deriving the VSFs, computing the scaling parameters, as well as for creating the figures of this manuscript are accessible via: \newline
     {\url{https://doi.org/10.5531/sd.astro.3}}.
 }
 
