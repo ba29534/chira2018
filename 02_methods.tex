@@ -32,13 +32,12 @@ The VSF is a two-point correlation function,
 	\label{equ:method:def_vsf}
 \end{equation}
 that measures the mean velocity difference 
-%mm to the $p^\mathrm{th}$ power
-\begin{equation}\Delta \vec{v} (\vec{\ell}) = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})
+\begin{equation}
+    \Delta \vec{v} (\vec{\ell}) = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})
 \end{equation} 
 between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$, with $\vec{\ell}$ being the direction vector pointing from the first to the second point.  The VSF
 $S_p$ is usually reported as a function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
-%mm [restating the intro from Heyer & Brunt 04] The VSF estimates the occurrence of symmetric motions (e.g., rotation, collapse, outflows), as well as rare events in random turbulent flows (e.g., supernovae) in velocity patterns.
-     \textbf{The coherent velocity differences measured by the VSF can be produced by both the energy cascade expected in turbulent flows, and by coherent motions such as collapse, rotation, or blast waves.}
+\textbf{The coherent velocity differences measured by the VSF can be produced by both the energy cascade expected in turbulent flows, and by coherent motions such as collapse, rotation, or blast waves.}
 Those patterns become more prominent the higher the value of the power $p$ is \citep{Heyer2004}.
 
 For fully developed turbulence the VSF is well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
@@ -46,19 +45,9 @@ For fully developed turbulence the VSF is well-described by a power-law relation
 	\mathit{S}_p (\ell) \propto \ell^{\zeta(p)}.
 	\label{equ:method:propto_zeta}
 \end{equation}
-%mm Note that the scaling exponent of that power-law relation, $\zeta$, depends on many parameters, such as the order of the VSF, as well as the properties and composition of the studied turbulent flow, such as its geometry, compressibility, or magnetization.
-%Many studies of VSFs distinguish between longitudinal and transverse velocity components, or compressible and solenoidal components, because those are expected to behave differently, especially towards larger lag distances \citep{Gotoh2002,Schmidt2008,Benzi2010}.
-%mm However, the differences are mostly negligible on scales we focus on. 
-%Since these decompositions are difficult to perform on observational data, we focus on the total VSF.
 
-%mm [moved discussion ahead of definition of density-weighted SF]
-%Theoretical studies predict values of $\zeta$ depending on the nature of the turbulence and the order $p$.
 \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an incompressible flow.
-This 
-%mm results in the commonly known prediction 
-     predicts
-that the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
-%
+This predicts that the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 For a supersonic flow, however, $\zeta(3) >1$ is expected.
 Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following \textbf{intermittency corrections to \citeauthor{Kolmogorov1941}'s scaling law}.
 For incompressible \textbf{turbulence with filamentary dissipative structures} \citet{She1994} predict that
@@ -93,9 +82,6 @@ We therefore compare our three-dimensional (3D) results to one-dimensional (1D),
 \end{equation}
 with $\vec{e}_i$ representing the unit vector along the $i$~=~$x$-, $y$-, or $z$-axis.
 
-%mm The first several orders of the VSF have a physical meaning. 
-%For example, $\mathit{S}_1$ gives the mean of relative velocities between any two points reflecting the modes created by different gas flows, while $\mathit{S}_2$ is proportional to the kinetic energy, making it a good probe of how the turbulent energy is distributed among different scales.
-
 \citet{Benzi1993} introduced the principle of extended self-similarity.
 It proposes that there is a constant relationship between the scaling
 exponents of different orders at all lag scales so that $\zeta$ can be measured from $S_p/S_3$, which typically gives a clearer power-law behaviour.
@@ -116,18 +102,12 @@ given by
 	\label{equ:method:fitting}
 \end{equation}
 with $A$ being the proportionality factor of the power-law to the simulated measurements.
-%mm
-\textbf{We choose the smallest lag of the fitting range to be equal to \mm{ten zones [CHECK!]}, sufficiently large to ensure that our fit does not include the numerical dissipation range.
-%
-	For more details of the fitting procedure we refer to Appendix~\ref{appFitting}.
+\textbf{
+We choose the smallest lag of the fitting range to be equal to \mm{ten zones [CHECK!]}, sufficiently large to ensure that our fit does not include the numerical dissipation range.
+For more details of the fitting procedure we refer to Appendix~\ref{appFitting}.
 }
 
-%mm [now covered in Appendix A] In order to reduce the computational effort, we divide the range of 3D lag distances, $|\vec{\ell}|$, into 40 equidistantly separated bins ranging from~0.1 to 30~pc.
-%This means that the measurements at the given lag interval $\ell_i$ we will show below are based on data with lag distances $\ell_{i-1} < \ell \leq \ell_i$.
-
-%mm Furthermore, we 
-We 
-\textbf{follow observational practice and} reduce the computational effort of this study by generally focusing on clouds {\bf defined by a density threshold.}
+We \textbf{follow observational practice and} reduce the computational effort of this study by generally focusing on clouds {\bf defined by a density threshold.}
 However, \citetalias{IbanezMejia2017} shows that there is usually no sharp increase in density between the ISM and the clouds. 
 Instead, the gas becomes continuously denser towards the centres of mass within the clouds. 
 Consequently, our use of a density threshold is a somewhat artificial boundary between the clouds and the ISM. Observationally, however, introducing a column density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., detector sensitivity) or the nature of the underlying physical processes (for example, excitation rates, or critical densities).
@@ -135,14 +115,9 @@ Therefore, we also study how a density threshold influences the VSF and its evol
 
 At our fiducial density threshold, we actually consider only $\leq$1.5\% of the volume in the high resolution cube.
 To understand the influence of this limitation we set up a test scenario (see Sect.~\ref{results:densthres}) by removing the density threshold (setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$) that results in analysing the entire data cube.
-%mm
 \textbf{Details of the method for computing the VSFs in these two cases are given in Appendix~\ref{appFitting}.}
 
-As in the case without a density threshold it would be too computationally expensive to compute all lags to all zones, we randomly choose a set of 5\% of the total number of zones as reference points and only compute relative velocities
-%mm [this is now in Appendix A.]  to these zones only. We emphasise that this does not mean that we only calculate the relative velocities between these zones.
-%Rather this subsample of zones represent the starting vectors $\vec{x}$ to which the velocities of all other zones $\vec{x} + \vec{\ell}$ in the same cube are compared to.
-%This way we reduce the risk of ignoring or emphasising any spatial direction or angle.
-        from the entire cube to these zones.
+As in the case without a density threshold it would be too computationally expensive to compute all lags to all zones, we randomly choose a set of 5\% of the total number of zones as reference points and only compute relative velocities from the entire cube to these zones.
 By choosing the starting points randomly we ensure that all parts of the cubes are considered. 
 As a consequence, there is only a small likelihood (5\%~$\times$~1.5\%~=~0.075\%) that any given zone chosen will be in the cloud.
 Therefore, we emphasise that it is likely that the two subsamples (no density threshold and cloud-only) do not have a common subset of starting vectors.
