@@ -201,7 +201,7 @@ At the end of the same paragraph, the authors state that there is a local minimu
 >> local minimum in the VSFs and the sizes of the clouds relates to a 
 >> theory of ours that we have not had enough time to investigate 
 >> in all required detail. Therefore, we decided to remove it. Yet, for 
->> technical reasons (probably merging conflicts) some sentences survived 
+>> technical reasons (probably merging conflicts) some sentences survived
 >> accidentally. They have now been removed. The remaining comments have been 
 >> addressed in the appendix.
 

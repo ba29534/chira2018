@@ -48,7 +48,8 @@ In order to derive the scaling parameters $\zeta$ of the VSFs as a function of t
 Due to the rather irregular behaviour of our VSFs at larger scales, we define the weighting function as
 \begin{equation}
     w\left(\ell\right) = \begin{cases}
-        1 & \ell \leq~\mathrm{8~pc} \\
+        0 & \ell \leq~\mathrm{0.8~pc} \\
+        1 & \mathrm{0.8~pc} \leq \ell \leq~\mathrm{8~pc} \\
         \mathrm{1~pc}\,\ell^{-1} & \ell >~\mathrm{8~pc}.
     \end{cases}
 \end{equation}
@@ -68,9 +69,7 @@ As can be seen in Fig.~\ref{pic:results:vsf_example}, as well as in the figures 
     \includegraphics[width=0.9\textwidth]{error_vsf04_zeta_z.pdf}
     \caption{
         Data presented in Fig.~\ref{pic:results:zeta_all}a, with
-        shaded areas behind the data representing the error ranges of the computed $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}).  
-%mm
-    \mm{[left axis labels are clipped.]}
+        shaded areas behind the data representing the error ranges of the computed $\zeta$ (\textit{top}) and $Z$ (\textit{bottom}).
     }
     \label{pic:appFitting:error_vsfhr04_zeta_z}
 \end{figure*}

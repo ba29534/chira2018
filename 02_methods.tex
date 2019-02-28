@@ -8,13 +8,17 @@ The analysis in this paper is based on a sample of three MCs identified within a
 We summarise the most relevant properties. 
 
 The numerical simulation models a $1\times1\times40$~kpc$^3$ section of the multi-phase, turbulent ISM of a disk galaxy, where dense structures form self-consistently in convergent, turbulent flows \citepalias{IbanezMejia2016}.  
-The model includes gravity---a background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time---SN-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
+The model includes gravity -- a background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time -- SN-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
 Although hundreds of dense clouds form within the simulated volume, \citetalias{IbanezMejia2017} focused on three clouds, which were re-simulated at a much higher spatial resolution.
 The internal structures of the MCs are resolved using adaptive mesh refinement, focusing grid resolution on dense regions where Jeans unstable structures must be resolved with a minimum of 4 cells ($\lambda_J > 4~\Delta x_{\rm min}$).
-For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}. {\bf We define MCs as regions above a fixed number density threshold with fiducial value $n_{\mathrm cloud}$~=~100~cm$^{-3}$.  We chose this threshold as it roughly corresponds to the density when CO becomes detectable.}
-The MCs have initial masses at the onset of self-gravity of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter. In this paper, we use the data within (40~pc)$^{3}$ subregions centred on the high-resolution clouds' centres of mass, , which we map to a uniform grid of 0.1 pc zones \textbf{for analysis}.
+For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}. 
 \textbf{
-    For illustrations of the morphologies of the three clouds we refer to Fig.~1 of \citetalias{Chira2018}.
+We define MCs as regions above a fixed number density threshold with fiducial value $n_{\mathrm cloud}$~=~100~cm$^{-3}$.
+We chose this threshold as it roughly corresponds to the density when CO becomes detectable.
+}
+The MCs have initial masses at the onset of self-gravity of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter. 
+In this paper, we use the data within (40~pc)$^{3}$ subregions centred on the high-resolution clouds' centres of mass, which we map to a uniform grid of 0.1 pc zones \textbf{for analysis.
+For illustrations of the morphologies of the three clouds we refer to Fig.~1 of \citetalias{Chira2018}.
 }
 
 It is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
@@ -35,9 +39,11 @@ that measures the mean velocity difference
 \begin{equation}
     \Delta \vec{v} (\vec{\ell}) = \vec{v}(\vec{x}+\vec{\ell}) - \vec{v}(\vec{x})
 \end{equation} 
-between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$, with $\vec{\ell}$ being the direction vector pointing from the first to the second point.  The VSF
-$S_p$ is usually reported as a function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
-\textbf{The coherent velocity differences measured by the VSF can be produced by both the energy cascade expected in turbulent flows, and by coherent motions such as collapse, rotation, or blast waves.}
+between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$, with $\vec{\ell}$ being the direction vector pointing from the first to the second point.
+The VSF $S_p$ is usually reported as a function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
+\textbf{
+The coherent velocity differences measured by the VSF can be produced by both the energy cascade expected in turbulent flows, and by coherent motions such as collapse, rotation, or blast waves.
+}
 Those patterns become more prominent the higher the value of the power $p$ is \citep{Heyer2004}.
 
 For fully developed turbulence the VSF is well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
@@ -47,7 +53,7 @@ For fully developed turbulence the VSF is well-described by a power-law relation
 \end{equation}
 
 \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an incompressible flow.
-This predicts that the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
+As a consequence the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 For a supersonic flow, however, $\zeta(3) >1$ is expected.
 Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following \textbf{intermittency corrections to \citeauthor{Kolmogorov1941}'s scaling law}.
 For incompressible \textbf{turbulence with filamentary dissipative structures} \citet{She1994} predict that
@@ -95,15 +101,15 @@ The self-similarity parameter is defined as,
     Therefore, those equations also offer predictions for $Z(p)$.
 }
 
-For the discussion below, we measure $\zeta$ by fitting a power-law,
+For the discussion below, we measure $\zeta$(p) by fitting a power-law,
 given by
 \begin{equation}
-	\log_{10}\left[ S_p(\ell) \right] = \log_{10}\left(A\right) + \zeta \log_{10}(\ell) ,
+	\log_{10}\left[ S_p(\ell) \right] = \log_{10}\left(A\right) + \zeta(p) \, \log_{10}(\ell) ,
 	\label{equ:method:fitting}
 \end{equation}
 with $A$ being the proportionality factor of the power-law to the simulated measurements.
 \textbf{
-We choose the smallest lag of the fitting range to be equal to \mm{ten zones [CHECK!]}, sufficiently large to ensure that our fit does not include the numerical dissipation range.
+We choose the smallest lag of the fitting range to be equal to eight zones, sufficiently large to ensure that our fit does not include the numerical dissipation range.
 For more details of the fitting procedure we refer to Appendix~\ref{appFitting}.
 }
 
