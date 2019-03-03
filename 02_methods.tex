@@ -101,8 +101,7 @@ The self-similarity parameter is defined as,
     Therefore, those equations also offer predictions for $Z(p)$.
 }
 
-For the discussion below, we measure $\zeta$(p) by fitting a power-law,
-given by
+For the discussion below, we measure $\zeta$(p) by fitting a power-law, given by
 \begin{equation}
 	\log_{10}\left[ S_p(\ell) \right] = \log_{10}\left(A\right) + \zeta(p) \, \log_{10}(\ell) ,
 	\label{equ:method:fitting}
@@ -113,7 +112,7 @@ We choose the smallest lag of the fitting range to be equal to eight zones, suff
 For more details of the fitting procedure we refer to Appendix~\ref{appFitting}.
 }
 
-We \textbf{follow observational practice and} reduce the computational effort of this study by generally focusing on clouds {\bf defined by a density threshold.}
+We \textbf{follow observational practice and} reduce the computational effort of this study by generally focusing on clouds \textbf{defined by a density threshold}.
 However, \citetalias{IbanezMejia2017} shows that there is usually no sharp increase in density between the ISM and the clouds. 
 Instead, the gas becomes continuously denser towards the centres of mass within the clouds. 
 Consequently, our use of a density threshold is a somewhat artificial boundary between the clouds and the ISM. Observationally, however, introducing a column density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., detector sensitivity) or the nature of the underlying physical processes (for example, excitation rates, or critical densities).
@@ -123,9 +122,10 @@ At our fiducial density threshold, we actually consider only $\leq$1.5\% of the 
 To understand the influence of this limitation we set up a test scenario (see Sect.~\ref{results:densthres}) by removing the density threshold (setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$) that results in analysing the entire data cube.
 \textbf{Details of the method for computing the VSFs in these two cases are given in Appendix~\ref{appFitting}.}
 
-As in the case without a density threshold it would be too computationally expensive to compute all lags to all zones, we randomly choose a set of 5\% of the total number of zones as reference points and only compute relative velocities from the entire cube to these zones.
+As in the case without a density threshold it would be too computationally expensive to compute all lags to all zones.
+Thus, we randomly choose a set of 5\% of the total number of zones as reference points and only compute relative velocities from the entire cube to these zones.
 By choosing the starting points randomly we ensure that all parts of the cubes are considered. 
-As a consequence, there is only a small likelihood (5\%~$\times$~1.5\%~=~0.075\%) that any given zone chosen will be in the cloud.
+As a consequence, there is only a small likelihood (5\%~$\times$~1.5\%~=~0.075\%) that any given zone chosen will be within the cloud.
 Therefore, we emphasise that it is likely that the two subsamples (no density threshold and cloud-only) do not have a common subset of starting vectors.
 Nevertheless, the random sample still includes $>4 \times 10^3$ zones in the cloud, so the sample does include information on VSFs of material in the cloud.
 
