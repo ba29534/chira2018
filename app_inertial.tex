@@ -3,14 +3,13 @@
 \section{Inertial Range}\label{appInertial}
 
 
-\textbf{
 For our analysis it is essential to verify that there is a reasonable range of scales $\ell$ below the driving range within which the simulations are not dominated by numerical effects, so that they resolve the inertial range of any turbulent cascade.  
 We note that the fitting region for our VSFs starts at lags greater than eight zones, ensuring that the numerical dissipation range lies at smaller scales.
 To understand the non-power law behaviour that we nonetheless find, in the following subsections we offer more examples that show VSFs of all three clouds at different times and considering our different analysis approaches. 
 We focus on the standard analysis in Sect.~\ref{Bsub:standard}, on the
 analysis neglecting the density threshold in Sect.~\ref{Bsub:full},
 and on the impact of varying the resolution in collapsing regions in Sect.~\ref{Bsub:Jeans}.
-}
+
  	
 \begin{figure*}
     \centering
@@ -81,41 +80,34 @@ and on the impact of varying the resolution in collapsing regions in Sect.~\ref{
 
 \subsection{Standard Analysis}\label{Bsub:standard}
 
-\textbf{
 Figs.~\ref{pic:appInertial:examples_with_threshold_s_vs_l} and~\ref{pic:appInertial:examples_with_threshold_sl_vs_l} extend the data presented in Sect.~\ref{results:normal} and discussed in Sect.~\ref{discussion:normal}.
 These figures use the same format as Fig.~\ref{pic:results:vsf_example}, but with data from all three clouds and at three different snapshots during the simulations.
 The straight lines within the plots indicate the power-law relation that we have fitted onto the VSFs, considering the range 0.8~$\leq\,\ell\,\leq$~8~pc.
-}
 
-\textbf{
 We see that in most of the cases the VSFs are in good agreement with the described power-law relation within the fitted ranges (e.g., Fig.~\ref{pic:appInertial:examples_with_threshold_s_vs_l}). 
 However, there are cases when the VSF is not well reproduced by a simple, single power-law function, such as \texttt{M3} at $t=3.0$~Myr in Fig.~\ref{pic:appInertial:examples_with_threshold_s_vs_l}.
 This appears to occur particularly when the dominant mechanism driving turbulence changes from large-scale driving to internal contraction. 
 At this point the  larger scales of the clouds (larger~$\ell$) are still dominated by external driving, while the smaller scales (smaller~$\ell$) start to accelerate mostly due to gravitational fragmentation and infall motions.
 The consequence is that the actual VSF is a superposition of two processes that amplify the relative motions of the gas differently and on different scales.
 A single power-law cannot describe this scenario adequately. 
-}
 
 
 \subsection{No Density Threshold} \label{Bsub:full}
 
-\textbf{Figs.~\ref{pic:appInertial:examples_without_threshold_s_vs_l} and~\ref{pic:appInertial:examples_without_threshold_sl_vs_l} extend the set of VSFs for the box without a density threshold presented in Sect.~\ref{results:densthres} and discussed in Sect.~\ref{discussion:densthres}.}
+Figs.~\ref{pic:appInertial:examples_without_threshold_s_vs_l} and~\ref{pic:appInertial:examples_without_threshold_sl_vs_l} extend the set of VSFs for the box without a density threshold presented in Sect.~\ref{results:densthres} and discussed in Sect.~\ref{discussion:densthres}.
 
-\textbf{
 Here we also find problems describing the behaviour of small-scale motions with $\ell\,\lesssim$~2~pc.
 In this case we primarily capture the turbulent motions within the low-density ISM. 
 Contrary to the modelled MCs, the ISM is not organised in hierarchical structures, and the turbulence within the ISM is predominantly driven by SN explosions.
 These produce structured correlations at the large scales of entire blast waves as well as the small scales across shock fronts.
 Yet, we see that we can fit the VSFs with a power law within the intermediate lag scale ranges (2~pc~$\lesssim\,\ell\,\lesssim$~8~pc), suggesting this range of length scales is dominated by a turbulent cascade.
-}
+
+
 
 \subsection{Varying Refinement} \label{Bsub:Jeans}
 
-\textbf{
 Figs.~\ref{pic:appInertial:examples_jeans_s_vs_l} and~\ref{pic:appInertial:examples_jeans_sl_vs_l} extend the set of VSFs presented for clouds with varying amounts of refinement in gravitationally collapsing regions in Sect.~\ref{results:refinement} and discussed in Sect.~\ref{discussion:refinement}.
-}
 
-\textbf{
 A final example of VSFs not following a power law at intermediate scales is given by cloud \texttt{M3} at $t=0.8$~Myr and with $\lambda_\mathrm{J} = 32\Delta x$ in Fig.~\ref{pic:appInertial:examples_jeans_s_vs_l}.
 This represents the VSF of a cloud that is interacting with a SN blast wave.
 In this case the maximal amplification is neither at the scale of the cloud, where the turbulence is driven by external sources, nor on small scales where gravitational contraction acts.
@@ -124,7 +116,6 @@ Considering the morphology of the cloud and the cloud's environment this can onl
 Thus, the VSF here is a superposition of three driving mechanisms:
 first, the external large-scale driving; second, self-gravity that leads to contractive motions; and finally the shock jump that injects kinetic energy as it moves through the cloud. 
 The effect of the shock, however, is only local and short-lived as the injected turbulence decays quickly (compare with \texttt{M3} at $t=1.2$~Myr and with $\lambda_\mathrm{J} = 32\Delta x$ in Fig.~\ref{pic:appInertial:examples_jeans_s_vs_l}).
-}
 
 
 

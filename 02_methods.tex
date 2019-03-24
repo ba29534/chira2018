@@ -8,18 +8,18 @@ The analysis in this paper is based on a sample of three MCs identified within a
 We summarise the most relevant properties. 
 
 The numerical simulation models a $1\times1\times40$~kpc$^3$ section of the multi-phase, turbulent ISM of a disk galaxy, where dense structures form self-consistently in convergent, turbulent flows \citepalias{IbanezMejia2016}.  
-The model includes gravity -- a background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time -- SN-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
+The model includes 
+%mm4 gravity -- a [-- is an en-dash for a range of numbers, e.g. 1--5, while --- is an em-dash for a parenthetical remark.  Neither takes spaces.]
+           gravity---a 
+background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time---SN-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
 Although hundreds of dense clouds form within the simulated volume, \citetalias{IbanezMejia2017} focused on three clouds, which were re-simulated at a much higher spatial resolution.
 The internal structures of the MCs are resolved using adaptive mesh refinement, focusing grid resolution on dense regions where Jeans unstable structures must be resolved with a minimum of 4 cells ($\lambda_J > 4~\Delta x_{\rm min}$).
 For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}. 
-\textbf{
 We define MCs as regions above a fixed number density threshold with fiducial value $n_{\mathrm cloud}$~=~100~cm$^{-3}$.
 We chose this threshold as it roughly corresponds to the density when CO becomes detectable.
-}
 The MCs have initial masses at the onset of self-gravity of $3~\times 10^3$, $4~\times 10^3$, and $8~\times 10^3$~M$_{\odot}$ and are denoted as \texttt{M3}, \texttt{M4}, and \texttt{M8}, respectively, hereafter. 
-In this paper, we use the data within (40~pc)$^{3}$ subregions centred on the high-resolution clouds' centres of mass, which we map to a uniform grid of 0.1 pc zones \textbf{for analysis.
+In this paper, we use the data within (40~pc)$^{3}$ subregions centred on the high-resolution clouds' centres of mass, which we map to a uniform grid of 0.1 pc zones for analysis.
 For illustrations of the morphologies of the three clouds we refer to Fig.~1 of \citetalias{Chira2018}.
-}
 
 It is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
 \citetalias{IbanezMejia2017} described the time evolution of the properties of all three clouds in detail, in particular, mass, size, velocity dispersion, and accretion rates, in the context of MC formation and evolution within a galactic environment.
@@ -41,9 +41,7 @@ that measures the mean velocity difference
 \end{equation} 
 between two points $\vec{x}$ and $\vec{x}+\vec{\ell}$, with $\vec{\ell}$ being the direction vector pointing from the first to the second point.
 The VSF $S_p$ is usually reported as a function of lag distance, $\ell = |\vec{\ell}|$, between the correlated points.
-\textbf{
 The coherent velocity differences measured by the VSF can be produced by both the energy cascade expected in turbulent flows, and by coherent motions such as collapse, rotation, or blast waves.
-}
 Those patterns become more prominent the higher the value of the power $p$ is \citep{Heyer2004}.
 
 For fully developed turbulence the VSF is well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
@@ -55,29 +53,29 @@ For fully developed turbulence the VSF is well-described by a power-law relation
 \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an incompressible flow.
 As a consequence the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 For a supersonic flow, however, $\zeta(3) >1$ is expected.
-Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following \textbf{intermittency corrections to \citeauthor{Kolmogorov1941}'s scaling law}.
-For incompressible \textbf{turbulence with filamentary dissipative structures} \citet{She1994} predict that
+Based on \citeauthor{Kolmogorov1941}'s work, \citet{She1994} and \citet{Boldyrev2002} extended and generalised the analysis and predicted the following intermittency corrections to \citeauthor{Kolmogorov1941}'s scaling law.
+For incompressible turbulence with filamentary dissipative structures \citet{She1994} predict that
 the VSFs scale with power law index
 \begin{equation}
 	\zeta(p) = \frac{p}{9} + 2 \left[ 1 - \left( \frac{2}{3} \right)^{\frac{p}{3}} \right] ,
 	\label{equ:method:she}
 \end{equation}
-while supersonic flows with sheet-like \textbf{dissipative structures} are predicted to scale with \citep{Boldyrev2002}
+while supersonic flows with sheet-like dissipative structures are predicted to scale with \citep{Boldyrev2002}
 \begin{equation}
 	\zeta(p) = \frac{p}{9} + 1 - \left( \frac{1}{3} \right)^{\frac{p}{3}}.
 	\label{equ:method:boldyrev}
 \end{equation}
-\textbf{\noindent
-    Note that both equations return a value of $\zeta(3) =1$, but this is only an exact result for the \citeauthor{She1994} model, while it is a result of normalisation in the case of \citeauthor{Boldyrev2002}. 
-}
+\noindent
+Note that both equations return a value of $\zeta(3) =1$, but this is only an exact result for the \citeauthor{She1994} model, while it is a result of normalisation in the case of \citeauthor{Boldyrev2002}. 
 
-\textbf{In the case of compressible turbulence, the energy cascade can no longer be expressed in terms of a pure velocity difference because density fluctuations become important.  Turbulence should then show a cascade in some density-weighted VSF analogous to the incompressible case.}
-\citet{Padoan2016a} defined a density-weighted VSF \textbf{to attempt to capture this process that we use in our subsequent analysis}
+In the case of compressible turbulence, the energy cascade can no longer be expressed in terms of a pure velocity difference because density fluctuations become important.
+Turbulence should then show a cascade in some density-weighted VSF analogous to the incompressible case.
+\citet{Padoan2016a} defined a density-weighted VSF to attempt to capture this process that we use in our subsequent analysis
 \begin{equation}
 	{S}_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle}.
 	\label{equ:method:def_vsf_dw}
 \end{equation}
-\textbf{Alternatives have been proposed by \citet{Kritsuk2013a} based on an analysis of the equations of compressible flow that should be explored in future work.}
+Alternatives have been proposed by \citet{Kritsuk2013a} based on an analysis of the equations of compressible flow that should be explored in future work.
 
 In many cases a three-dimensional computation of the VSF cannot be performed because of the observational constraint that only line-of-sight velocities are available.
 We therefore compare our three-dimensional (3D) results to one-dimensional (1D), density-weighted VSFs
@@ -96,10 +94,9 @@ The self-similarity parameter is defined as,
 	Z(p) = \frac{\zeta(p)}{\zeta(3)}.
 	\label{equ:method:z_def}
 \end{equation} 
-\textbf{\noindent
-    As mentioned before, both Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) return values of $\zeta(3)$~=~1.
-    Therefore, those equations also offer predictions for $Z(p)$.
-}
+\noindent
+As mentioned before, both Eq.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev}) return values of $\zeta(3)$~=~1.
+Therefore, those equations also offer predictions for $Z(p)$.
 
 For the discussion below, we measure $\zeta$(p) by fitting a power-law, given by
 \begin{equation}
@@ -107,12 +104,10 @@ For the discussion below, we measure $\zeta$(p) by fitting a power-law, given by
 	\label{equ:method:fitting}
 \end{equation}
 with $A$ being the proportionality factor of the power-law to the simulated measurements.
-\textbf{
 We choose the smallest lag of the fitting range to be equal to eight zones, sufficiently large to ensure that our fit does not include the numerical dissipation range.
 For more details of the fitting procedure we refer to Appendix~\ref{appFitting}.
-}
 
-We \textbf{follow observational practice and} reduce the computational effort of this study by generally focusing on clouds \textbf{defined by a density threshold}.
+We follow observational practice and reduce the computational effort of this study by generally focusing on clouds defined by a density threshold.
 However, \citetalias{IbanezMejia2017} shows that there is usually no sharp increase in density between the ISM and the clouds. 
 Instead, the gas becomes continuously denser towards the centres of mass within the clouds. 
 Consequently, our use of a density threshold is a somewhat artificial boundary between the clouds and the ISM. Observationally, however, introducing a column density (or intensity) threshold is unavoidable, be it due to technical limitations (e.g., detector sensitivity) or the nature of the underlying physical processes (for example, excitation rates, or critical densities).
@@ -120,7 +115,7 @@ Therefore, we also study how a density threshold influences the VSF and its evol
 
 At our fiducial density threshold, we actually consider only $\leq$1.5\% of the volume in the high resolution cube.
 To understand the influence of this limitation we set up a test scenario (see Sect.~\ref{results:densthres}) by removing the density threshold (setting n$_\mathrm{cloud}$~=~0~cm$^{-3}$) that results in analysing the entire data cube.
-\textbf{Details of the method for computing the VSFs in these two cases are given in Appendix~\ref{appFitting}.}
+Details of the method for computing the VSFs in these two cases are given in Appendix~\ref{appFitting}.
 
 As in the case without a density threshold it would be too computationally expensive to compute all lags to all zones.
 Thus, we randomly choose a set of 5\% of the total number of zones as reference points and only compute relative velocities from the entire cube to these zones.
