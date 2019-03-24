@@ -1,8 +1,10 @@
-Dear Editor:
+Dear Referee:
 
 We thank the referee for a detailed report. We have to apologise for the delayed re-submission as some of us do not work in science anymore and there was a bereavement in the lead author's family, as well as health problems that needed to be treated first.
 
 We have nevertheless edited the manuscript following the referee's recommendations. The changes are shown in bold face in the PDF. Please find additional responses to the referee's comments below, marked by leading ">>".
+
+As mentioned at the end of our introduction, we published our data online, following https://doi.org/10.5531/sd.astro.3.
 
 Yours sincerely,
 
@@ -263,18 +265,3 @@ What are the grey horizontal lines in figure 2? Maybe they are meant to be blue 
 
 
 I hope the authors are willing to undertake the revisions I suggest. I will have to see the revised version of the paper to be able to express a final opinion about its publication.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
