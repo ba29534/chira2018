@@ -1,6 +1,6 @@
 Dear Referee:
 
-We thank the referee for a detailed report. We have to apologise for the delayed re-submission as some of us do not work in science anymore and there was a bereavement in the lead author's family, as well as health problems that needed to be treated first.
+We thank the referee for a detailed report.  We have to apologise for the delayed re-submission as some of us do not work in science anymore and there was a bereavement in the lead author's family.
 
 We have nevertheless edited the manuscript following the referee's recommendations. The changes are shown in bold face in the PDF. Please find additional responses to the referee's comments below, marked by leading ">>".
 
@@ -27,11 +27,12 @@ Add a figure comparing S_p(\ell)/\ell versus \ell for the three different resolu
 If the above figures show that the VSFs are not power laws in general, one should conclude that no inertial range is resolved in the simulations, and thus one cannot derive meaningful physical values of the VSF slopes, \zeta, from these simulations. If instead there is a clear range of values of \ell where the structure functions are power laws, and that interval corresponds to a reasonable range of scales where the simulations should not be dominated by numerical diffusion, then the power-law fits should be performed within that range.
 
 >> We have added the requested figures, their descriptions and discussion, as well as 
->> further details to the appendix of the paper. In short, the referee is correct that 
->> there are significant deviations from power laws. However, we argue that these deviations 
+>> further details to the appendix of the paper.  In short, the referee is correct that 
+>> there are significant deviations from power laws.  However, we argue that these deviations 
 >> occur not because of numerical dissipation but because the flow deviates from uniform, 
 >> isotropic turbulence due to the effects of self-gravity, cooling, and supernova blast 
->> waves.
+>> waves. We only fit the VSFs at lags exceeding 8 zones (0.8 pc), beyond the outer edge of the
+>> dissipation range. (See Fig. 25 of Paper II, Ibáñez-Mejía et al. 2017)
 
 
 B)
@@ -46,20 +47,22 @@ Figures 2 and 3 shows vertical dashed lines indicating the time of explosions of
 One possibility is that the problem partly arises from a lack of resolution of the early evolution of the SN remnants. The authors should compare the spatial resolution (grid size) at the locations of the SN explosions with the criterion for numerical convergence of SN remnants derived by Kim and Ostriker (2015), which states that both the grid size and the initial SN radius must be smaller than one third of the shell-formation radius, which results into a maximum value of the ambient density above which the evolution of the SN remnants is not numerically converged. The authors should apply this convergence criterion to their simulations and describe their findings.
 
 >> Indeed, there seems to be a significant misunderstanding of the term "nearby SN".
->> As already mentioned in the text (we have moved the paragraph into Sect. 3.2), 
+>> As already mentioned in the text (we have moved the paragraph into Sect. 3.1), 
 >> we mean SNe that have exploded at distances between 30-100 pc from the clouds' 
 >> centres of mass. As the shock fronts propagate at 50-100 km/s through the ISM
 >> it takes the blast waves about 1 Myr to reach the clouds. This means that *it is not 
 >> possible for a cloud to be impacted by a SN immediately after the explosion*. In the 
->> given example, the SN exploded at t = 0.7 Myr. This means the first impact between
+>> given example, the SN exploded at t = 0.7 Myr. That means the first impact between
 >> the blast wave and the outer skirts of the clouds *cannot occur before*  t = 1.5 Myr.
 >> And at this time, we indeed see a major feature, as the referee expects. 
+>> As mentioned, we have moved the paragraph to an earlier part of the paper and 
+>> added additional information and references to it. 
 >>
 >> Addressing the concern of resolving the SN explosion sites correctly, we have two 
->> responses. First, we note that, as described in Paper I, energy injection 
+>> responses.  First, we note that, as described in Paper I, energy injection 
 >> occurs over a sphere encompassing 60 solar masses. Since we are resolving the entire 
 >> galactic midplane with parsec resolution, only the very densest clouds will have 
->> unresolved source regions in the sense of Kim & Ostriker 2015. Second, we note that
+>> unresolved source regions in the sense of Kim & Ostriker 2015.  Second, we note that
 >> the Jeans refinement is only significant in dense regions where
 >> the Jeans length becomes comparable to the length of the AMR grid cells.
 >> As all our SNe explode in diffuse regions within the ISM (see Paper II), the sites of 
@@ -72,7 +75,7 @@ One possibility is that the problem partly arises from a lack of resolution of t
 >> the Jeans refinement -- than in the ISM cells. 
 >>
 >> Consequently, the clouds are hit by the same strength of blast wave in all the simulations
->> (we have added a comment on this in the revised manuscript; but it can also be seen
+>> (we have added a comment on this in the revised manuscript;  but it can also be seen
 >> in the online material). The real difference between the simulations is that only the 
 >> lambda = 32 cells / Jeans length simulation resolves the shock well enough to produce
 >> a substantial change in its power spectrum that can be picked up by the VSF.
@@ -89,11 +92,12 @@ In the fourth paragraph of section 3.1 the author state that the cloud M3 has ju
 
 >> To summarise the explanations given to point C: The SNe *do not explode* next to the clouds 
 >> (or even within). They explode at a distance of up to 100 pc and need varying 
->> amounts of time up to 2 Myr to travel through the ISM to the clouds. 
->> This means that the SN that causes the feature at t = 3.5 Myr needs to explode 
->> between t = 2.2-2.8 Myr (depending on the distance and propagation speed) to reach 
->> the cloud on time. This points to the SN at t=2.7 Myr, and by tracing the propagation 
->> from the cloud back to the source that is exactly the one that causes the feature.
+>> amounts of time up to 2 Myr to  
+>> travel through the ISM to the clouds. This means that the SN that causes the feature at 
+>>  t = 3.5 Myr needs to explode between t = 2.2-2.8 Myr (depending on the distance and
+>> propagation speed) to reach the cloud on time. This points to the SN at t=2.7 Myr, 
+>> and by tracing the propagation from the cloud back to the source that is exactly the 
+>> one that causes the feature.
 
 (At the end of the paragraph the authors write “steeper slope”, but I think they mean “shallower slope”.) This contradiction should be resolved.
 
@@ -101,9 +105,9 @@ In the fourth paragraph of section 3.1 the author state that the cloud M3 has ju
 >> the preceding time. Those are similar to the example in Fig. 1(c) and much shallower
 >> than the shocked VSF in Fig. 1(b). This is more obvious in Fig. 2(a) where one clearly 
 >> sees that zeta (the slope) increases significantly at t = 3.5 Myr relative to the 
->> time steps before. Of course, if one compares Fig. 1(a) and (b) with each other, 
+>> time steps before.  Of course, if one compares Fig. 1(a) and (b) with each other, 
 >> Fig. 1(b) is shallower. We emphasise that such a comparison is inappropriate 
->> as the examples are not from the same cloud. However, we now see that trying to make this 
+>> as the examples are not from the same cloud.  However, we now see that trying to make this 
 >> point prior to introducing the time histories is rather confusing, so we defer its 
 >> discussion to the next section.
 
@@ -116,8 +120,7 @@ In the second paragraph of section 4.5 the authors try to explain the large diff
 E)
 In section 2.1 the authors write that the maximum resolution is \Delta x=0.1 pc. They also write that they use data from 40 pc regions, centered on the MCs, mapped to a uniform resolution of 0.1 pc. It would be useful if the authors also specified the resolution of the root grid (for the readers who are not familiar with the preceeding papers). This is particularly important in the case of the VSFs without a threshold density, where the majority of the randomly selected cells must reside in non-refined regions, reducing significantly the range of scales probed by the VSFs (and their power-law fits).
 
->> The requested information is now given in Appendix A. In short, the entire region 
->> of study is resolved to the finest scale in the zoom-in calculation that we analysed.
+>> The requested information is now given in Appendix A. In short, the entire region of study is resolved to the finest scale in the zoom-in calculation that we analysed.
 
 F)
 In the first paragraph of section 3.2, the authors interpret the too steep power laws at t=0 as the result of initial convergent flows forming the clouds. I think a possible interpretation is that the simulations are dominated by numerical dissipation, and thus the structure functions 1) are not power laws and 2) are far too steep, while with a much higher (root-grid) resolution they would be power laws with realistic slopes. Because of the very large Reynolds number of MC motions, a turbulent cascade is unavoidable in nature. Thus, realistic MC simulations (with a large enough dynamic range) should recover a velocity scaling characteristic of turbulent flows, even in the absence of self-gravity. Perhaps the Jeans refinement strategy adopted in this work is not sufficient to resolve the turbulence, without a more generous root-grid size and/or more aggressive density/velocity refinement strategies.
@@ -125,8 +128,8 @@ In the first paragraph of section 3.2, the authors interpret the too steep power
 This interpretation is reinforced by the case of the VSFs without density threshold, where it should be even easier (at lower gas density) to resolve the turbulent cascade due to the energy injection from SNe, yet those VSFs are even steeper, with values of zeta that remains unrealistically high during the whole simulation. This is shown in section 3.4. In that section, the authors should stress this result, and should admit that it clearly shows the inability of their simulations to resolve the SN-driven turbulence even in the general ISM (not just the dense gas). Below, in that same section, they comment that the values of Z for these VSFs are consistent with mildly compressible turbulence, but that result is irrelevant given that the values of \zeta are completely inconsistent with turbulent flows (it is well known that the extended self-similarity applies well into the dissipation range, including the numerical dissipation range of simulations, so reasonable values of Z can be found even if the turbulence is not resolved). So, what’s the point of claiming that the Z values are consistent with incompressible turbulence while neglecting to stress that the more important \zeta values are completely inconsistent with turbulence? The consistency of Z with incompressible turbulence would seem irrelevant, and stressing that fact without mentioning the inconsistency of the \zeta values is a misleading statement.
 
 >> Indeed, a 1:1 comparison between the predictions and our measurements is not 
->> possible for several reasons, in particular the lack of isotropy and uniformity in
->> our flows. We hope that our additions to Sect. 3.2 takes these 
+>> possible for several reasons, in particular the lack of isotropy and uniformity in our
+>> flows. We hope that our additions to Sect. 3.2 takes these 
 >> aspects more into account. Yet, we are confident that our simulations are not 
 >> dominated by numerical dissipation as we are able to resolve both the dissipation 
 >> and the inertial range with all refinement levels. This can be seen in Fig. 25 of 
@@ -156,16 +159,14 @@ to be in complete contradiction with the velocity-size relation results in their
 >> We thank the referee for making this extremely important point explicit. We believe the 
 >> explanation for the apparent contradiction is that in Paper I Larson's relation 
 >> was measured on a whole-cloud basis, comparing cloud radius to averaged 
->> cloud velocity dispersion. It was shown that self-gravity is required to maintain 
->> the velocity dispersions in whole clouds. On the other hand, measurements of velocity 
+>> cloud velocity dispersion.  It was shown that self-gravity is required to maintain 
+>> the velocity dispersions in whole clouds.  On the other hand, measurements of velocity 
 >> 2 point correlations in uniform turbulence do yield a square root of lag dependence of 
 >> the second-order function, including in our own work. However, this correlation does not
->> survive the onset of self-gravity. We now suggest that these are two independent 
+>> survive the onset of self-gravity.  We now suggest that these are two independent 
 >> phenomena that only coincidentally share a common functional form, and show that our 
 >> simulated clouds transition from one to the other form as they evolve. We have changed
->> the abstract, introduction, section 4.1, and conclusions (and acknowledgements) to reflect 
->> this point.
-
+>> the abstract, introduction, section 4.1, and conclusions (and acknowledgements) to reflect >> this point.
 
 I)
 In section 4.6 the authors claim that there is a significant fraction of \zeta values in the simulations that agree with the observations. I think this statement is both incorrect and misleading. In reality, the simulations disagree with the observations during most of the time evolution. There is only a brief, transient period of time where the values are consistent with the observations, probably of the order of 1/10 of the time interval considered (M3: 1.2-1.8 Myr, M4: 2-3.8 Myr M8: 3-3.2 Myr). Since MCs lifetimes (both from observations and simulations) are approximately 2-4 times longer than the 6 Myr of these simulations, the period of time when the simulated clouds have realistic \zeta values is practically insignificant. In other words, the simulations fail at retrieving the observed values. The authors should correct sections 4.6 and 5 to more clearly admit such a failure.
@@ -181,7 +182,7 @@ In section 4.6 the authors claim that there is a significant fraction of \zeta v
 >> in just the same way as our mean values do for our comparably simple clouds. 
 >> Thus, yes, we compare apples with oranges (in the exact same way as any simulated and
 >> observational data are compared to each other), but the mean values are the closest we 
->> can offer to what is behind the observational data. We have changed the last line of the 
+>> can offer to what is behind the observational data.  We have changed the last line of the 
 >> abstract to better reflect this (from "agree well" to "are consistent"), as well as 
 >> revising section 4.6 accordingly.
 
@@ -203,7 +204,7 @@ At the end of the same paragraph, the authors state that there is a local minimu
 >> local minimum in the VSFs and the sizes of the clouds relates to a 
 >> theory of ours that we have not had enough time to investigate 
 >> in all required detail. Therefore, we decided to remove it. Yet, for 
->> technical reasons (probably merging conflicts) some sentences survived
+>> technical reasons (probably merging conflicts) some sentences survived 
 >> accidentally. They have now been removed. The remaining comments have been 
 >> addressed in the appendix.
 

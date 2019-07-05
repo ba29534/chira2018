@@ -51,11 +51,11 @@ As a consequence, large amounts of kinetic energy are transferred to smaller sca
 Fig.~\ref{pic:results:zeta_all}(a) summarises the time evolution of the power-law index $\zeta(p)$ fit to the density-weighted VSF obtained for each cloud, and each order $p$.
 The figure shows several interesting features.
 First, initially, at $t=0$~Myr, all calculated values of $\zeta$ are above the predicted values (see Eqs.~(\ref{equ:method:she}) and~(\ref{equ:method:boldyrev})).
-This suggests that we are seeing excess power at large scales from the initial convergent flows that formed the clouds.
-Note that these flows mean that the turbulence we study here is not uniform or isotropic, as was assumed by \citet{She1994} and \citet{Boldyrev2002}.
-Thus, derived VSFs are not only functions of time and lag, but also the direction of $\vec{\ell}$, as that direction defines at which scales of $\ell$ large scale structures become relevant.
-This will become clearer in Sects.~\ref{results:1d} and~\ref{results:refinement} where we study the impact of dimensional projection and model refinement levels on the VSFs. 
-It also explains why comparisons with theoretical predictions are difficult even though we resolve dissipation and inertial ranges \citepalias[Fig 25 in their Appendix B]{IbanezMejia2017}.
+\textbf{
+This suggests that the base simulation (before the extra AMR levels of the zooming runs are included) cannot resolve the turbulence inertial range below approximately 3 pc yet \citepalias[as shown by the $t=0$~Myr power spectrum in Fig.~25, Appendix B, of][]{IbanezMejia2017}. 
+As the zoom-in simulations are evolved, the turbulence is allowed to cascade to smaller scales, and so the VSF slopes gradually transition to more physical values. 
+The VSFs without density-weighting and, even more so, without density threshold remain too steep despite the increased resolution, as the AMR density-refinement of the zoom-in runs does not affect significantly those VSFs that remain dominated by numerical diffusion at scales below a 3 pc.
+}
 
 Second, $\zeta$ for all orders decreases with time as the clouds gravitationally collapse.
 Distributed gravitational collapse causes an increase in relative velocities at increasingly small scales as material falls into filaments and nodes.  The increase in small-scale power leads to a flattening or even inversion of the VSF and thus a decrease in $\zeta$.
@@ -147,6 +147,10 @@ Although we see a similar decline of $\zeta$ in \texttt{M4} and \texttt{M8} as t
 We see a high rate of random fluctuations in the evolution of $\zeta$, as well.
 Furthermore, contrary to all of our other test scenarios, we see here that all $Z$ are constant in time and within all clouds, with values slightly lower than those predicted by \citet{She1994} for incompressible flows.  
 This is consistent with the high sound speed in the hot gas that fills most of the volume of the computational box, which results in subsonic flows predominating.
+\textbf{
+Yet, note that these result based on a fraction of the available data that represent only 5\% of the actual total volume of the simulated boxes. 
+Therefore, one needs to keep in mind that our results are based on a comparably low number of sample point which may introduce numerical effects at low lag distances as the number of reference cells is lowest here. 
+}
 
 
 \subsection{Density Weighting}\label{results:densweight}

@@ -13,3 +13,6 @@ pics/.ipynb*
 *blg
 *out
 comments/*
+How*.zip
+pics/data/*checkpoint*
+pics/data/*/*checkpoint*

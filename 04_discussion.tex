@@ -48,7 +48,9 @@ On the other hand, if we remove the density threshold, including the entire high
 The high velocities present in the diffuse interstellar medium surrounding the cloud lead to strong large-scale power and thus much steeper VSFs, corresponding to higher values of $\zeta$. 
 There is still a slightly declining trend in $\zeta$, but the evolution is dominated by random fluctuations.
 We also see that $Z$ remains constant for the entire simulation in every case.
-The VSFs for the entire box appear consistent with the prediction for the value in incompressible turbulence \citep{Boldyrev2002}. 
+\textbf{
+Thereby, the VSFs are about four-times higher than the values that are predicted by \citep{Boldyrev2002} for incompressible flows.
+}
 This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.
 
 Furthermore, the results demonstrate that the effect of SNe, and the interaction of the produced shock fronts with the ISM acts rather locally. 
@@ -133,21 +135,26 @@ In this section we discuss our results in the context of the observational studi
 Most of the velocity information derives from $^{12}$CO and $^{13}$CO observations of young star-forming regions \citep[e.g., Perseus and Taurus][]{Padoan2003}.
 We also consider observations of more evolved regions, such as those of the H~{\sc ii} region NGC 6334 \citep{Zernickel2015}, since the filaments in our simulated MCs fragment within the first 2 Myr \citepalias{Chira2018}, suggesting that our cloud may start to resemble such more evolved regions.
 
-Fig.~\ref{pic:discussion:comp_observation} summarises the measured scaling exponents found in the literature, along with our fiducial results (Figs.~\ref{pic:results:zeta_all}a).
-We see that the observed values of $\zeta$ are in general close to each other, as well as to the predicted values by \citet{She1994} and \citet{Boldyrev2002}. 
+Fig.~\ref{pic:discussion:comp_observation} summarises the measured scaling exponents found in the literature, along with our fiducial results (Fig.~\ref{pic:results:zeta_all}a).
+We see that the observed values of $\zeta$ \textbf{span within values of 0.24 to 1.18 across the first three orders.} 
 Furthermore, we see that the observed values are always positive, suggesting that none of the observed clouds show signs of being dominated by collapse, though that could be because the fastest flows lie in optically thick regions inaccessible to the observations.  
 
-\begin{figure}
-	\includegraphics[width=0.49\textwidth]{compare_observations.pdf}
-	\caption{Summary of measurements of $\zeta$ (\textit{abscissas}) and $Z$ (\textit{ordinates}) for orders $p=1$--3 (from \textit{left} to \textit{right}). The grey boxes represent the values presented in Sect.~\ref{results:normal}. The orange solid and blue dashed lines represent the average and median values of the distributions, respectively. The coloured star markers illustrate the predictions by \citet{She1994} and \citet{Boldyrev2002}. The coloured, circular markers summarise values found in the literature (see legend for precise references).
+\begin{figure*}
+	\includegraphics[width=\textwidth]{pics/compare_observations.pdf}
+	\caption{
+	\textbf{
+	Time evolution of scaling exponent $\zeta(p)$ of the $p^{\rm th}$ order VSF. 
+	The panels show the measured scaling exponents for the first to third order (\textit{left} to \textit{right}) for \texttt{M3} (red), \texttt{M4} (green), \texttt{M8} (blue). 
+	The shaded area within all panels marks the range of observed values at the respective order of VSF (see Table \ref{tab:discussion:summary_obs}).
+	}
 	}
 	\label{pic:discussion:comp_observation}
-\end{figure}
+\end{figure*}
 
 
 Compared to these measurements, the distributions of our results show a large scatter across the parameter space. 
 However, we also see that there is a significant fraction of values in our models that are consistent with the observational findings. 
-These measurements belong roughly to the evolutionary stages of the modelled clouds after having evolved for 1.5--4~Myr after the onset of self-gravity.
+These measurements belong roughly to the evolutionary stages of the modelled clouds after having evolved for \textbf{1.0--3.9~Myr after the onset of self-gravity (or within the range of 0.0--3.9~Myr if we consider the errors of the observational values)}.
 \citetalias{Chira2018} finds that the clouds consist of a highly hierarchical structure that is dominated by already fragmenting filaments at this point.
 This means that the flows within the clouds experience a transition from cloud-scale dominated, through filament-dominated, to core-collapse driven motions; which is exactly what we observe in the VSFs, as well.
 Consequently this suggests that the observed MCs, which show clear signs of embedded star formation activity, are in a similar stage where flows are dominated by the formation of hierarchical structures, (pre-/proto-)stellar cores or, in the case of NGC 6334, internal feedback.
@@ -160,7 +167,12 @@ This is, for example, the case when the first structures (such as filaments or s
 Although the influence of shock fronts on VSFs is transient compared to the lifetime of the entire MC, it is still long enough to mimic a quasi-steady state in real observations.
 Observing typical shock tracers, such as SiO, may help to identify these situations. 
 \item We have neglected typical line-of-sight effects that may have a significant influence on the measurements of the local standard of rest velocity whose precision is crucial for this kind of study.
-Our projections ignore optical depth effects, and reflect velocities all the way through the clouds, including high column density regions of dynamical collapse where motions are fast at small scales.  However, CO reaches optical depth of unity at relatively low column densities. This means that the observed VSFs will only reflect the motions of the surface layers of dense MCs.  
+Our projections ignore optical depth effects, and reflect velocities all the way through the clouds, including high column density regions of dynamical collapse where motions are fast at small scales.
+However, \textbf{both $^{12}$CO and $^{13}$CO} reach optical depth of unity at relatively low column densities. 
+This means that the observed VSFs will only reflect the motions of the surface layers of dense MCs.  
+\textbf{
+Fig.~\ref{pic:results:vsf_example}, as well as the figures in Appendix \ref{appFitting} demonstrate that neglecting certain regimes, in particular at small scales where column densities are highest, does have significant influence on the shape and scaling of the corresponding VSF.
+}
 Therefore, single-tracer observations are not suitable for studying the dynamical structure of MCs. 
 For a proper VSF analysis it would be advisable to use a variety of tracers to cover the different phases of the clouds, as well as to populate the statistics of lag distances more completely.
 \item Only a small fraction of the listed observational studies in Table~\ref{tab:discussion:summary_obs} aimed to measure the VSFs of the respective objects directly.
