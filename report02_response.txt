@@ -62,8 +62,6 @@ However, the VSF scalings are initially affected by the limited numerical resolu
 >>> done
 
 
-
-
 2) (previous points I and K): The value of \zeta in the simulated clouds is consistent with the observations only for a rather short transient time. 
 
 The VSF slope \zeta decreases monotonically with time and it is too large initially and too low at later times. 
@@ -86,8 +84,8 @@ It seems to me it shows \zeta in the ordinate and p in the abscissa.
 I don’t think the figure shows Z values at all. 
 The caption also mention grey boxes, that I cannot see, while there are black boxes and error bars whose meaning is not mentioned. 
 I assume the error bars show the total scatter in \zeta values in the simulations, but I have no idea of what the black boxes show.
->>> The referee is right by pointing out that the caption of 
->>> Fig. 6 was wrong. We have corrected it.
+
+>>> The referee is right by pointing out that the caption of Fig. 6 was wrong. We have corrected it. 
 
 The authors response was that they have tried to present the figure as I suggested and it looked messy. 
 I don’t see why that should be the case, so I now explain in more details how the figure should be changed. 
