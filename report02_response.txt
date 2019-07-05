@@ -183,12 +183,4 @@ Figure 1 shows one cloud (M4) in the first panel, and a different cloud (M3) in 
 Since the figure is used in section 3.1 and elsewhere to argue that self-gravity has the effect of increasing the kinetic energy of a cloud by comparing the first and second panels with each other, it is clearly necessary to show VSFs from the same cloud in all panels of figure 1. 
 So the authors should correct Figure 1 to show the same cloud in all three panels. 
 
->>> If the referee allows me to cite them: This statement is 
->>> incorrect. As the referee certainly knows the main point
->>> of examples is that they illustrate the behaviour of a group
->>> of sample members. The details of the individual members 
->>> may differ from the example, but those are not essential 
->>> for explain the general behaviour of the group.
->>> If the reader wishes to see the VSFs of individual clouds at
->>> any desired time they are free to use the online provided data
->>> and scripts to produce the plots themselves. 
+>>> done

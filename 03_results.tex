@@ -4,17 +4,22 @@ In this section, we present our results on how VSFs reflect the velocity structu
 
 \subsection{Examples}\label{results:example}
 
-Fig.~\ref{pic:results:vsf_example} shows three examples of density-weighted VSFs (Eq.~\ref{equ:method:def_vsf_dw}), (a) cloud \texttt{M4} at $t=$1.2~Myr after self-gravity has been activated in the simulations, (b) \texttt{M3} at $t=$3.5~Myr, and (c) \texttt{M3} at $t=$4.0~Myr.
+Fig.~\ref{pic:results:vsf_example} shows \textbf{nine} examples of density-weighted VSFs (Eq.~\ref{equ:method:def_vsf_dw}).
+\textbf{
+The figure shows the VSFs of all three clouds (columns) at three different times in their evolutions, more precisely at 1.0~Myr, 3.0~Myr, and 4.2~Myr after the on-set of gravity. 
+}
 All plots show orders $p=$1--3.
 The solid lines show the fitted power-law relations as given by Eq.~(\ref{equ:method:fitting}).
 
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=\textwidth]{vsf_example.pdf}
-	\caption{Examples of density-weighted VSFs (Eq.~\ref{equ:method:def_vsf_dw})  as function of the lag scale $\ell$ and order $p$. 
-		The dots connected by dashed lines show the values computed from the simulation, while
-		the solid lines show the power-law relations fitted to the respective structure functions.
-	}
+    \includegraphics[width=\textwidth]{app_examples_wthres_s_l.pdf}
+    \caption{
+        The figures show additional examples of VSFs, based on data with density threshold, of (\textit{left} to \textit{right}) \texttt{M3}, \texttt{M4}, and \texttt{M8} as function of lag scale $\ell$ and order $p$. 
+        The examples are given for times (\textit{top} to \textit{bottom}) t~=~1.0~Myr, 3.0~Myr, and 4.2~Myr.
+        The dots (connected by dashed lines) show the values computed from the simulations. 
+        The solid lines represent the power-law relation fitted to the respective structure functions.
+    }
 	\label{pic:results:vsf_example}
 \end{figure*}
 
@@ -26,21 +31,20 @@ On larger scales, one observes a local minimum before the VSFs either increase o
 Additional examples of VSFs are given in Appendix~\ref{appInertial}.
 
 The examples in Fig.~\ref{pic:results:vsf_example} and Appendix~\ref{appInertial} illustrate how VSFs react to different scenarios that affect the turbulent structure of the entire clouds. 
-Fig.~\ref{pic:results:vsf_example}(a) shows the case where turbulence is driven on large scales and naturally decays towards smaller scales.
+\textbf{All clouds at $t$~=~1.0~Myr} shows the case where turbulence is driven on large scales and naturally decays towards smaller scales.
 This is the most common behaviour seen in all three MCs within the first $\sim$1.5~Myr of the simulations.
 During this interval of time the clouds experience the effect of self-gravity for the first time in their evolution and need to adjust to this new condition.
 Until this occurs, their VSFs continue to be dominated by the freely cascading turbulence that previously dominated the kinetic structure of the clouds.
 We note that with each refinement it takes finite time for the turbulence to propagate to smaller scale, so the cloud evolution at high resolution was started well before self-gravity was turned on \citep[see][]{IbanezMejia2017,Seifried2017b}.
 
 The later examples represent the clouds when the VSFs are dominated by sources that drive the flow within the clouds in a more coherent way.
-Fig.~\ref{pic:results:vsf_example}(b) shows the VSF of \texttt{M3} at a time when the cloud has just been hit by a SN blast wave. 
-One clearly sees how the amplitude of the VSFs are increased by an order of magnitude or more compared to the previous example.
+\textbf{\texttt{M3} at $t$~=~3.0~Myr and \texttt{M4} at $t$~=~4.2~Myr show VSFs at times when the clouds have just been hit by a SN blast wave. }
+One clearly sees how the amplitude of the VSFs are increased by an order of magnitude or more compared to the \textbf{time before}.
 Especially the power at small scales below a few parsecs is highly amplified as a result of the shock.
 Despite the increase of turbulent power at small scales, a large amount of energy is injected at large scales, as well.
 However, the effect of SN shocks last for only a short period of time (see Sect.~\ref{results:normal}).
 
-
-The last example, Fig.~\ref{pic:results:vsf_example}(c), demonstrates the imprint of gravitational contraction.
+\texttt{M8} at $t$~=~3.0~Myr demonstrates the imprint of gravitational contraction.
 Here, the VSF is almost flat, or even slightly increasing towards smaller separation scales. 
 This kind of profile is typical for gas that is gravitationally contracting \citep{Boneberg2015,Burkhart2015}.
 Gas moves into the inner regions of the cloud, reducing the average lag distances, while being accelerated by the infall to higher velocity.
