@@ -8,10 +8,7 @@ The analysis in this paper is based on a sample of three MCs identified within a
 We summarise the most relevant properties. 
 
 The numerical simulation models a $1\times1\times40$~kpc$^3$ section of the multi-phase, turbulent ISM of a disk galaxy, where dense structures form self-consistently in convergent, turbulent flows \citepalias{IbanezMejia2016}.  
-The model includes 
-%mm4 gravity -- a [-- is an en-dash for a range of numbers, e.g. 1--5, while --- is an em-dash for a parenthetical remark.  Neither takes spaces.]
-           gravity---a 
-background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time---SN-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
+The model includes gravity---a background galactic-disk potential accounting for a stellar component and a dark matter halo, as well as self-gravity turned on after 250~Myr of simulated time---SN-driven turbulence, photoelectric heating and radiative cooling, and magnetic fields. 
 Although hundreds of dense clouds form within the simulated volume, \citetalias{IbanezMejia2017} focused on three clouds, which were re-simulated at a much higher spatial resolution.
 The internal structures of the MCs are resolved using adaptive mesh refinement, focusing grid resolution on dense regions where Jeans unstable structures must be resolved with a minimum of 4 cells ($\lambda_J > 4~\Delta x_{\rm min}$).
 For a maximum resolution of $\Delta x = 0.1$~pc, the corresponding maximum resolved density is $8~\times 10^3$~cm$^{-3}$ for gas at a temperature of 10~K \citepalias[e.g.][Eq.~15]{IbanezMejia2017}. 
@@ -24,7 +21,7 @@ For illustrations of the morphologies of the three clouds we refer to Fig.~1 of 
 It is important to point out that the clouds are embedded within a complex turbulent environment, gaining and losing mass as they evolve.
 \citetalias{IbanezMejia2017} described the time evolution of the properties of all three clouds in detail, in particular, mass, size, velocity dispersion, and accretion rates, in the context of MC formation and evolution within a galactic environment.
 \citetalias{Chira2018} studied the properties, evolution, and fragmentation of filaments that self-consistently condense within these clouds. 
-We paid particular attention on the accuracy of typical stability criteria for filaments, comparing the results to the theoretical predictions, showing that simplified analytic models do not capture the complexity of fragmentation due to their simplifying assumptions.
+We paid particular attention to the accuracy of typical stability criteria for filaments, comparing the results to the theoretical predictions, showing that simplified analytic models do not capture the complexity of fragmentation due to their simplifying assumptions.
 
 
 \subsection{Velocity Structure Function}\label{methods:vsf}
@@ -44,12 +41,12 @@ The VSF $S_p$ is usually reported as a function of lag distance, $\ell = |\vec{\
 The coherent velocity differences measured by the VSF can be produced by both the energy cascade expected in turbulent flows, and by coherent motions such as collapse, rotation, or blast waves.
 Those patterns become more prominent the higher the value of the power $p$ is \citep{Heyer2004}.
 
-For fully developed turbulence the VSF is well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
+For fully developed, \textbf{homogeneous, isotropic,} turbulence the VSF is well-described by a power-law relation \citep{Kolmogorov1941,She1994,Boldyrev2002}:
 \begin{equation}
 	\mathit{S}_p (\ell) \propto \ell^{\zeta(p)}.
 	\label{equ:method:propto_zeta}
 \end{equation}
-
+%
 \citet{Kolmogorov1941} predicts that the third-order exponent, $\zeta(3)$, is equal to unity for an incompressible flow.
 As a consequence the kinetic energy decays with $E_{\mathrm{kin}}(k) \propto k^{-\frac{5}{3}}$, with $k = \frac{2 \pi}{\ell}$ being the wavenumber of the turbulence mode.
 For a supersonic flow, however, $\zeta(3) >1$ is expected.
@@ -70,7 +67,7 @@ Note that both equations return a value of $\zeta(3) =1$, but this is only an ex
 
 In the case of compressible turbulence, the energy cascade can no longer be expressed in terms of a pure velocity difference because density fluctuations become important.
 Turbulence should then show a cascade in some density-weighted VSF analogous to the incompressible case.
-\citet{Padoan2016a} defined a density-weighted VSF to attempt to capture this process that we use in our subsequent analysis
+\citet{Padoan2016a} defined a density-weighted VSF to attempt to capture this process, which we use in our subsequent analysis
 \begin{equation}
 	{S}_p (\ell) = \frac{\langle \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, |\Delta \vec{v}|^p  \, \rangle}{\langle  \, \rho(\vec{x}) \rho(\vec{x}+\vec{\ell}) \, \rangle}.
 	\label{equ:method:def_vsf_dw}

@@ -2,7 +2,7 @@ Dear Referee:
 
 We thank the referee for another detailed report. 
 We have edited the manuscript following the referee's recommendations. 
-The changes are shown in bold face in the PDF. Please find additional responses to the referee's comments below, marked by leading ">>".
+The changes are shown in bold face in the PDF. Please find additional responses to the referee's comments below, marked by leading ">>>".
 
 As mentioned at the end of our introduction, we published our data online, following https://doi.org/10.5531/sd.astro.3.
 
@@ -42,7 +42,12 @@ So the correct statement should be something like "At t=0 the \zeta values are t
 As the zoom-in simulations are evolved, the turbulence is allowed to cascade to smaller scales, and so the VSF slopes gradually transition to more physical values. 
 The VSFs without density-weighting and, even more so, without density threshold remain too steep despite the increased resolution, as the AMR density-refinement of the zoom-in runs does not affect significantly those VSFs that remain dominated by numerical diffusion at scales below a 3 pc.” 
 
->>> done
+>>> Upon more careful examination of the procedure for the 
+>>> zoom-in, we understand the referee's argument, and agree 
+>>> that it must be at least part of the story. We have 
+>>> therefore included revisions in a number of places based 
+>>> on their suggestions.
+
 
 The third item in the list of conclusions, in section 5, should be corrected. It currently states that when turbulence is dominant or for VSFs computed without density weighting, \zeta(2)~1/2. 
 The correct statement is that in those two cases \zeta(2)~1 (or larger for cloud M8), and in the case without density threshold \zeta(2)~3. 
@@ -75,7 +80,15 @@ In any case, the point here is not whether observed clouds can be compared with 
 
 Figure 6, sections 4.6 and 5, and the abstract, should be modified accordingly.
 
->>> done
+>>> As we note in section 4.6, interpretation of late-time 
+>>> observations is strongly influenced by optical depth 
+>>> effects that act to obscure the smallest scale velocities. 
+>>> We defer to future work a full treatment of this problem.
+>>> We have, however, revised our statements to make them more 
+>>> exact, acknowledging the issue raised by the referee 
+>>> regarding the role of numerical dissipation in the 
+>>> early-time results.  (See below for further discussion 
+>>> of this point.
 
 The authors have not modified Figure 6 as suggested in my first report. 
 Furthermore, the caption of that figure is quite messy. 
@@ -85,7 +98,9 @@ I don’t think the figure shows Z values at all.
 The caption also mention grey boxes, that I cannot see, while there are black boxes and error bars whose meaning is not mentioned. 
 I assume the error bars show the total scatter in \zeta values in the simulations, but I have no idea of what the black boxes show.
 
->>> The referee is right by pointing out that the caption of Fig. 6 was wrong. We have corrected it. 
+>>> The referee was correct in pointing out that the caption 
+>>> of Fig. 6 was wrong. We have now changed the figure 
+>>> following the next suggestion.
 
 The authors response was that they have tried to present the figure as I suggested and it looked messy. 
 I don’t see why that should be the case, so I now explain in more details how the figure should be changed. 
@@ -114,28 +129,23 @@ Why can’t they evolve into lower values of \zeta as found in the simulations? 
 >>> As described at the end of Sect. 4.6 we consider 
 >>> several reasons why our results match the observations
 >>> only for short periods of time.
->>> The first, most important one is obviously that we
->>> do not consider any star formation activity in our
->>> simulations. That is, though, essential for tracing
->>> the dynamics at small scales as soon as protostars 
->>> have formed (which should certainly occur during the
->>> simulated time). 
->>> However, there are also other reasons that also refer
->>> to the observational data themselves. First, there
->>> is a very small sample of data, observed in regions
->>> that are not well comparable to our clouds,
->>> automatically introducing differences. Furthermore, 
->>> all observations have been performed with CO that is 
+>>> The most important one is that 
+>>> all observations were performed with CO, which is 
 >>> highly prone to optical depth effects; and those 
 >>> introduce a different kind of density threshold, as 
 >>> it gives upper limits to column densities and the
 >>> corresponding small scales with high relative
 >>> velocities close to the centres of the cores that are 
->>> able to be observed. 
+>>> able to be observed. We also neglect star formation 
+>>> activity in our simulations, which is of course important 
+>>> for tracing the dynamics at small scales once protostars 
+>>> have formed (which should certainly occur during the
+>>> simulated time). 
+>>>
 >>> Therefore, before we can ultimately evaluate the
 >>> comparison between our results and the observational
->>> values one needs to evaluate the influence of such line 
->>> of sight effects on the shape and scaling of VSFs in
+>>> values, we will needs to evaluate the influence of such 
+>>> optical depth effects on the shape and scaling of VSFs in
 >>> general, which is outside the scope of this work. 
 
 The last item in the list of conclusions of section 5 claims that the \zeta values match the observations during times when the simulations are dominated by gravity. 
@@ -172,10 +182,11 @@ A totally honest statement giving the true raw result of the simulations would b
 Another conclusion worth appearing at the end of the abstract would be “The very shallow or even inverted velocity scaling predicted by the simulation in the gravity-dominated phase is inconsistent with the velocity scaling in MCs, suggesting that the dynamics of MCs is not dominated by gravity“. 
 Such a sentence should also appear in the end of the main conclusion section of the paper, unless the authors can propose a convincing alternative explanation for such a striking contrast with the observations. 
 
->>> We have removed the sentence referring to the comparison of our results with observational data from the abstract. 
-
-
-
+>>> We have removed the sentence referring to the comparison
+>>> of our results with observational data from the abstract,
+>>> as we believe that that comparison really must include 
+>>> optical depth effects to be of significant use.  
+>>> We have also made appropriate revisions elsewhere.
 
 
 Final point: 
@@ -183,4 +194,6 @@ Figure 1 shows one cloud (M4) in the first panel, and a different cloud (M3) in 
 Since the figure is used in section 3.1 and elsewhere to argue that self-gravity has the effect of increasing the kinetic energy of a cloud by comparing the first and second panels with each other, it is clearly necessary to show VSFs from the same cloud in all panels of figure 1. 
 So the authors should correct Figure 1 to show the same cloud in all three panels. 
 
->>> done
+>>> We have replaced Figure 1 with our previous Figure B.1 
+>>> from the appendix, showing examples from all three clouds 
+>>> at all three times.

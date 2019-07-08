@@ -4,10 +4,10 @@
 
 We have seen in Sect.~\ref{results} that density-weighted VSFs reflect a combination of uniform, compressible turbulence, large-scale shocks, and gravitational collapse.  Extended self-similarity emphasises the turbulent nature of these high-Reynolds numbers flows even in regions of gravitational collapse. 
 \textbf{
-The measured values of $\zeta$ differ from the predicted values by \citet{She1994} and \citet{Boldyrev2002} for most of the time of the clouds' evolution.
-The origin of these differences are to be found in the underlying physical conditions. 
-Contrary to the conditions in the reference models, we examine a multi-phase medium with magnetised turbulence that is hardly uniform, isothermal, or homogeneous.
-Consequent, deviations between the predicted and our measured values are unavoidable for most of the studied scenarios. 
+    The measured values of $\zeta$ differ from the predicted values by \citet{She1994} and \citet{Boldyrev2002} for most of the time of the clouds' evolution.
+    The origin of these differences are to be found in a combination of numerical dissipation and the underlying physical conditions. 
+    Contrary to the conditions in the reference models, we examine a multi-phase medium with magnetised turbulence that is hardly uniform, isothermal, or homogeneous.
+    However, the diffuse medium is also underresolved compared to the dense gas, thanks to our Jeans refinement strategy, which removes small-scale power in the diffuse medium.
 }
 
 The impact of SN shocks hitting the clouds is to inject power at all scales (Fig.~\ref{pic:results:vsf_example}). 
@@ -44,8 +44,6 @@ Thus, we predict that observed VSFs reflect the nature of turbulence within MCs 
 Note that this analysis does not take typical line-of-sight effects, such as optical depth or blending, into account. 
 Future studies need to investigate this point in more detail by performing VSF analyses based on full radiative transfer calculations.
 
-
-
 \subsection{Density thresholds}\label{discussion:densthres}
 
 We find that the structure and behaviour of VSFs strongly depends on whether or not we assume a density threshold in computing them.
@@ -55,7 +53,9 @@ The high velocities present in the diffuse interstellar medium surrounding the c
 There is still a slightly declining trend in $\zeta$, but the evolution is dominated by random fluctuations.
 We also see that $Z$ remains constant for the entire simulation in every case.
 \textbf{
-Thereby, the VSFs are about four-times higher than the values that are predicted by \citep{Boldyrev2002} for incompressible flows.
+    However, the VSF scaling exponents are about four times steeper than the values that are predicted by \citep{Boldyrev2002} for incompressible flows.
+    This is partly an effect of numerical dissipation reducing the velocities in less-refined diffuse gas.
+    However, it is probably also due to the sharp reduction in the velocity dispersion of dense gas already noted in \citetalias{IbanezMejia2016}, given that the dense gas has small characteristic scales.
 }
 This suggests that they are dominated by the subsonic flow in the hot gas with $T > 10^6$~K that occupies most of the volume of the box.
 
@@ -67,9 +67,9 @@ We conclude that the decision of whether or not a density threshold is used has 
 Indeed, it is a straight-forward approach to focus the analysis on the actual area of interest.
 In observational studies such a threshold will anyway always be present as minimal collision rates for excitation or the sensitivity of detectors automatically introduce implicit density or intensity thresholds. 
 Although we have only tested two specific setups in this context we have seen the significance of a proper choice of the density threshold, as well as a proper discussion of the obtained results considering the threshold as one of the defining parameters.
-
-
-
+\textbf{
+    We note that future work could fruitfully also consider an upper density threshold to mimic the major effects of optical thickness even if true radiative transfer were probibitively expensive.
+}
 
 \subsection{Density weighting}\label{discussion:densweight}
 
@@ -160,7 +160,7 @@ Furthermore, we see that the observed values are always positive, suggesting tha
 
 Compared to these measurements, the distributions of our results show a large scatter across the parameter space. 
 However, we also see that there is a significant fraction of values in our models that are consistent with the observational findings. 
-These measurements belong roughly to the evolutionary stages of the modelled clouds after having evolved for \textbf{1.0--3.9~Myr after the onset of self-gravity (or within the range of 0.0--3.9~Myr if we consider the errors of the observational values)}.
+These measurements belong roughly to the evolutionary stages of the modelled clouds after having evolved for \textbf{roughly 1.0--3.9~Myr after the onset of self-gravity.}
 \citetalias{Chira2018} finds that the clouds consist of a highly hierarchical structure that is dominated by already fragmenting filaments at this point.
 This means that the flows within the clouds experience a transition from cloud-scale dominated, through filament-dominated, to core-collapse driven motions; which is exactly what we observe in the VSFs, as well.
 Consequently this suggests that the observed MCs, which show clear signs of embedded star formation activity, are in a similar stage where flows are dominated by the formation of hierarchical structures, (pre-/proto-)stellar cores or, in the case of NGC 6334, internal feedback.
@@ -177,7 +177,7 @@ Our projections ignore optical depth effects, and reflect velocities all the way
 However, \textbf{both $^{12}$CO and $^{13}$CO} reach optical depth of unity at relatively low column densities. 
 This means that the observed VSFs will only reflect the motions of the surface layers of dense MCs.  
 \textbf{
-Fig.~\ref{pic:results:vsf_example}, as well as the figures in Appendix \ref{appFitting} demonstrate that neglecting certain regimes, in particular at small scales where column densities are highest, does have significant influence on the shape and scaling of the corresponding VSF.
+    Fig.~\ref{pic:results:zeta_all}, as well as the figures in Appendix \ref{appFitting} demonstrate that neglecting certain regimes, in particular at small scales where column densities are highest, does have significant influence on the shape and scaling of the corresponding VSF.
 }
 Therefore, single-tracer observations are not suitable for studying the dynamical structure of MCs. 
 For a proper VSF analysis it would be advisable to use a variety of tracers to cover the different phases of the clouds, as well as to populate the statistics of lag distances more completely.
