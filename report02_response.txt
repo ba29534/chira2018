@@ -144,7 +144,7 @@ Why can’t they evolve into lower values of \zeta as found in the simulations? 
 >>>
 >>> Therefore, before we can ultimately evaluate the
 >>> comparison between our results and the observational
->>> values, we will needs to evaluate the influence of such 
+>>> values, we will need to evaluate the influence of such 
 >>> optical depth effects on the shape and scaling of VSFs in
 >>> general, which is outside the scope of this work. 
 
